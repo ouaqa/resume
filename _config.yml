@@ -1,0 +1,4 @@
+name: Aurelien Benefice resume
+markdown: redcarpet
+pygments: true
+baseurl: /resume
