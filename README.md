@@ -8,9 +8,18 @@ You should check the actual page of my resume at [ouaqa.github.io] [1] except if
 
 At the moment (jan 2014), you might be disapointed by is there to see but soon there will be an awesome site with all the rings and bells and adaptivity I can manage to cram in one web page.
 
+  
+
+  I get 10 times more traffic from [Google] [4] than from
+[Yahoo] [2] or [MSN] [3].
 
 So for the moment, sit back relax and come back soon.
 
 
 
-  [1]: http://ouaqa.github.io/resume	"ouaqa.github.io"
+  [1]: http://ouaqa.github.io/resume  "ouaqa.github.io"
+
+
+  [4]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
