@@ -13,4 +13,4 @@ So for the moment, sit back relax and come back soon.
 
 
 
-  [1]: ouaqa.github.io/resume	"ouaqa.github.io"
+  [1]: http://ouaqa.github.io/resume	"ouaqa.github.io"
