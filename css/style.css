@@ -55,8 +55,20 @@ basic definitions
 */
 html {
   height: 100%;
-  background-color: #74104b;
-  background: linear-gradient(180deg, #74104b, #a7264d, #be3550, #f36244);
+  background: #74104b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74104b), color-stop(33%, #a7264d), color-stop(66%, #be3550), color-stop(100%, #f36244));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #74104b 0%, #f36244 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
+  /* W3C */
   background-repeat: no-repeat;
   font-size: 30px;
   line-height: 1.5em;
@@ -76,21 +88,36 @@ h1 {
   left: 0;
   bottom: 0;
   right: 0; }
+  .absolute-centered h1 {
+    display: table;
+    height: auto; }
+  .absolute-centered p {
+    display: table;
+    height: auto;
+    width: 100%; }
 
 .coming-soon {
   width: 500px;
   height: 500px;
-  background-color: #faa143;
-  background: linear-gradient(#faa143, rgba(250, 161, 67, 0));
+  /* background-color:$opt-color;
+  background:linear-gradient($alpha-gradient-start , $alpha-gradient-stop ); */
+  background: #faa143;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #faa143), color-stop(100%, rgba(250, 161, 67, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #faa143 0%, rgba(250, 161, 67, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
   /* border-radius:50%; */
   text-align: center; }
-
-h1 {
-  display: table;
-  height: auto;
-  line-height: 2em; }
-
-p {
-  display: table;
-  height: auto;
-  width: 100%; }
+  .coming-soon h1 {
+    line-height: 2em; }

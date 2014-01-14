@@ -1,19 +1,18 @@
 /* 
 basic definitions
 */
-
 html {
 	height:100%;
-	background-color : $background-default-color ;
-	background:linear-gradient($background-start,$gradient-color-1,$gradient-color-2,$gradient-color-3,$gradient-color-4);
+	@include quadriColorGradient($gradient-color-1,$gradient-color-2,$gradient-color-3,$gradient-color-4);
 	background-repeat:no-repeat;
 	font-size:$base-font-size;
 	line-height:$base-line-height;
-	font-family:$font-stack;
+	font-family:$font-stack; 
 	color:$primary-font-color;
 }
 
 header { max-width:33em; }
 
 h1 { font-size:3em; }
-
+ 
+ 

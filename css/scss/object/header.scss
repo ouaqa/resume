@@ -3,31 +3,32 @@
 	margin: auto;
   	position: absolute;
   	top: 0; left: 0; bottom: 0; right: 0;
+
+  	h1 {
+		display:table;
+		height:auto; 
+	}
+	p 
+	{
+		display:table;
+		height:auto;
+		width: 100%;	
+	}	
   }
 
 .coming-soon
 {
 	width:500px;
 	height:500px;
-	background-color:$opt-color;
-	background:linear-gradient(rgba(250,161,67,1),rgba(250,161,67,0));
+	/* background-color:$opt-color;
+	background:linear-gradient($alpha-gradient-start , $alpha-gradient-stop ); */
+	@include linearGradient ($alpha-gradient-start , $alpha-gradient-stop ); 
 	/* border-radius:50%; */
 
 	text-align:center;
+	
+	h1 {line-height:2em; }
 
 	
 }
 
-h1 {
-		display:table;
-		height:auto; 
-		line-height:2em;
-
-	}
-	p 
-	{
-		display:table;
-		height:auto;
-		width: 100%;
-		
-	}	
