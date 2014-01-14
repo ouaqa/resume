@@ -8,7 +8,23 @@ $gradient-color-4:#F36244;
 
 $opt-color:#FAA143;
 
-$font-stack:    Helvetica, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+$font-stack:    'MS Serif', 'New York', serif;
+
+$alternative-font : 'Great Vibes'; 
+
+$header-font:url(font/dude_personal/Dude_Hank.otf);
+
+
+@font-face
+{
+font-family: dude;
+src: $header-font;
+}
+
+$heading-font:dude;
+
 $primary-font-color: #333;
 
 /*background color*/
@@ -19,3 +35,5 @@ $background-gradient:#74104B;
 $background-start:180deg;
 
 $base-font-size:30px;
+$base-line-height:1.5em;
+

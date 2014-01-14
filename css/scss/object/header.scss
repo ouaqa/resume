@@ -11,17 +11,17 @@
 	height:500px;
 	background-color:$opt-color;
 	background:linear-gradient(rgba(250,161,67,1),rgba(250,161,67,0));
-	border-radius:50%;
+	/* border-radius:50%; */
 
 	text-align:center;
 
-	h1 {display:table; height:auto; line-height:2em;}
+	h1 {display:table; height:auto; line-height:2em; font-family:$heading-font;}
 	p 
 	{
 		display:table;
 		height:auto;
-		font-size:.7em;
 		width: 100%;
+		font-family: $alternative-font;
 	}	
 }
 

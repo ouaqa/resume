@@ -8,6 +8,7 @@ html {
 	background:linear-gradient($background-start,$gradient-color-1,$gradient-color-2,$gradient-color-3,$gradient-color-4);
 	background-repeat:no-repeat;
 	font-size:$base-font-size;
+	line-height:$base-line-height;
 	font-family:$font-stack;
 	color:$primary-font-color;
 }
