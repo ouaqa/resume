@@ -1,0 +1,26 @@
+
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+
+
+ $alternative-font : 'Great Vibes'  ;  
+
+
+
+
+@font-face
+{
+font-family: dude;
+src: url(font/dude_personal/Dude_Hank.otf);
+} 
+
+ $heading-font:  dude  ; 
+
+
+.wf-active h1 {
+	  font-family:$heading-font; 
+	}
+.wf-active	p 
+	{
+		 font-family: $alternative-font;
+	}	

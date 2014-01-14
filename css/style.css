@@ -1,13 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
 /*
 	Base file fort
 */
 /* basic variables */
 /*kuler color stack */
-@font-face {
-  font-family: dude;
-  src: url(font/dude_personal/Dude_Hank.otf); }
-
 /*background color*/
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
@@ -89,13 +84,13 @@ h1 {
   background: linear-gradient(#faa143, rgba(250, 161, 67, 0));
   /* border-radius:50%; */
   text-align: center; }
-  .coming-soon h1 {
-    display: table;
-    height: auto;
-    line-height: 2em;
-    font-family: dude; }
-  .coming-soon p {
-    display: table;
-    height: auto;
-    width: 100%;
-    font-family: "Great Vibes"; }
+
+h1 {
+  display: table;
+  height: auto;
+  line-height: 2em; }
+
+p {
+  display: table;
+  height: auto;
+  width: 100%; }

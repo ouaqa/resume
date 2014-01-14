@@ -15,13 +15,19 @@
 
 	text-align:center;
 
-	h1 {display:table; height:auto; line-height:2em; font-family:$heading-font;}
+	
+}
+
+h1 {
+		display:table;
+		height:auto; 
+		line-height:2em;
+
+	}
 	p 
 	{
 		display:table;
 		height:auto;
 		width: 100%;
-		font-family: $alternative-font;
+		
 	}	
-}
-
