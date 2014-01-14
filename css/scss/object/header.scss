@@ -1,0 +1,27 @@
+.absolute-centered
+{  
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  }
+
+.coming-soon
+{
+	width:500px;
+	height:500px;
+	background-color:$opt-color;
+	background:linear-gradient(rgba(250,161,67,1),rgba(250,161,67,0));
+	border-radius:50%;
+
+	text-align:center;
+
+	h1 {display:table; height:auto; line-height:2em;}
+	p 
+	{
+		display:table;
+		height:auto;
+		font-size:.7em;
+		width: 100%;
+	}	
+}
+
