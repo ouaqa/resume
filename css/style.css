@@ -80,7 +80,10 @@ header {
 
 h1 {
   font-size: 3em;
-  line-height: 2em; }
+  line-height: 1.8em; }
+  @media screen and (max-width: 630px) {
+    h1 {
+      line-height: 1.1em; } }
 
 p {
   font-size: 1.6em; }
@@ -107,12 +110,8 @@ a {
     width: 100%; }
 
 .coming-soon {
-  width: 60%;
-  height: 60%;
-  min-width: 500px;
-  max-width: 800px;
-  min-height: 500px;
-  max-height: 800px;
+  width: 20em;
+  height: 20em;
   /* background-color:$opt-color;
   background:linear-gradient($alpha-gradient-start , $alpha-gradient-stop ); */
   background: #faa143;
@@ -133,3 +132,7 @@ a {
   /* IE6-9 */
   /* border-radius:50%; */
   text-align: center; }
+  @media screen and (max-width: 630px) {
+    .coming-soon {
+      width: 100%;
+      height: 100%; } }
