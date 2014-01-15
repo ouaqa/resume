@@ -13,7 +13,11 @@ html {
 
 header { max-width:33em; }
 
-h1 { font-size:3em; line-height:2em;  }
+h1 { font-size:3em; line-height:1.8em;  
+	
+@media  screen and (max-width: 630px) {
+    line-height:1.1em;
+  }}
 
 p { font-size:$header-p-font-height; }
 
