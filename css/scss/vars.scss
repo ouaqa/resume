@@ -6,11 +6,14 @@ $gradient-color-2:#A7264D;
 $gradient-color-3:#BE3550;
 $gradient-color-4:#F36244;
 
+$alpha-gradient-start : rgba(250,161,67,1);
+$alpha-gradient-stop : rgba(250,161,67,0);
+
 $opt-color:#FAA143;
 
 $font-stack: 'MS Serif', 'New York', serif;
 
-$primary-font-color: #333;
+$primary-font-color:#333;
 
 /*background color*/
 $background-default-color:#74104B;
@@ -21,6 +24,4 @@ $background-start:180deg;
 
 $base-font-size:30px;
 $base-line-height:1.5em;
-
-$alpha-gradient-start : rgba(250,161,67,1);
-$alpha-gradient-stop : rgba(250,161,67,0);
+$p-font-height:1.2em;

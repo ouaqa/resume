@@ -7,31 +7,45 @@
 
 	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 
-	<script>
-	WebFontConfig = {
-	custom: {
-		families : ['dude','Great Vibes'], 
-		urls : ['css/fonts.css']
-	}
-};
+	<script type="text/javascript">
 
-  (function() 
-  {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-              '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
+		//font list
+		WebFontConfig = 
+		{
+			custom: 
+			{
+				families : ['dude','Great Vibes'], 
+				urls : ['css/fonts.css']
+			}
+		};
+
+		//deffer font loading
+		function loadFontsAfterPageLoad() 
+		{
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		}
+
+
+		//defferred font loading after full page load
+		if (window.addEventListener)
+		window.addEventListener("load", loadFontsAfterPageLoad, false);
+		else if (window.attachEvent)
+		window.attachEvent("onload", loadFontsAfterPageLoad);
+		else window.onload = loadFontsAfterPageLoad;
 
 	</script>
+
 </head>
 <body>
 	<header class="absolute-centered coming-soon">
-		<h1 class="absolute-centered dude-loaded ">Hello, I'm Aur&eacute;lien</h1>
-		<p class="absolute-centered greatvibes-loaded">This is where you'll find my online resume... soonish </p>
+		<h1 class=" ">Hello, I'm Aur&eacute;lien</h1>
+		<p class=" ">This is where you'll find my online resume... soonish </p>
 	</header>
 </body>
 </html>

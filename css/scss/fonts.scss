@@ -1,18 +1,30 @@
 
-@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+@font-face
+{
+font-family: 'Great Vibes';
+src: url(font/great_vibes/GreatVibes-Regular.otf);
+} 
 
 $alternative-font : 'Great Vibes'  ;  
 
 
 
-
+/*
 @font-face
 {
 font-family: dude;
 src: url(font/dude_personal/Dude_Hank.otf);
 } 
+*/
 
- $heading-font:  dude  ; 
+@font-face
+{
+font-family: chunkfive;
+src: url(font/chunkfive/Chunkfive.otf);
+} 
+
+
+ $heading-font:  chunkfive  ; 
 
 
 .wf-active h1 {

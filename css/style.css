@@ -79,7 +79,11 @@ header {
   max-width: 33em; }
 
 h1 {
-  font-size: 3em; }
+  font-size: 3em;
+  line-height: 2em; }
+
+p {
+  font-size: 1.2em; }
 
 .absolute-centered {
   margin: auto;
@@ -119,5 +123,3 @@ h1 {
   /* IE6-9 */
   /* border-radius:50%; */
   text-align: center; }
-  .coming-soon h1 {
-    line-height: 2em; }
