@@ -4,11 +4,7 @@
   	position: absolute;
   	top: 0; left: 0; bottom: 0; right: 0;
 
-  	h1 {
-		display:table;
-		height:auto; 
-	}
-	p 
+	h1 , p 
 	{
 		display:table;
 		height:auto;
@@ -18,8 +14,15 @@
 
 .coming-soon
 {
-	width:500px;
-	height:500px;
+	width: 60%; 
+  	height: 60%;
+
+	min-width:500px;
+	max-width:800px;
+
+	min-height:500px;
+	max-height:800px;
+
 	/* background-color:$opt-color;
 	background:linear-gradient($alpha-gradient-start , $alpha-gradient-stop ); */
 	@include linearGradient ($alpha-gradient-start , $alpha-gradient-stop ); 
@@ -27,8 +30,6 @@
 
 	text-align:center;
 	
-	
-
 	
 }
 

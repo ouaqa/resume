@@ -15,6 +15,18 @@ header { max-width:33em; }
 
 h1 { font-size:3em; line-height:2em;  }
 
-p {font-size:$p-font-height}
+p { font-size:$header-p-font-height; }
+
+aside {
+	float:right;
+	top:0;
+}
+
+a
+{
+	font-size:$header-p-font-height;
+	text-decoration:none;
+	color:$primary-font-color;
+}
  
  
