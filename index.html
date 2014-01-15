@@ -5,7 +5,7 @@
 	<meta name="description" content="Hi, I'm Aurelien Benefice, I'm a developer and this is my resume">
 	<meta name="author" content="Aurelien Benefice">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+	<meta name=viewport content="width=980, initial-scale=2">
 
 	<script type="text/javascript">
 
@@ -15,7 +15,7 @@
 			custom: 
 			{
 				families : ['dude','Great Vibes'], 
-				urls : ['css/fonts.css']
+				urls : ['css/fonts.min.css']
 			}
 		};
 
@@ -31,13 +31,32 @@
 			s.parentNode.insertBefore(wf, s);
 		}
 
+		//deffer css loading
+		function loadCssAfterPageLoad()
+		{
+			var stylesheet = document.createElement('link');
+          stylesheet.href = 'css/style.min.css';
+          stylesheet.rel = 'stylesheet';
+          stylesheet.type = 'text/css';
+          document.getElementsByTagName('head')[0].appendChild(stylesheet);
+		}
+
+		//global deferred loading
+		function defferedLoading()
+		{
+			loadCssAfterPageLoad();
+			loadFontsAfterPageLoad();
+		}
+
 
 		//defferred font loading after full page load
 		if (window.addEventListener)
-		window.addEventListener("load", loadFontsAfterPageLoad, false);
+		window.addEventListener("load", defferedLoading, false);
 		else if (window.attachEvent)
-		window.attachEvent("onload", loadFontsAfterPageLoad);
-		else window.onload = loadFontsAfterPageLoad;
+		window.attachEvent("onload", defferedLoading);
+		else window.onload = defferedLoading;
+
+
 
 	</script>
 
@@ -48,4 +67,7 @@
 		<p >This is where you'll find my online resume... soonish </p>
 	</header>
 </body>
+
 </html>
+<noscript><link rel="stylesheet" type="text/css"   href="css/style.min.css" /></noscript>
+
