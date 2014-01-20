@@ -5,32 +5,9 @@ html {
 	height:100%;
 	@include quadriColorGradient($gradient-color-1,$gradient-color-2,$gradient-color-3,$gradient-color-4);
 	background-repeat:no-repeat;
-	font-size:$base-font-size;
-	line-height:$base-line-height;
 	font-family:$font-stack; 
 	color:$primary-font-color;
 }
 
-header { max-width:33em; }
 
-h1 { font-size:3em; line-height:1.8em;  
-	
-@media  screen and (max-width: 630px) {
-    line-height:1.1em;
-  }}
-
-p { font-size:$header-p-font-height; }
-
-aside {
-	float:right;
-	top:0;
-}
-
-a
-{
-	font-size:$header-p-font-height;
-	text-decoration:none;
-	color:$primary-font-color;
-}
- 
  

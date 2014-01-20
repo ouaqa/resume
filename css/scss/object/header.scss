@@ -12,6 +12,8 @@
 	}	
   }
 
+header { max-width:33em; }
+
 .coming-soon
 {
 	width:100%;
@@ -19,14 +21,13 @@
 	max-width: 500px; 
   	max-height: 500px;
 
-
-	/* background-color:$opt-color;
-	background:linear-gradient($alpha-gradient-start , $alpha-gradient-stop ); */
 	@include linearGradient ($alpha-gradient-start , $alpha-gradient-stop ); 
 	/* border-radius:50%; */
 
 	text-align:center;
-	
+
+	h1 {  line-height:1.8em;  }
+	p { font-size:$header-p-font-height; }	
 	
 }
 
