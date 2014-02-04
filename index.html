@@ -60,9 +60,11 @@
 						<h3>Programming Skills</h3>
 					</header>
 					<dl>
-						<dt class="p-skill"><h4>PHP</h4> <em>4/5</em></dt>
+						<dt class="p-skill">PHP</dt>
+						<dd><em>4/5</em></dd>
 						<dd>I've been coding a lot in php, not my all time favorite thougt. Lots of work on our custom cms, adapteasy. Did some wordpress and joomla customization. </dd>
-						<dt class="p-skill"><h4>Actionscript (Flex/Flash)</h4> <em>5/5</em></dt>
+						<dt class="p-skill">Actionscript (Flex/Flash)<dt>
+						<dd><em>5/5</em></dd>
 						<dd> 
 							<h5>frameworks</h5>
 							<ul role="presentation">
@@ -71,11 +73,14 @@
 								<li class="p-skill">Robotlegs <em>4/5</em></li>
 							</ul>
 						</dd>
-						<dt class="p-skill"><h4>Javascript</h4> <em>3/5</em></dt>
+						<dt class="p-skill">Javascript<dt>
+						<dd><em>3/5</em></dd>
 						<dd>Now this is something i like. I diving into Vanilla since jquery tends to do too much stuff for me</dd>
-						<dt class="p-skill"><h4>html/css</h4> <em>3/5</em></dt>
+						<dt class="p-skill">html/css</dt>
+						<dd> <em>3/5</em></dd>
 						<dd>after being frustrated by not doing anything remotely nice with this, I've decided to take matters on my own turf</dd>
-						<dt class="p-skill"><h4>Java</h4> <em>2/5</em></dt>
+						<dt class="p-skill">Java</dt>
+						<dd><em>2/5</em></dd>
 						<dd>Meh</dd>
 					</dl>
 				</article>
@@ -285,6 +290,7 @@
 			}
 		};
 
+
 		//deffer font loading
 		function loadFontsAfterPageLoad() 
 		{
@@ -297,16 +303,32 @@
 			s.parentNode.insertBefore(wf, s);
 		}
 
+		function loadCssAfterPageLoad ()
+		{
+			var linkElement = document.createElement("link");
+			linkElement.rel = "stylesheet";
+			linkElement.type = "text/css";
+			linkElement.media = "screen";
+			linkElement.href = "css/style.min.css"; 
+
+			document.head.appendChild(linkElement);
+		}
+
+		function loadBothAfterPageLoad()
+		{
+			loadCssAfterPageLoad();
+			loadFontsAfterPageLoad;
+		}
 
 		//defferred font loading after full page load
 		if (window.addEventListener)
-		window.addEventListener("load", loadFontsAfterPageLoad, false);
+		window.addEventListener("load", loadBothAfterPageLoad, false);
 		else if (window.attachEvent)
-		window.attachEvent("onload", loadFontsAfterPageLoad);
-		else window.onload = loadFontsAfterPageLoad;
+		window.attachEvent("onload", loadBothAfterPageLoad);
+		else window.onload = loadBothAfterPageLoad;
 
 	</script>
 
 </body>
 </html>
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css" >
+<!--<link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css" >-->
