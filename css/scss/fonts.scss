@@ -1,36 +1,23 @@
 
-@font-face
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway:300);
+
+
+$heading-font:  raleway  ; 
+/*$sub-heading-font: 'League Gothic';*/
+$base-font : 'Open Sans Condensed', sans-serif;
+
+.wf-active h1,h2,h3,h4,h5 
 {
-font-family: 'Great Vibes';
-src: url(font/great_vibes/GreatVibes-Regular.otf);
-} 
-
-$alternative-font : 'Great Vibes'  ;  
-
-
+	  font-family:$heading-font; 
+}
 
 /*
-@font-face
+.wf-active header
 {
-font-family: dude;
-src: url(font/dude_personal/Dude_Hank.otf);
-} 
-*/
+	 font-family:$sub-heading-font; 
+}*/
 
-@font-face
+.wf-active	 
 {
-font-family: chunkfive;
-src: url(font/chunkfive/Chunkfive.otf);
-} 
-
-
- $heading-font:  chunkfive  ; 
-
-
-.wf-active h1 {
-	  font-family:$heading-font; 
-	}
-.wf-active	p 
-	{
-		 font-family: $alternative-font;
-	}	
+	 font-family: $base-font; 
+}	 

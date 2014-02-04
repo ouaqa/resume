@@ -1,0 +1,61 @@
+$font-color-dark: #808080;
+$font-color-light: #999999;
+$color1: #8dced8;
+$color2: #b2dee6;
+$color3: #d8eff3;
+
+$section-height:100em;
+$section-padding:10em;
+
+
+@media only screen and (min-width: $large-screen ) 
+{
+	section 
+	{
+		height: $section-height;
+		padding-top:$section-padding;
+	}
+
+	.site-banner
+	{
+		height: $section-height;
+		padding-top:$section-padding;
+		padding-left:$section-padding;
+	}
+
+	.background-1
+	{
+		background-color : $color1;
+		color:$font-color-dark;
+		background-repeat:no-repeat;
+		background-attachment: fixed; 
+	}
+	.background-2
+	{
+		color:$font-color-dark;
+		background-color : $color2;
+		background-repeat:no-repeat;
+		background-attachment: fixed; 
+	}
+	.background-3
+	{
+		color:$font-color-dark;
+		background-color : $color3;
+		background-repeat:no-repeat;
+		background-attachment: fixed; 
+	}
+	.background-4
+	{
+		color:$font-color-dark;
+		background-color : $color2;
+		background-repeat:no-repeat;
+		background-attachment: fixed; 
+	}
+	.background-5
+	{
+		color:$font-color-dark;
+		background-color : $color1;
+		background-repeat:no-repeat;
+		background-attachment: fixed; 
+	}
+}

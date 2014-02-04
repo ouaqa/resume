@@ -1,9 +1,22 @@
 /*
 	Base file fort
 */
+/* Set up a variable for maths */
+/* the font-size mixin */
+/* example of usage 
+
+.prose p {
+  @include font-size(16);  
+}
+
+*/
 /* basic variables */
-/*kuler color stack */
 /*background color*/
+/* $header-p-font-height:1.6rem; */
+/*
+	Font size mixin
+*/
+/* Set up a variable for maths */
 /* http://meyerweb.com/eric/tools/css/reset/
  * v2.0 | 20110126
  * License: none (public domain) */
@@ -50,60 +63,21 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* 
-basic definitions
+/* the font-size mixin from http://alwaystwisted.com/post.php?s=2014-01-01-rems-fallbacks-and-support */
+/* example of usage 
+
+.prose p {
+  @include font-size(16);  
+}
 */
-html {
-  height: 100%;
-  background: #74104b;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #74104b), color-stop(33%, #a7264d), color-stop(66%, #be3550), color-stop(100%, #f36244));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #74104b 0%, #f36244 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #74104b 0%, #a7264d 33%, #be3550 66%, #f36244 100%);
-  /* W3C */
-  background-repeat: no-repeat;
-  /* font-size:$base-font-size;
-  line-height:$base-line-height; */
-  font-family: "MS Serif", "New York", serif;
-  color: #333333; }
-
-header {
-  max-width: 33em; }
-
-/* 
-h1 { font-size:3em; line-height:1.8em;  
-	
-@media  screen and (max-width: 630px) {
-    line-height:1.1em;
-  }}
-
-p { font-size:$header-p-font-height; } */
-aside {
-  float: right;
-  top: 0; }
-
-/* a
-{
-	font-size:$header-p-font-height;
-	text-decoration:none;
-	color:$primary-font-color;
-} */
 /* 
   from http://typecast.com/blog/a-more-modern-scale-for-web-typography *
   made sassy...
 */
 html {
   /* font-size: 100%; */
-  font-size: 30px;
-  line-height: 1.5em; }
+  font-size: 12px;
+  line-height: 1.5rem; }
 
 body {
   font-size: 1em;
@@ -187,45 +161,98 @@ blockquote {
     /* 24px / 16px = */
     line-height: 1.45833333;
     /* 35px / 24px */ } }
-.absolute-centered {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; }
-  .absolute-centered h1, .absolute-centered p {
-    display: table;
-    height: auto;
-    width: 100%; }
-
-header {
-  max-width: 33em; }
-
-.coming-soon {
-  width: 100%;
+/* 
+basic definitions
+*/
+html {
   height: 100%;
-  max-width: 500px;
-  max-height: 500px;
-  background: #faa143;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #faa143), color-stop(100%, rgba(250, 161, 67, 0)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #faa143 0%, rgba(250, 161, 67, 0) 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #faa143 0%, rgba(250, 161, 67, 0) 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
-  /* IE6-9 */
-  /* border-radius:50%; */
-  text-align: center; }
-  .coming-soon h1 {
-    line-height: 1.8em; }
-  .coming-soon p {
-    font-size: 1.6em; }
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #484848;
+  font-family: Sans-Serif;
+  overflow-y: auto;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  font-size: 100%; }
+
+.grid-context {
+  width: 100%;
+  content: "";
+  display: table;
+  clear: both; }
+
+.col-2-2 {
+  width: 100%; }
+
+@media (min-width: 43.7em) and (max-width: 70em) {
+  [class*='col-'] {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important; }
+
+  .col-1-2 {
+    width: 50%; } }
+@media (max-width: 70em) {
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  [class*='col-'] {
+    padding-right: 10px; }
+
+  [class*='col-']:last-of-type {
+    padding-right: 0; }
+
+  .grid-outer-gutter {
+    padding: 10px 0 10px 10px; }
+
+  .grid-outer-gutter > [class*='col-']:last-of-type {
+    padding-right: 20px; } }
+@media only screen and (min-width: 70em) {
+  section {
+    height: 100em;
+    padding-top: 10em; }
+
+  .site-banner {
+    height: 100em;
+    padding-top: 10em;
+    padding-left: 10em; }
+
+  .background-1 {
+    background-color: #8dced8;
+    color: gray;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+
+  .background-2 {
+    color: gray;
+    background-color: #b2dee6;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+
+  .background-3 {
+    color: gray;
+    background-color: #d8eff3;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+
+  .background-4 {
+    color: gray;
+    background-color: #b2dee6;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+
+  .background-5 {
+    color: gray;
+    background-color: #8dced8;
+    background-repeat: no-repeat;
+    background-attachment: fixed; } }
+/* @import 'object/global-navigation.scss' ; */

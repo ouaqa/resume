@@ -3,11 +3,16 @@ basic definitions
 */
 html {
 	height:100%;
-	@include quadriColorGradient($gradient-color-1,$gradient-color-2,$gradient-color-3,$gradient-color-4);
+	//@include quadriColorGradient($gradient-color-1,$gradient-color-2,$gradient-color-3,$gradient-color-4);
 	background-repeat:no-repeat;
-	font-family:$font-stack; 
+	background-attachment: fixed; 
 	color:$primary-font-color;
-}
-
-
+	font-family: Sans-Serif;
  
+	overflow-y: auto; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+
+} 
+
+body { font-size: $body-font-size; }

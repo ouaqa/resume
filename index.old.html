@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Aur&eacute;lien B&eacute;n&eacute;fice, Developer</title>
+	<meta name="description" content="Hi, I'm Aurelien Benefice, I'm a developer and this is my resume">
+	<meta name="author" content="Aurelien Benefice">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+	<script type="text/javascript">
+
+		//font list
+		WebFontConfig = 
+		{
+			custom: 
+			{
+				families : ['dude','Great Vibes'], 
+				urls : ['css/fonts.css']
+			}
+		};
+
+		//deffer font loading
+		function loadFontsAfterPageLoad() 
+		{
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		}
+
+
+		//defferred font loading after full page load
+		if (window.addEventListener)
+		window.addEventListener("load", loadFontsAfterPageLoad, false);
+		else if (window.attachEvent)
+		window.attachEvent("onload", loadFontsAfterPageLoad);
+		else window.onload = loadFontsAfterPageLoad;
+
+	</script>
+
+</head>
+<body>
+	<header class="absolute-centered coming-soon">
+		<h1  >Hello, I'm Aur&eacute;lien</h1>
+		<p >This is where you'll find my online resume... soonish </p>
+	</header>
+</body>
+</html>

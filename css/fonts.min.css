@@ -1,1 +1,1 @@
-@font-face{font-family:'Great Vibes';src:url(font/great_vibes/GreatVibes-Regular.otf)}@font-face{font-family:chunkfive;src:url(font/chunkfive/Chunkfive.otf)}.wf-active h1{font-family:chunkfive}.wf-active p{font-family:"Great Vibes"}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway:300);.wf-active h1,h2,h3,h4,h5{font-family:raleway}.wf-active{font-family:"Open Sans Condensed",sans-serif}

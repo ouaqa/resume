@@ -1,0 +1,66 @@
+@mixin col {
+    border:0px solid rgba(0,0,0,0);
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+$gutter-width: 10px;
+
+.grid-context
+{ 
+	width:100%;
+
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.col-2-2{
+	width:100%;
+}
+
+
+
+@media (min-width: $medium-screen) and (max-width:$large-screen ) {
+
+  [class*='col-'] {
+  @include col;
+}
+
+
+.col-1-2{
+	width:50%;
+}
+}
+
+@media (max-width:$large-screen ) {
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class*='col-'] {
+  padding-right: $gutter-width;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.grid-outer-gutter {
+  padding: $gutter-width 0 $gutter-width $gutter-width;
+}
+
+.grid-outer-gutter > [class*='col-']:last-of-type {
+  padding-right: 20px;
+} 
+
+}
