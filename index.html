@@ -7,7 +7,7 @@
 		<meta name="author" content="Aurelien Benefice">
 
 		
-
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css" />
 		<link title="French version" type="text/html" rel="alternate" hreflang="fr" href="index-fr.html">
 	</head>
 
@@ -290,7 +290,6 @@
 			}
 		};
 
-
 		//deffer font loading
 		function loadFontsAfterPageLoad() 
 		{
@@ -303,32 +302,15 @@
 			s.parentNode.insertBefore(wf, s);
 		}
 
-		function loadCssAfterPageLoad ()
-		{
-			var linkElement = document.createElement("link");
-			linkElement.rel = "stylesheet";
-			linkElement.type = "text/css";
-			linkElement.media = "screen";
-			linkElement.href = "css/style.min.css"; 
-
-			document.head.appendChild(linkElement);
-		}
-
-		function loadBothAfterPageLoad()
-		{
-			loadCssAfterPageLoad();
-			loadFontsAfterPageLoad;
-		}
 
 		//defferred font loading after full page load
 		if (window.addEventListener)
-		window.addEventListener("load", loadBothAfterPageLoad, false);
+		window.addEventListener("load", loadFontsAfterPageLoad, false);
 		else if (window.attachEvent)
-		window.attachEvent("onload", loadBothAfterPageLoad);
-		else window.onload = loadBothAfterPageLoad;
+		window.attachEvent("onload", loadFontsAfterPageLoad);
+		else window.onload = loadFontsAfterPageLoad;
 
 	</script>
 
 </body>
 </html>
-<!--<link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css" >-->
