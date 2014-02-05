@@ -172,12 +172,12 @@ html {
 
 body {
   font-size: 100%;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+  	/* -webkit-text-size-adjust:none;
+      -moz-text-size-adjust:none;
+      -ms-text-size-adjust:none;
+      -webkit-text-size-adjust:100%;
+      -moz-text-size-adjust:100%;
+      -ms-text-size-adjust:100%; */ }
 
 a {
   color: gray; }
@@ -191,7 +191,7 @@ a {
 .col-2-2 {
   width: 100%; }
 
-@media (min-width: 43.7em) and (max-width: 70em) {
+@media (min-width: 70em) and (max-width: 80em) {
   [class*='col-'] {
     border: 0px solid rgba(0, 0, 0, 0);
     float: left;
@@ -204,7 +204,7 @@ a {
 
   .col-1-2 {
     width: 50%; } }
-@media (max-width: 70em) {
+@media (max-width: 80em) {
   *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -221,7 +221,7 @@ a {
 
   .grid-outer-gutter > [class*='col-']:last-of-type {
     padding-right: 20px; } }
-@media only screen and (min-width: 70em) {
+@media only screen and (min-width: 80em) {
   section {
     height: 100em;
     padding-top: 10em; }
