@@ -18,17 +18,3 @@
     background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
-
-
-/* the font-size mixin from http://alwaystwisted.com/post.php?s=2014-01-01-rems-fallbacks-and-support */
-
-@mixin font-size($size) {
-  font-size: 0px + $size;
-  font-size: 0rem + $size / $doc-font-size;
-}
-/* example of usage 
-
-.prose p {
-  @include font-size(16);  
-}
-*/

@@ -1,8 +1,8 @@
 $font-color-dark: #808080;
 $font-color-light: #999999;
-$color1: #8dced8;
-$color2: #b2dee6;
-$color3: #d8eff3;
+$background-color-1: #8dced8;
+$background-color-2: #b2dee6;
+$background-color-3: #d8eff3;
 
 $section-height:100em;
 $section-padding:10em;
@@ -16,6 +16,12 @@ $section-padding:10em;
 		padding-top:$section-padding;
 	}
 
+	[class*='background-'] 
+	{
+		padding-top:$section-padding/4;
+		padding-left:$section-padding;
+	}
+
 	.site-banner
 	{
 		height: $section-height;
@@ -25,7 +31,7 @@ $section-padding:10em;
 
 	.background-1
 	{
-		background-color : $color1;
+		background-color : $background-color-1;
 		color:$font-color-dark;
 		background-repeat:no-repeat;
 		background-attachment: fixed; 
@@ -33,28 +39,28 @@ $section-padding:10em;
 	.background-2
 	{
 		color:$font-color-dark;
-		background-color : $color2;
+		background-color : $background-color-2;
 		background-repeat:no-repeat;
 		background-attachment: fixed; 
 	}
 	.background-3
 	{
 		color:$font-color-dark;
-		background-color : $color3;
+		background-color : $background-color-3;
 		background-repeat:no-repeat;
 		background-attachment: fixed; 
 	}
 	.background-4
 	{
 		color:$font-color-dark;
-		background-color : $color2;
+		background-color : $background-color-2;
 		background-repeat:no-repeat;
 		background-attachment: fixed; 
 	}
 	.background-5
 	{
 		color:$font-color-dark;
-		background-color : $color1;
+		background-color : $background-color-1;
 		background-repeat:no-repeat;
 		background-attachment: fixed; 
 	}

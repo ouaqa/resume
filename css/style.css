@@ -63,21 +63,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* the font-size mixin from http://alwaystwisted.com/post.php?s=2014-01-01-rems-fallbacks-and-support */
-/* example of usage 
+a {
+  text-decoration: none; }
 
-.prose p {
-  @include font-size(16);  
-}
-*/
 /* 
   from http://typecast.com/blog/a-more-modern-scale-for-web-typography *
   made sassy...
 */
 html {
   /* font-size: 100%; */
-  font-size: 12px;
-  line-height: 1.5rem; }
+  font-size: 20px;
+  line-height: 1.5em; }
 
 body {
   font-size: 1em;
@@ -87,7 +83,7 @@ body {
 
 @media (min-width: 43.75em) {
   body {
-    font-size: 1em;
+    font-size: 1.2em;
     /* equivalent to 16px */
     line-height: 1.375;
     /* equivalent to 22px */ } }
@@ -168,14 +164,23 @@ html {
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #484848;
+  color: gray;
   font-family: Sans-Serif;
   overflow-y: auto;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
 body {
-  font-size: 100%; }
+  font-size: 100%;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a {
+  color: gray; }
 
 .grid-context {
   width: 100%;
@@ -221,6 +226,10 @@ body {
     height: 100em;
     padding-top: 10em; }
 
+  [class*='background-'] {
+    padding-top: 2.5em;
+    padding-left: 10em; }
+
   .site-banner {
     height: 100em;
     padding-top: 10em;
@@ -255,4 +264,4 @@ body {
     background-color: #8dced8;
     background-repeat: no-repeat;
     background-attachment: fixed; } }
-/* @import 'object/global-navigation.scss' ; */
+/* @import 'object/global-navigation.scss' ;  */
