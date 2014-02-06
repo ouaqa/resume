@@ -1,3 +1,29 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+/* the rem sizing mixin */
+/* based on http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback */
+
+/*
+available keywords :
+    xx-small
+    x-small
+    small
+    medium
+    large
+    x-large
+    xx-large
+*/
+
+@mixin font-size( $decimal-size, $keyword: null ) {
+  @if $keyword{ font-size: $keyword; }
+  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
+  font-size: $decimal-size * 1rem;
+}
+
+
+/* gradient mixins */
 @mixin quadriColorGradient($top, $middle1 , $middle2, $bottom){
     background: $top; /* Old browsers */
     background: -moz-linear-gradient(top,  $top 0%,  $middle1 33%, $middle2 66%, $bottom 100%); /* FF3.6+ */
@@ -8,7 +34,7 @@
     background: linear-gradient(to bottom,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); /* W3C */
 }  
 
-@mixin linearGradient($top, $bottom){
+@mixin bicolorGradient($top, $bottom){
     background: $top; /* Old browsers */
     background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
@@ -17,4 +43,43 @@
     background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
     background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+/* text hover mixin */
+@mixin text-hover($color)
+{
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+
+    &:hover 
+    {
+        color:$color;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+    }
+    &:active 
+    {
+        color:$color;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+    } 
+    &:focus 
+    {
+        color:$color;
+        -o-transition:.5s;
+        -ms-transition:.5s;
+        -moz-transition:.5s;
+        -webkit-transition:.5s;
+        transition:.5s;
+    }
+
 }

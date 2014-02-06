@@ -1,11 +1,43 @@
-/*
-	Base file fort
-*/
+		/*------------------------------------*\
+    TABLE OF CONTENTS 
+    based on Harry Robert's articles and
+    https:/github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES.................Define Sass Variables
+ * MIXINS....................Define Sass Mixins
+ * GENERIC...................Reset,typo... 
+ * BASE......................Global Element Styles
+ * STRUCTURE.................Site structure (header, nav, etc)
+ */
 @import 'vars.scss';
-@import 'generic/meyer-reset.sass';
-@import 'generic/mixins.scss' ;
-@import 'base/typo.scss' ;
+@import 'mixins.scss' ;
+
+
+
+
+/*------------------------------------*\
+    $GENERIC
+\*------------------------------------*/
+@import 'generic/meyer-reset.scss';
+@import 'generic/box-sizing.scss';
+@import 'generic/typo.scss' ;
+
+
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
 @import 'base/base.scss' ;
-@import 'base/my-grid.scss' ;
+/*@import 'base/my-grid.scss' ;*/
 @import 'base/section-full-page.scss' ; 
-/* @import 'object/global-navigation.scss' ;  */ 
+
+
+
+/*------------------------------------*\
+    $STRUCTURE
+\*------------------------------------*/
+@import 'gui/global-navigation.scss' ;  
+@import 'gui/banner.scss' ;  
+@import 'gui/contact.scss' ;  

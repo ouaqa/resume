@@ -1,0 +1,15 @@
+/* contact elements */ 
+.contact {
+	margin-top:3em; 
+}
+.contact__title{}
+.contact__sub-title{}
+
+[class*='contact__link-']:after 
+{ 
+	content:"\A"; 
+	white-space:pre;
+	@include text-hover(#ffffff) ;
+}
+.contact__link--mail{}
+.contact__link--plus{} 

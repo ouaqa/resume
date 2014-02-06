@@ -1,0 +1,38 @@
+/* Styles for the navgation bar */
+.global-navigation
+{
+	background-color:$font-color-dark;
+	color:$font-color-light;
+	position:fixed;
+	top:0;
+	width:100%;
+	
+	@media only screen and (min-width: $large-screen ) 
+	{
+	}
+}
+
+.global-navigation__title
+{ 
+	display:inline; 
+	font-weight: bold;
+	cursor:default;
+
+	&:after {content:" | ";}
+}
+
+.global-navigation__link
+{
+	color:$font-color-light;
+
+	&:not(:last-child):after {content:" | ";}
+
+	@include text-hover(#ffffff) ;
+
+	@media only screen and (min-width: $medium-screen ) 
+	{
+		@include font-size(1.5);
+	}
+
+}
+

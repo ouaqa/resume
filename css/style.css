@@ -1,25 +1,47 @@
-/*
-	Base file fort
-*/
-/* Set up a variable for maths */
-/* the font-size mixin */
-/* example of usage 
-
-.prose p {
-  @include font-size(16);  
-}
-
-*/
+		/*------------------------------------*\
+    TABLE OF CONTENTS 
+    based on Harry Robert's articles and
+    https:/github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES.................Define Sass Variables
+ * MIXINS....................Define Sass Mixins
+ * GENERIC...................Reset,typo... 
+ * BASE......................Global Element Styles
+ * STRUCTURE.................Site structure (header, nav, etc)
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
 /* basic variables */
-/*background color*/
-/* $header-p-font-height:1.6rem; */
+/* font colors */
+/* background colors */
+/* font size and line heights (todo use px rem fallback) */
+/* screen sizes */
+/* full page vars */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* the rem sizing mixin */
+/* based on http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback */
 /*
-	Font size mixin
+available keywords :
+    xx-small
+    x-small
+    small
+    medium
+    large
+    x-large
+    xx-large
 */
-/* Set up a variable for maths */
-/* http://meyerweb.com/eric/tools/css/reset/
- * v2.0 | 20110126
- * License: none (public domain) */
+/* gradient mixins */
+/* text hover mixin */
+/*------------------------------------*\
+    $GENERIC
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
 * {
   margin: 0;
   padding: 0; }
@@ -60,7 +82,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
+  content: '';
   content: none; }
 
 table {
@@ -68,109 +90,25 @@ table {
   border-spacing: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  outline: none; }
+
+/* 
+	box sizing reset 
+	http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 /* 
   from http://typecast.com/blog/a-more-modern-scale-for-web-typography *
   made sassy...
 */
 html {
-  /* font-size: 100%; */
-  font-size: 20px;
-  line-height: 1.5em; }
-
-body {
-  font-size: 1em;
-  /* equivalent to 16px */
-  line-height: 1.25;
-  /* equivalent to 20px */ }
-
-@media (min-width: 43.75em) {
-  body {
-    font-size: 1.2em;
-    /* equivalent to 16px */
-    line-height: 1.375;
-    /* equivalent to 22px */ } }
-h1 {
-  font-size: 2em;
-  /* 2x body copy size = 32px */
-  line-height: 1.25;
-  /* 45px / 36px */ }
-
-@media (min-width: 43.75em) {
-  h1 {
-    font-size: 2.5em;
-    /* 2.5x body copy size = 40px */
-    line-height: 1.125; } }
-@media (min-width: 56.25em) {
-  h1 {
-    font-size: 3em;
-    /* 3x body copy size = 48px */
-    line-height: 1.05;
-    /* keep to a multiple of the 20px line height and something more appropriate for display headings */ } }
-h2 {
-  font-size: 1.625em;
-  /* 1.625x body copy size = 26px */
-  line-height: 1.15384615;
-  /* 30px / 26px */ }
-
-@media (min-width: 43.75em) {
-  h2 {
-    font-size: 2em;
-    /* 2x body copy size = 32px */
-    line-height: 1.25; } }
-@media (min-width: 56.25em) {
-  h2 {
-    font-size: 2.25em;
-    /* 2.25x body copy size = 36px */
-    line-height: 1.25; } }
-h3 {
-  font-size: 1.375em;
-  /* 1.375x body copy size = 22px */
-  line-height: 1.13636364;
-  /* 25px / 22px */ }
-
-@media (min-width: 43.75em) {
-  h3 {
-    font-size: 1.5em;
-    /* 1.5x body copy size = 24px */
-    line-height: 1.25; } }
-@media (min-width: 56.25em) {
-  h3 {
-    font-size: 1.75em;
-    /* 1.75x body copy size = 28px */
-    line-height: 1.25; } }
-h4 {
-  font-size: 1.125em;
-  /* 1.125x body copy size = 18px */
-  line-height: 1.11111111; }
-
-@media (min-width: 43.75em) {
-  h4 {
-    line-height: 1.22222222;
-    /* (22px / 18px */ } }
-blockquote {
-  font-size: 1.25em;
-  /* 20px / 16px */
-  line-height: 1.25;
-  /* 25px / 20px */ }
-
-@media (min-width: 43.75em) {
-  blockquote {
-    font-size: 1.5em;
-    /* 24px / 16px = */
-    line-height: 1.45833333;
-    /* 35px / 24px */ } }
-/* 
-basic definitions
-*/
-html {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: gray;
-  font-family: Sans-Serif;
-  overflow-y: auto;
+  font-size: 100%;
+  line-height: 1.5em;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
@@ -179,91 +117,254 @@ html {
   -ms-text-size-adjust: 100%; }
 
 body {
+  font-size: medium;
+  font-size: 1rem;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */ }
+  @media (min-width: 43.75em) {
+    body {
+      font-size: medium;
+      font-size: 1.2rem;
+      /* equivalent to 16px */
+      line-height: 1.375;
+      /* equivalent to 22px */ } }
+
+h1 {
+  font-size: 32px;
+  font-size: 2rem;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */ }
+  @media (min-width: 43.75em) {
+    h1 {
+      font-size: 40px;
+      font-size: 2.5rem;
+      /* 2.5x body copy size = 40px */
+      line-height: 1.125; } }
+  @media (min-width: 56.25em) {
+    h1 {
+      font-size: 48px;
+      font-size: 3rem;
+      /* 3x body copy size = 48px */
+      line-height: 1.05;
+      /* keep to a multiple of the 20px line height and something more appropriate for display headings */ } }
+
+h2 {
+  font-size: 26px;
+  font-size: 1.625rem;
+  /* font-size: 1.625em; */
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */ }
+  @media (min-width: 43.75em) {
+    h2 {
+      font-size: 32px;
+      font-size: 2rem;
+      /* 2x body copy size = 32px */
+      line-height: 1.25; } }
+  @media (min-width: 56.25em) {
+    h2 {
+      font-size: 36px;
+      font-size: 2.25rem;
+      /* font-size: 2.25em; */
+      /* 2.25x body copy size = 36px */
+      line-height: 1.25; } }
+
+h3 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */ }
+  @media (min-width: 43.75em) {
+    h3 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      /* 1.5x body copy size = 24px */
+      line-height: 1.25; } }
+  @media (min-width: 56.25em) {
+    h3 {
+      font-size: 28px;
+      font-size: 1.75rem;
+      /* 1.75x body copy size = 28px */
+      line-height: 1.25; } }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111; }
+  @media (min-width: 43.75em) {
+    h4 {
+      line-height: 1.22222222;
+      /* (22px / 18px */ } }
+
+blockquote {
+  font-size: small;
+  font-size: 1.25rem;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */ }
+  @media (min-width: 43.75em) {
+    blockquote {
+      font-size: small;
+      font-size: 1.5rem;
+      /* 24px / 16px = */
+      line-height: 1.45833333;
+      /* 35px / 24px */ } }
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/*------------------------------------*\
+    $BASE GLOBAL STYLES
+\*------------------------------------*/
+html {
+  height: 100%;
+  color: gray;
+  font-family: Sans-Serif; }
+
+body {
   font-size: 100%; }
 
 a {
   color: gray; }
 
-.grid-context {
-  width: 100%;
-  content: "";
-  display: table;
-  clear: both; }
+strong {
+  font-weight: bold; }
 
-.col-2-2 {
+/*@import 'base/my-grid.scss' ;*/
+/* paddings and heights */
+[class*='background-'] {
+  padding-top: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em; }
+  @media (min-width: 43.75em) {
+    [class*='background-'] {
+      height: 70em;
+      min-height: 70em;
+      padding-top: 2.5em;
+      padding-left: 10em;
+      padding-right: 1em;
+      padding-bottom: 1em; } }
+
+.background--title {
+  padding-top: 1em;
+  padding-left: 1em; }
+  @media (min-width: 43.75em) {
+    .background--title {
+      padding-top: 10em;
+      padding-left: 10em; } }
+
+/* painting the backgrounds */
+[class*='background-'] {
+  color: gray;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.background-1 {
+  background-color: #8dced8; }
+
+.background-2 {
+  background-color: #b2dee6; }
+
+.background-3 {
+  background-color: #d8eff3; }
+
+.background-4 {
+  background-color: #b2dee6; }
+
+.background-5 {
+  background-color: #8dced8; }
+
+/*------------------------------------*\
+    $STRUCTURE
+\*------------------------------------*/
+/* Styles for the navgation bar */
+.global-navigation {
+  background-color: gray;
+  color: #999999;
+  position: fixed;
+  top: 0;
   width: 100%; }
 
-@media (min-width: 70em) and (max-width: 80em) {
-  [class*='col-'] {
-    border: 0px solid rgba(0, 0, 0, 0);
-    float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-background-clip: padding-box !important;
-    -webkit-background-clip: padding-box !important;
-    background-clip: padding-box !important; }
+.global-navigation__title {
+  display: inline;
+  font-weight: bold;
+  cursor: default; }
+  .global-navigation__title:after {
+    content: " | "; }
 
-  .col-1-2 {
-    width: 50%; } }
-@media (max-width: 80em) {
-  *, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
+.global-navigation__link {
+  color: #999999;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  .global-navigation__link:not(:last-child):after {
+    content: " | "; }
+  .global-navigation__link:hover {
+    color: white;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  .global-navigation__link:active {
+    color: white;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  .global-navigation__link:focus {
+    color: white;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  @media only screen and (min-width: 40.4em) {
+    .global-navigation__link {
+      font-size: 24px;
+      font-size: 1.5rem; } }
 
-  [class*='col-'] {
-    padding-right: 10px; }
+.banner__sub-title {
+  margin-top: 2em; }
 
-  [class*='col-']:last-of-type {
-    padding-right: 0; }
+/* contact elements */
+.contact {
+  margin-top: 3em; }
 
-  .grid-outer-gutter {
-    padding: 10px 0 10px 10px; }
-
-  .grid-outer-gutter > [class*='col-']:last-of-type {
-    padding-right: 20px; } }
-@media only screen and (min-width: 80em) {
-  section {
-    height: 100em;
-    padding-top: 10em; }
-
-  [class*='background-'] {
-    padding-top: 2.5em;
-    padding-left: 10em; }
-
-  .site-banner {
-    height: 100em;
-    padding-top: 10em;
-    padding-left: 10em; }
-
-  .background-1 {
-    background-color: #8dced8;
-    color: gray;
-    background-repeat: no-repeat;
-    background-attachment: fixed; }
-
-  .background-2 {
-    color: gray;
-    background-color: #b2dee6;
-    background-repeat: no-repeat;
-    background-attachment: fixed; }
-
-  .background-3 {
-    color: gray;
-    background-color: #d8eff3;
-    background-repeat: no-repeat;
-    background-attachment: fixed; }
-
-  .background-4 {
-    color: gray;
-    background-color: #b2dee6;
-    background-repeat: no-repeat;
-    background-attachment: fixed; }
-
-  .background-5 {
-    color: gray;
-    background-color: #8dced8;
-    background-repeat: no-repeat;
-    background-attachment: fixed; } }
-/* @import 'object/global-navigation.scss' ;  */
+[class*='contact__link-']:after {
+  content: "\A";
+  white-space: pre;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s; }
+  [class*='contact__link-']:after:hover {
+    color: white;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  [class*='contact__link-']:after:active {
+    color: white;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; }
+  [class*='contact__link-']:after:focus {
+    color: white;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s; }
