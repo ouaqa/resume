@@ -3,7 +3,7 @@
 \*------------------------------------*/
 html {
 	height:100%;
-	color:$font-color-dark;
+	color:$font-color-light;
 	font-family: Sans-Serif;
 } 
 
@@ -12,9 +12,27 @@ body {
 }
 
 a { 
-	color:$font-color-dark;
+	color:$font-color-light;
+	@include default-tansition;
+	@include text-hover($font-color-hover) ;
 }
 
 strong
 { font-weight: bold;}
+
+em
+{ font-weight: bold; }
+
+/* dd , dt, dl {display:inline;}  */
+
+/* standard styles */
+.right
+{
+	float:right;
+}
+
+.left
+{
+	float:left;
+}
   

@@ -45,41 +45,60 @@ available keywords :
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
-/* text hover mixin */
-@mixin text-hover($color)
-{
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
 
+
+/* basic grid column mixin */
+@mixin col {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+}
+
+
+
+/* text hover mixin */
+@mixin default-tansition($duration:.5s)
+{
+    -o-transition:$duration;
+    -ms-transition:$duration;
+    -moz-transition:$duration;
+    -webkit-transition:$duration;
+    transition:$duration;
+}
+
+@mixin text-hover($color,$duration:.5s)
+{
     &:hover 
     {
         color:$color;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
+        -o-transition:$duration;
+        -ms-transition:$duration;
+        -moz-transition:$duration;
+        -webkit-transition:$duration;
+        transition:$duration;
     }
     &:active 
     {
         color:$color;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
+        -o-transition:$duration;
+        -ms-transition:$duration;
+        -moz-transition:$duration;
+        -webkit-transition:$duration;
+        transition:$duration;
     } 
     &:focus 
     {
         color:$color;
-        -o-transition:.5s;
-        -ms-transition:.5s;
-        -moz-transition:.5s;
-        -webkit-transition:.5s;
-        transition:.5s;
+        -o-transition:$duration;
+        -ms-transition:$duration;
+        -moz-transition:$duration;
+        -webkit-transition:$duration;
+        transition:$duration;
     }
-
 }
+

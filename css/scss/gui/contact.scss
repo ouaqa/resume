@@ -11,5 +11,5 @@
 	white-space:pre;
 	@include text-hover(#ffffff) ;
 }
-.contact__link--mail{}
-.contact__link--plus{} 
+.contact__link--mail:before{content:"email : ";}
+.contact__link--plus:before{content:"plus : ";} 

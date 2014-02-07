@@ -1,23 +1,24 @@
 	/* paddings and heights */
-	[class*='background-']
+	
+	 [class*='background-']
 	{
-		padding-top:$section-padding/40;
+	/* 	padding-top:$section-padding/40;
 		padding-left:$section-padding/10;
 		padding-right:$section-padding/10;
-		padding-bottom:$section-padding/10;
+		padding-bottom:$section-padding/10; */
 		
 		@media (min-width: 43.75em) 
 		{  
-			height: $section-height;
+			/* height: $section-height; */
 			min-height: $section-height;
-			padding-top:$section-padding/4;
+			/* padding-top:$section-padding/4;
 			padding-left:$section-padding;
 			padding-right:$section-padding/10;
-			padding-bottom:$section-padding/10;
+			padding-bottom:$section-padding/10; */
 		}
-	}
+	} 
 
-	.background--title
+	/* .background--title
 	{
 		padding-top:$section-padding/10;
 		padding-left:$section-padding/10;
@@ -26,12 +27,11 @@
 			padding-top:$section-padding;
 			padding-left:$section-padding;
 		}
-	} 
+	} */ 
 
 	/* painting the backgrounds */ 
 	[class*='background-'] 
 	{
-		color:$font-color-dark;
  		background-repeat:no-repeat;
 		background-attachment: fixed;  
 	}
@@ -53,6 +53,7 @@
 	.background-3
 	{
 		background-color : $background-color-3;
+
 		 //@include bicolorGradient($background-color-3,$background-color-2); 
 
 	}

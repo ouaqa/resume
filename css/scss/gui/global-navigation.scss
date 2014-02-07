@@ -1,33 +1,42 @@
 /* Styles for the navgation bar */
-.global-navigation
+
+$global-nav-height : 3em;
+
+.global-nav
 {
 	background-color:$font-color-dark;
 	color:$font-color-light;
 	position:fixed;
 	top:0;
-	width:100%;
+	left:0;
+	height:3em;  
+	width:100%; 
 	
 	@media only screen and (min-width: $large-screen ) 
 	{
 	}
 }
 
-.global-navigation__title
+
+ .global-nav__container
+{
+	padding-top:4.1em;
+} 
+
+.global-nav__title
 { 
 	display:inline; 
 	font-weight: bold;
 	cursor:default;
 
-	&:after {content:" | ";}
+	//&:after {content:" | ";}
 }
 
-.global-navigation__link
+.global-nav__link
 {
 	color:$font-color-light;
 
-	&:not(:last-child):after {content:" | ";}
-
-	@include text-hover(#ffffff) ;
+	//&:not(:last-child):after {content:" | ";}
 
 	@media only screen and (min-width: $medium-screen ) 
 	{
