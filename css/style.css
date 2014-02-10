@@ -267,69 +267,18 @@ em {
 
 /* dd , dt, dl {display:inline;}  */
 /* standard styles */
-.right {
-  float: right; }
+/*.right
+{
+	float:right;
+}
 
-.left {
-  float: left; }
-
-/*------------------------------------*\
-    $GRID
-    simple grid system based on http://css-tricks.com/dont-overthink-it-grids/
-\*------------------------------------*/
-.grid {
-  width: 100%;
-  content: "";
-  display: table;
-  clear: both; }
-
-[class*='grid__col-'] {
-  width: 100%; }
-
-@media (min-width: 40.4em) {
-  [class*='grid__col-'] {
-    border: 0px solid rgba(0, 0, 0, 0);
-    float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-background-clip: padding-box !important;
-    -webkit-background-clip: padding-box !important;
-    background-clip: padding-box !important; }
-
-  [class*='grid__col-'] {
-    padding-right: 1em; }
-
-  [class*='grid__col-']:last-of-type {
-    padding-right: 0; }
-
-  .grid--outer-gutter {
-    padding-left: 1em;
-    padding-right: 1em; }
-
-  .grid--outer-gutter > [class*='grid__col-']:last-of-type {
-    padding-right: 20px; }
-
-  .grid__col-1-2 {
-    width: 50%; }
-
-  .grid__col-2-3 {
-    width: 66.66%; }
-
-  .grid__col-1-3 {
-    width: 33.33%; }
-
-  .grid__col-1-2 {
-    width: 50%; }
-
-  .grid__col-1-4 {
-    width: 25%; }
-
-  .grid__col-1-8 {
-    width: 12.5%; }
-
-  .grid__col-1-5 {
-    width: 20%; } }
+.left
+{
+	float:left;
+}
+  
+*/
+/*@import 'base/my-grid.scss' ;*/
 /* paddings and heights */
 [class*='background-'] {
   /* 	padding-top:$section-padding/40;
