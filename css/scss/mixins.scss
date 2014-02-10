@@ -45,6 +45,12 @@ available keywords :
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
+@mixin opaqueBackground ($r,$g,$b,$a)
+{
+    background-color:rgb($r,$g,$b);
+    background-color:rgba($r,$g,$b,$a);
+}
+
 
 
 /* basic grid column mixin */

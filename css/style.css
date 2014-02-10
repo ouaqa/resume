@@ -16,6 +16,7 @@
 /* basic variables */
 /* font colors */
 /* background colors */
+/* transparent colors */
 /* font size and line heights (todo use px rem fallback) */
 /* screen sizes */
 /* full page vars */
@@ -260,25 +261,19 @@ a {
     transition: 0.5s; }
 
 strong {
-  font-weight: bold; }
+  text-transform: uppercase; }
 
 em {
   font-weight: bold; }
 
-/* dd , dt, dl {display:inline;}  */
 /* standard styles */
-/*.right
-{
-	float:right;
-}
+.right {
+  float: right; }
 
-.left
-{
-	float:left;
-}
-  
-*/
-/*@import 'base/my-grid.scss' ;*/
+.left {
+  float: left; }
+
+/* @import 'base/my-grid.scss' ; */
 /* paddings and heights */
 [class*='background-'] {
   /* 	padding-top:$section-padding/40;
@@ -330,6 +325,7 @@ em {
 /* Styles for the navgation bar */
 .global-nav {
   background-color: #c7c7c7;
+  background-color: rgba(199, 199, 199, 0.8);
   color: #e0e0e0;
   position: fixed;
   top: 0;
@@ -337,9 +333,10 @@ em {
   height: 3em;
   width: 100%; }
 
-.global-nav__container {
-  padding-top: 4.1em; }
-
+ /* .global-nav__container
+{
+	padding-top:$global-nav-height;
+}  */
 .global-nav__title {
   display: inline;
   font-weight: bold;
@@ -350,7 +347,9 @@ em {
   @media only screen and (min-width: 40.4em) {
     .global-nav__link {
       font-size: 24px;
-      font-size: 1.5rem; } }
+      font-size: 1.5rem; }
+      .global-nav__link:not(:last-child):after {
+        content: " | "; } }
 
 .banner {
   padding-top: 10em; }
@@ -364,6 +363,12 @@ em {
 /* contact elements */
 .contact {
   margin-top: 3em; }
+
+.contact__title {
+  padding-bottom: .3em; }
+
+.contact__sub-title {
+  padding-bottom: 1em; }
 
 [class*='contact__link-']:after {
   content: "\A";
@@ -390,8 +395,13 @@ em {
     -webkit-transition: 0.5s;
     transition: 0.5s; }
 
+[class*='contact__link-'] {
+  font-size: 1.4em; }
+
 .contact__link--mail:before {
-  content: "email : "; }
+  content: "email : ";
+  text-transform: uppercase; }
 
 .contact__link--plus:before {
-  content: "plus : "; }
+  content: "plus : ";
+  text-transform: uppercase; }

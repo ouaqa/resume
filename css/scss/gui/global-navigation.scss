@@ -4,30 +4,33 @@ $global-nav-height : 3em;
 
 .global-nav
 {
-	background-color:$font-color-dark;
+	@include opaqueBackground($rgb-gray-light,$rgb-gray-light,$rgb-gray-light,$alpha);
+
 	color:$font-color-light;
 	position:fixed;
 	top:0;
 	left:0;
-	height:3em;  
+	height:$global-nav-height;  
 	width:100%; 
 	
 	@media only screen and (min-width: $large-screen ) 
 	{
 	}
+
 }
 
 
- .global-nav__container
+ /* .global-nav__container
 {
-	padding-top:4.1em;
-} 
+	padding-top:$global-nav-height;
+}  */
 
 .global-nav__title
 { 
 	display:inline; 
 	font-weight: bold;
 	cursor:default;
+
 
 	//&:after {content:" | ";}
 }
@@ -36,11 +39,10 @@ $global-nav-height : 3em;
 {
 	color:$font-color-light;
 
-	//&:not(:last-child):after {content:" | ";}
-
 	@media only screen and (min-width: $medium-screen ) 
 	{
 		@include font-size(1.5);
+		&:not(:last-child):after {content:" | ";}
 	}
 
 }

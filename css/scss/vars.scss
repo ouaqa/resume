@@ -15,6 +15,12 @@ $background-color-1: #40b498;//#8dced8;
 $background-color-2: #60c8af;//#b2dee6;
 $background-color-3: #85d6c2;//#d8eff3;
 
+/* transparent colors */
+$rgb-gray-light:199;
+$alpha:.8;
+
+
+
 /* font size and line heights (todo use px rem fallback) */
 $base-font-multiplier : 1 ; //1 = 100%.
 $base-line-height:1.5em;

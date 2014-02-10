@@ -2,8 +2,8 @@
 .contact {
 	margin-top:3em; 
 }
-.contact__title{}
-.contact__sub-title{}
+.contact__title{padding-bottom:.3em;}
+.contact__sub-title{ padding-bottom:1em;}
 
 [class*='contact__link-']:after 
 { 
@@ -11,5 +11,12 @@
 	white-space:pre;
 	@include text-hover(#ffffff) ;
 }
-.contact__link--mail:before{content:"email : ";}
-.contact__link--plus:before{content:"plus : ";} 
+
+[class*='contact__link-']
+{
+	font-size:1.4em;
+}
+.contact__link--mail:before 
+{ content:"email : "; text-transform:uppercase; }
+.contact__link--plus:before 
+{ content:"plus : "; text-transform:uppercase; } 
