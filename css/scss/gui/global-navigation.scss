@@ -39,10 +39,14 @@ $global-nav-height : 3em;
 {
 	color:$font-color-light;
 
+	display:block;
+
+
 	@media only screen and (min-width: $medium-screen ) 
 	{
+		display:inline;
 		@include font-size(1.5);
-		&:not(:last-child):after {content:" | ";}
+		&:not(:last-child):after {content:"";}
 	}
 
 }

@@ -30,7 +30,7 @@
     $BASE
 \*------------------------------------*/
 @import 'base/base.scss' ;
-/* @import 'base/my-grid.scss' ; */
+@import 'base/my-grid.scss' ;
 @import 'base/section-full-page.scss' ; 
 
 
@@ -41,3 +41,8 @@
 @import 'gui/global-navigation.scss' ;  
 @import 'gui/banner.scss' ;  
 @import 'gui/contact.scss' ;  
+
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
+@import 'object/skill.scss';

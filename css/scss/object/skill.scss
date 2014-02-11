@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    $Skill level indicators
+\*------------------------------------*/
+
+
+[class*='skill__meter']
+{
+	 display:block;
+	width:inherit;
+	background-color:$font-color-dark;
+}
+
+[class*='skill__level-']
+{
+	height:100%;
+	display:block;	
+	width:inherit;
+	background-color:$background-color-3;
+	text-align:right;
+}
+.skill__level-1-5 {width:20%;}
+.skill__level-2-5 {width:40%;}
+.skill__level-3-5 {width:60%;}
+.skill__level-4-5 {width:80%;}
+.skill__level-5-5 {width:100%;}
+.skill__levelling-up {}

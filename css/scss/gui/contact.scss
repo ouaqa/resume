@@ -14,7 +14,7 @@
 
 [class*='contact__link-']
 {
-	font-size:1.4em;
+	 @include font-size(1.4,medium);
 }
 .contact__link--mail:before 
 { content:"email : "; text-transform:uppercase; }

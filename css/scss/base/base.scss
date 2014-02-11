@@ -8,8 +8,25 @@ html {
 } 
 
 body { 
-	font-size: $body-font-size; 
+	height:100%;
+	/* font-size: $body-font-size;  */
 }
+
+header
+{
+	/* height:100%; */
+	padding-top:$default-section-padding;
+	padding-bottom:$default-section-padding;
+}
+
+section
+{
+	/* height:100%;
+	min-height:100%; */
+	padding-top:$default-section-padding;
+	padding-bottom:$default-section-padding;
+}
+
 
 a { 
 	color:$font-color-light;
@@ -23,6 +40,9 @@ strong
 em
 { font-weight: bold; }
 
+dt { margin-top:1em; }
+dd { margin-left:1em; }
+
 
 /* standard styles */
 .right
@@ -33,4 +53,9 @@ em
 .left
 {
 	float:left;
+}
+
+.text-center
+{
+	text-align  : center ;
 }

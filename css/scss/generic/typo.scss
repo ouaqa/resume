@@ -18,7 +18,7 @@ html {
 //local reset
  
 body {
-  @include font-size(1,medium);
+  @include font-size(1.2,medium);
   /* equivalent to 16px */
   line-height: 1.25; 
   /* equivalent to 20px */

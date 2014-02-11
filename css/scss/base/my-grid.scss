@@ -35,6 +35,12 @@
     padding-right: 20px;
   }
 
+  .grid__col--centered
+  {
+      margin-left: auto;
+    margin-right: auto;
+  }
+
   .grid__col-1-2 {
     width: 50%;
   }
