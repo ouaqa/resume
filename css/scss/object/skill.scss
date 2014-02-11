@@ -7,7 +7,7 @@
 {
 	 display:block;
 	width:inherit;
-	background-color:$font-color-dark;
+	background-color:$font-color-dark ;
 }
 
 [class*='skill__level-']
@@ -15,7 +15,7 @@
 	height:100%;
 	display:block;	
 	width:inherit;
-	background-color:$background-color-3;
+	background-color:$complimentary-color;
 	text-align:right;
 }
 .skill__level-1-5 {width:20%;}
