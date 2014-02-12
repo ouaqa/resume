@@ -14,17 +14,17 @@
 	</head>
 
 
-	<body class="global-nav__container" role="document" class="h-resume">
+	<body role="document" class="h-resume">
 
 		<!-- site navigation -->
-		<nav class="global-nav grid grid--outer-gutter " role="navigation">
-			<h3 class="global-nav__title grid__col-1-8 ">goto</h3>
-			<a  class="global-nav__link grid__col-1-8 " href="index.html#hello" >home</a>
-			<a  class="global-nav__link grid__col-1-8 " href="index.html#work-experience" >work experience</a>
-			<a  class="global-nav__link grid__col-1-8 " href="index.html#skills" >skills</a>
-			<a  class="global-nav__link grid__col-1-8 " href="index.html#education" >education</a>
-			<a  class="global-nav__link grid__col-1-8 " href="index.html#about-me" >about me</a>
-			<a  class="global-nav__link grid__col-1-8 " href="https://github.com/ouaqa/resume" rel="source" target="_blank" >source</a>
+		<nav class="global-nav " role="navigation">
+			<h3 class="global-nav__title">goto</h3>
+			<a  class="global-nav__link " href="index.html#hello" >home</a>
+			<a  class="global-nav__link " href="index.html#work-experience" >work experience</a>
+			<a  class="global-nav__link " href="index.html#skills" >skills</a>
+			<a  class="global-nav__link " href="index.html#education" >education</a>
+			<a  class="global-nav__link " href="index.html#about-me" >about me</a>
+			<a  class="global-nav__link " href="https://github.com/ouaqa/resume" rel="source" target="_blank" >source</a>
 		</nav>	
 
 		<a id="hello"></a>
@@ -44,15 +44,15 @@
 		
 
 		<!-- - - - - - - - - - - -  -->
-		<!--     skills      -->
+		<!--     skills     		-->
 		<!-- - - - - - - - - - - -  -->
 		<a id="skills"></a>
 		<section class=" grid grid--outer-gutter  p-summary background-2">
-			<header>
-				<h2 class="text-center">skills</h2>
+			<header class="text-center">
+				<h2 >skills</h2>
 			</header>
 			
-			<article class="grid__col-1-3 grid__col--centered">
+			<article class="grid__col-2-3 grid__col--centered">
 				<header>
 					<h3 class="text-center">Programming Skills</h3>
 				</header>
@@ -61,29 +61,33 @@
 					<dt class="p-skill">Actionscript</dt>
 					<dd class="skill__meter"><span class="skill__level-5-5">expert<span></dd>
 					<dd> 
-						<h5>frameworks</h5>
 						<ul role="presentation">
 							<li class="p-skill">Flex 4.x <div class="skill__meter"><span class="skill__level-4-5">excellent<span></div></li>
 							<li class="p-skill">Starling, feathers <div class="skill__meter"><span class="skill__level-3-5">intermediate<span></div></li>
 							<li class="p-skill">Robotlegs <div class="skill__meter"><span class="skill__level-4-5">excellent<span></div></li>
 						</ul>
 					</dd>
+					<dd>I worked extensively with the flex framework to build specific tools during my stay at atonis like a <a href="http://www.eyesinterface.com/demoEyes.html" target="_blank">search engine</a> and photo editing tools. As the sole flash developer in my company; I taught myself how to code properly, learn from online experts and comunities, and (unfortunately) drill through large projects alone.</dd>
+					
 
 					<dt class="p-skill">PHP</dt>
 					<dd class="skill__meter"><span class="skill__level-4-5">excellent<span></dd>
-					<dd>I've been coding a lot in php, not my all time favorite thougt. Lots of work on our custom cms, adapteasy.</dd>
+					<dd>Working as a back-end developer in web agencies, my main tool has been PHP for quite a while.</dd>
 
 					<dt class="p-skill">Javascript</dt>
 					<dd class="skill__meter"><span class="skill__level-3-5 skill__levelling-up">intermediate<span></dd>
-					<dd>Now this is something I like. I'm currently diving into pure javascript.</dd>
+					<dd>I mainly used JQuery for ux enhancements, building tailored-fit sliders, dropdowns and what not. Now, I've decided to level-up this skill by focusing first on vanilla javascript then learn node js and everything that the cool kids talk about.</dd>
 
-					<dt class="p-skill">html/css</dt>
+					<dt class="p-skill">html</dt>
 					<dd class="skill__meter"><span class="skill__level-3-5 skill__levelling-up">intermediate<span></dd>
-					<dd></dd> 
+					<dd>I decided to focus on learning how to code proper html code : no hacks,  full accessibility, proper markup...</dd>
+
+					<dt class="p-skill">css / sass</dt>
+					<dd class="skill__meter"><span class="skill__level-3-5 skill__levelling-up">intermediate<span></dd>
+					<dd>Before building this website, I have always been frustrated by css; now I'm learning sass and I love it ! </dd> 
 
 					<dt class="p-skill">Java</dt>
 					<dd class="skill__meter"><span class="skill__level-2-5">intermediate<span></dd>
-					<!-- <dd>Meh</dd> -->
 				</dl>
 			</article>
 
@@ -108,14 +112,15 @@
 					<h3 class="text-center">Other skills</h3>
 				</header>	
 				<ul role="presentation">
+					<dt class="p-skill">Project management tools (git/svn)</dt> 
+					<dd class="skill__meter"><span class="skill__level-3-5">intermediate</span></dd>
+
 					<dt class="p-skill">Photography</dt> 
 					<dd class="skill__meter"><span class="skill__level-4-5">intermediate</span></dd>
 		
-					<dt class="p-skill">Illustrator</dt> 
+					<dt class="p-skill">Illustrator, Photoshop</dt> 
 					<dd class="skill__meter"><span class="skill__level-2-5">beginner</span></dd>
 					
-					<dt class="p-skill">Photoshop</dt> 
-					<dd class="skill__meter"><span class="skill__level-2-5">beginner</span></dd>
 				</ul>
 			</article>
 		</section>	
@@ -124,13 +129,13 @@
 			<!-- work experience	-->
 			<!-- - - - - - - - - - - -  -->
 			<a id="work-experience"></a>
-			<section class="col-1-2 background-3">
-				<header>
+			<section class=" grid grid--outer-gutter background-3">
+				<header class="text-center">
 					<h2>work Experience</h2>
-					<p> Or what did I do with what I did learn ?</p>
+					<p> Or the story of what did I do with what I did learn ?</p>
 				</header>
 
-				<article class="p-experience">
+				<article class="p-experience grid__col-1-1">
 					<header>
 						<h3>Atonis Technologies</h3>
 						<ul role="presentation">
@@ -164,7 +169,7 @@
 					</aside>
 				</article>
 
-				<article class="p-experience">
+				<article class="p-experience grid__col-1-3">
 					<header>
 						<h3>Keepcore</h3>
 						<ul role="presentation">
@@ -185,7 +190,7 @@
 					</p>
 				</article>	
 			
-				<article class="p-experience">
+				<article class="p-experience grid__col-1-3 ">
 					<header>
 						<h3>Cibleweb</h3>
 						<h4>Back-end Developer</h4>
@@ -195,7 +200,7 @@
 					<p>I developped internal tools to ease various aspects of the company's activity wich were SEO and emailing at the time</p>
 				</article>	
 			
-				<article class="p-experience">
+				<article class="p-experience grid__col-1-3 ">
 					<header>
 						<h3>University Of Central Lancashire</h3>
 						<h4>Research and Development</h4>
@@ -207,14 +212,12 @@
 			</section>
 
 
-		<div class="grid-context grid-outer-gutter">	
-
 			<!-- - - - - - - - - - - -  -->
 			<!--       education        -->
 			<!-- - - - - - - - - - - -  -->
-				<a id="education"></a>
-			<section class="col-1-2 background-4">
-				<header>
+			<a id="education"></a>
+			<section class="background-4">
+				<header class="text-center">
 					<h2>Education</h2>
 					<p>I'm still not sure how I made it, but I did work for it</p>
 				</header>
@@ -264,13 +267,14 @@
 		<!-- - - - - - - - - - - -  -->
 		<!--       about me         -->
 		<!-- - - - - - - - - - - -  -->
-			<a id="about-me"></a>
-		<section  class="col-1-2 background-5">
-			<header>
+		<a id="about-me"></a>
+		<section  class="background-5">
+			<header class="text-center">
 				<h2>a bit more about me</h2>
 			</header>
 			<ul role="presentation">
 				<li>spent most of my childhood abroad</li>
+				<li>self learner</li>
 				<li>I can drive !</li>
 				<li>did a lot of scouting</li>
 				<li>avid reader</li>
@@ -282,11 +286,7 @@
 				<li>would love to be able to draw something decent (flat trend saved my life)</li>
 			</ul>
 		</section>
-	</div>
-
-	<div class="grid-context grid-outer-gutter">
 		<footer class="col-2-2"></footer>
-	</div>
 
 	<script type="text/javascript">
 

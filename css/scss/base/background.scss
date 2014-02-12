@@ -1,3 +1,7 @@
+/*------------------------------------*\ 
+    background for sections
+\*------------------------------------*/
+
 	/* paddings and heights */
 	
 	[class*='background-']
@@ -38,32 +42,33 @@
 
 	.background-1
 	{
-		background-color : $background-color-1;
-		 //@include bicolorGradient($background-color-1,$background-color-2); 
+		background-color : $main-color-1;
+		 //@include bicolorGradient($main-color-1,$main-color-2); 
 		
 	}
 	.background-2
 	{
-		background-color : $background-color-2;
-		 //@include bicolorGradient($background-color-2,$background-color-3); 
+		background-color : $main-color-2;
+		 //@include bicolorGradient($main-color-2,$main-color-3); 
 
 
 
 	}
 	.background-3
 	{
-		background-color : $background-color-3;
+		background-color : $main-color-1;
 
-		 //@include bicolorGradient($background-color-3,$background-color-2); 
+		 //@include bicolorGradient($main-color-3,$main-color-2); 
 
 	}
 	.background-4
 	{
-		 background-color : $background-color-2; 
-		//@include bicolorGradient($background-color-2,$background-color-1); 
+		 background-color : $main-color-2; 
+		//@include bicolorGradient($main-color-2,$main-color-1); 
 	}
+	
 	.background-5
 	{
-		 background-color : $background-color-1; 
-		 //@include bicolorGradient($background-color-1,$background-color-2); 
+		 background-color : $main-color-1; 
+		 //@include bicolorGradient($main-color-1,$main-color-2); 
 	}

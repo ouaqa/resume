@@ -284,6 +284,9 @@ dt {
 dd {
   margin-left: 1em; }
 
+li {
+  margin-left: 1em; }
+
 /* standard styles */
 .right {
   float: right; }
@@ -316,9 +319,7 @@ dd {
     box-sizing: border-box;
     -moz-background-clip: padding-box !important;
     -webkit-background-clip: padding-box !important;
-    background-clip: padding-box !important; }
-
-  [class*='grid__col-'] {
+    background-clip: padding-box !important;
     padding-right: 1em; }
 
   [class*='grid__col-']:last-of-type {
@@ -334,6 +335,9 @@ dd {
   .grid__col--centered {
     margin-left: auto;
     margin-right: auto; }
+
+  .grid__col-1-1 {
+    width: 100%; }
 
   .grid__col-1-2 {
     width: 50%; }
@@ -392,7 +396,7 @@ dd {
   background-color: #60c8af; }
 
 .background-3 {
-  background-color: #85d6c2; }
+  background-color: #40b498; }
 
 .background-4 {
   background-color: #60c8af; }
@@ -408,16 +412,22 @@ dd {
   background-color: #c7c7c7;
   background-color: rgba(199, 199, 199, 0.8);
   color: #e0e0e0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3em;
-  width: 100%; }
+  /* height:$global-nav-height;   */
+  width: 100%;
+  display: table; }
+  @media only screen and (min-width: 65.11em) {
+    .global-nav {
+      position: fixed;
+      top: 0;
+      left: 0; } }
 
- /* .global-nav__container
-{
-	padding-top:$global-nav-height;
-}  */
+[class*='global-nav_'] {
+  padding: 1em;
+  line-height: 1.5; }
+  @media only screen and (min-width: 24.41em) {
+    [class*='global-nav_'] {
+      line-height: 3; } }
+
 .global-nav__title {
   display: inline;
   font-weight: bold;
@@ -426,8 +436,12 @@ dd {
 .global-nav__link {
   color: #e0e0e0;
   display: block; }
+  @media only screen and (max-width: 40.4em) {
+    .global-nav__link {
+      border-top: 1px solid #e0e0e0; } }
   @media only screen and (min-width: 40.4em) {
     .global-nav__link {
+      border-right: 1px solid #e0e0e0;
       display: inline;
       font-size: 24px;
       font-size: 1.5rem; }
@@ -499,14 +513,15 @@ dd {
 [class*='skill__meter'] {
   display: block;
   width: inherit;
-  background-color: #c7c7c7; }
+  background-color: #85d6c2; }
 
 [class*='skill__level-'] {
   height: 100%;
   display: block;
   width: inherit;
   background-color: #e73b57;
-  text-align: right; }
+  text-align: right;
+  padding-right: 1em; }
 
 .skill__level-1-5 {
   width: 20%; }

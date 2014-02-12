@@ -18,9 +18,6 @@
 
   [class*='grid__col-'] {
     @include col;
-  }
-
-  [class*='grid__col-'] {
     padding-right: $gutter-width;
   }
   [class*='grid__col-']:last-of-type {
@@ -41,7 +38,10 @@
     margin-right: auto;
   }
 
-  .grid__col-1-2 {
+  .grid__col-1-1 {
+    width: 100%;
+  }
+.grid__col-1-2 {
     width: 50%;
   }
 
