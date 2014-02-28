@@ -2,42 +2,42 @@
     $VARIABLES
 \*------------------------------------*/
 
-/* basic variables */ 
+// basic variables  
 $body-font-size : 100%;
  
-/* font colors */
+// font colors 
 $font-color-dark: #c7c7c7;//#808080;
 $font-color-light:#e0e0e0;// #999999;
 $font-color-hover:#ffffff;
 
-/* background colors */
+// background colors 
 $main-color-1: #40b498;//#8dced8;
 $main-color-2: #60c8af;//#b2dee6;
 $main-color-3: #85d6c2;//#d8eff3;
 
 $complimentary-color:#E73B57;
 
-/* transparent colors */
+// transparent colors 
 $rgb-gray-light:199;
 $alpha:.8;
 
 
 
-/* font size and line heights (todo use px rem fallback) */
+// font size and line heights (todo use px rem fallback) 
 $base-font-multiplier : 1 ; //1 = 100%.
 $base-line-height:1.5em;
 
-/* screen sizes */
+// screen sizes 
 
 $small-screen : 24.41em;
 $medium-screen : 40.40em;
 $large-screen : 65.11em;
 
-/* full page vars */
+// full page vars 
 $section-height:70em;
 $section-padding:10em;
 
-/* grid vars */
+// grid vars 
 $gutter-width: 1em;
 $default-section-padding:1em;
 

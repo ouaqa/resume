@@ -9,7 +9,6 @@
 		<meta name="author" content="Aurelien Benefice">
 
 		
-		<link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css" />
 		<link title="French version" type="text/html" rel="alternate" hreflang="fr" href="index-fr.html">
 	</head>
 
@@ -17,26 +16,27 @@
 	<body role="document" class="h-resume">
 
 		<!-- site navigation -->
-		<nav class="global-nav " role="navigation">
-			<h3 class="global-nav__title">goto</h3>
-			<a  class="global-nav__link " href="index.html#hello" >home</a>
-			<a  class="global-nav__link " href="index.html#work-experience" >work experience</a>
-			<a  class="global-nav__link " href="index.html#skills" >skills</a>
-			<a  class="global-nav__link " href="index.html#education" >education</a>
-			<a  class="global-nav__link " href="index.html#about-me" >about me</a>
-			<a  class="global-nav__link " href="https://github.com/ouaqa/resume" rel="source" target="_blank" >source</a>
-		</nav>	
+		<nav class="global-nav" role="navigation">
+			<!-- <h3 class="global-nav__title icon--left icon__hidden icon--logo">goto</h3> -->
+			<a  class="global-nav__link icon--stack-left icon__hidden icon--home" href="index.html#hello" >top</a>
+			<a  class="global-nav__link icon--stack-left icon__hidden icon--work" href="index.html#work-experience" >work experience</a>
+			<a  class="global-nav__link icon--stack-left icon__hidden icon--skills " href="index.html#skills" >skills</a>
+			<a  class="global-nav__link icon--stack-left icon__hidden icon--education" href="index.html#education" >education</a>
+			<a  class="global-nav__link icon--stack-left icon__hidden icon--about-me" href="index.html#about-me" >about me</a>
+			<a  class="global-nav__link icon--stack-left icon__hidden icon--src" href="https://github.com/ouaqa/resume" rel="source" target="_blank" >source</a>
+		</nav>	 
+
 
 		<a id="hello"></a>
-		<header class="background-1 background--title banner grid grid--outer-gutter" role="banner">
+		<header class="background-1 banner grid grid--outer-gutter" role="banner">
 			<h1 class="banner__title grid__col-1-2">Hi, I'm <strong>Aur&eacute;lien,</strong> </h1>
 			<h2  class="banner__sub-title grid__col-1-2">I'm a web <em>developper</em>, going freelance, and this is my <em>resume</em></h2>
 
 			<aside class="contact p-contact h-card grid__col-1-2">
 				<h2 class="contact__title">Having a project in mind ?</h2>
 				<h3 class="contact__sub-title">Well then, let's get in touch !</h3>
-				<span class="contact__link--mail"><a class="u-email" rel="author" href="mailto:aurelien.benefice+dev@gmail.com">aurelien.benefice+dev@gmail.com</a></span>
-				<span class="contact__link--plus"><a class="u-url g-person" rel="author" href="https://plus.google.com/117831952145940518158" target="_blank">google.com/+B&eacute;n&eacute;ficeAur&eacute;lien</a></span>
+				<span class="contact__link--mail  icon--email"><a class="u-email" rel="author" href="mailto:aurelien.benefice+dev@gmail.com">aurelien.benefice+dev@gmail.com</a></span>
+				<span class="contact__link--plus icon--google-plus"><a class="u-url g-person" rel="author" href="https://plus.google.com/117831952145940518158" target="_blank">google.com/+B&eacute;n&eacute;ficeAur&eacute;lien</a></span>
 			</aside>	
 		</header>
 
@@ -47,53 +47,76 @@
 		<!--     skills     		-->
 		<!-- - - - - - - - - - - -  -->
 		<a id="skills"></a>
-		<section class=" grid grid--outer-gutter  p-summary background-2">
-			<header class="text-center">
-				<h2 >skills</h2>
+		<section class=" grid grid--outer-gutter  p-summary background-2 ">
+			<header class="icon--skills text-center" >
+				<h2 class="title__separation">skills</h2>
 			</header>
 			
-			<article class="grid__col-2-3 grid__col--centered">
-				<header>
-					<h3 class="text-center">Programming Skills</h3>
+			<section class="grid__col-2-3 grid__col--centered ">
+				<header class="">
+					<h3 class="text-center icon--programming">Programming Skills</h3>
 				</header>
-				<dl>
 
-					<dt class="p-skill">Actionscript</dt>
-					<dd class="skill__meter"><span class="skill__level-5-5">expert<span></dd>
-					<dd> 
-						<ul role="presentation">
+					<article class="grid__col-1-3 block block__expandable">
+						<header>
+							<h4 class="p-skill">Actionscript</h4>
+							<div class="skill__meter"><span class="skill__level-5-5">expert<span></div>
+						</header>
+
+	
+						<ul role="presentation" class="block__expandable--accessory">
 							<li class="p-skill">Flex 4.x <div class="skill__meter"><span class="skill__level-4-5">excellent<span></div></li>
 							<li class="p-skill">Starling, feathers <div class="skill__meter"><span class="skill__level-3-5">intermediate<span></div></li>
 							<li class="p-skill">Robotlegs <div class="skill__meter"><span class="skill__level-4-5">excellent<span></div></li>
 						</ul>
-					</dd>
-					<dd>I worked extensively with the flex framework to build specific tools during my stay at atonis like a <a href="http://www.eyesinterface.com/demoEyes.html" target="_blank">search engine</a> and photo editing tools. As the sole flash developer in my company; I taught myself how to code properly, learn from online experts and comunities, and (unfortunately) drill through large projects alone.</dd>
+
+						<p class="block__expandable--accessory">I worked extensively with the flex framework to build specific tools during my stay at atonis like a <a href="http://www.eyesinterface.com/demoEyes.html" target="_blank">search engine</a> and photo editing tools. As the sole flash developer in my company; I taught myself how to code properly, learn from online experts and comunities, and (unfortunately) drill through large projects alone.</p>
+					</article>
+
+
+					<article class="grid__col-1-3 block block__expandable ">
+						<header>
+							<h4 class="p-skill">PHP</h4>
+							<div class="skill__meter"><span class="skill__level-4-5">excellent<span></div>
+						</header>
+						<p class="block__expandable--accessory">Working as a back-end developer in web agencies, my main tool has been PHP for quite a while.</p>
+					</article>
 					
+					<article class="grid__col-1-3 block block__expandable">
+						<header>
+							<h4 class="p-skill skill__levelling-up">Javascript</h4>
+							<div class="skill__meter"><span class="skill__level-3-5 ">intermediate<span></div>
+						</header>
+						<p class="block__expandable--accessory">I mainly used JQuery for ux enhancements, building tailored-fit sliders, dropdowns and what not. Now, I've decided to level-up this skill by focusing first on vanilla javascript then learn node js and everything that the cool kids talk about.</p>
+					</article>
 
-					<dt class="p-skill">PHP</dt>
-					<dd class="skill__meter"><span class="skill__level-4-5">excellent<span></dd>
-					<dd>Working as a back-end developer in web agencies, my main tool has been PHP for quite a while.</dd>
+					<article class="grid__col-1-3 block  block__expandable">
+						<header>
+							<h4 class="p-skill skill__levelling-up">html</h4>
+							<div class="skill__meter"><span class="skill__level-3-5">intermediate<span></div>
+						</header>
+						<p class="block__expandable--accessory">I decided to focus on learning how to code proper html code : no hacks,  full accessibility, proper markup...</p>
+					</article>
 
-					<dt class="p-skill">Javascript</dt>
-					<dd class="skill__meter"><span class="skill__level-3-5 skill__levelling-up">intermediate<span></dd>
-					<dd>I mainly used JQuery for ux enhancements, building tailored-fit sliders, dropdowns and what not. Now, I've decided to level-up this skill by focusing first on vanilla javascript then learn node js and everything that the cool kids talk about.</dd>
+					<article class="grid__col-1-3 block  block__expandable">
+						<header>
+							<h4 class="p-skill skill__levelling-up">css / sass</h4>
+							<div class="skill__meter"><span class="skill__level-3-5">intermediate<span></div>
+						</header>
+						<p class="block__expandable--accessory">Before building this website, I have always been frustrated by css; now I'm learning sass and I love it ! </p> 
+					</article>
+					
+					<article class="grid__col-1-3 block  ">
+						<header>
+							<h4 class="p-skill">Java</h4>
+							<div class="skill__meter"><span class="skill__level-2-5">intermediate<span></div>
+						</header>
+					</article>
+			</section>
 
-					<dt class="p-skill">html</dt>
-					<dd class="skill__meter"><span class="skill__level-3-5 skill__levelling-up">intermediate<span></dd>
-					<dd>I decided to focus on learning how to code proper html code : no hacks,  full accessibility, proper markup...</dd>
-
-					<dt class="p-skill">css / sass</dt>
-					<dd class="skill__meter"><span class="skill__level-3-5 skill__levelling-up">intermediate<span></dd>
-					<dd>Before building this website, I have always been frustrated by css; now I'm learning sass and I love it ! </dd> 
-
-					<dt class="p-skill">Java</dt>
-					<dd class="skill__meter"><span class="skill__level-2-5">intermediate<span></dd>
-				</dl>
-			</article>
-
-			<article class="grid__col-1-3 grid__col--centered">
+			<section class="grid__col-1-3 grid__col--centered  ">
 				<header>
-					<h3 class="text-center">Foreign languages</h3>
+					<h3 class="text-center icon--foreign-languages">Foreign languages</h3>
 				</header>
 				<dl role="presentation">
 					<dt class="p-skill">French</dt> 
@@ -105,13 +128,13 @@
 					<dt class="p-skill">Spanish</dt> 
 					<dd class="skill__meter"><span class="skill__level-3-5">conversational<span></dd>
 				</dl>
-			</article>
+			</section>
 
-			<article class="grid__col-1-3 grid__col--centered">
+			<section class="grid__col-1-3 grid__col--centered  ">
 				<header>
-					<h3 class="text-center">Other skills</h3>
+					<h3 class="text-center icon--other-skills">Other skills</h3>
 				</header>	
-				<ul role="presentation">
+				<dl role="presentation">
 					<dt class="p-skill">Project management tools (git/svn)</dt> 
 					<dd class="skill__meter"><span class="skill__level-3-5">intermediate</span></dd>
 
@@ -120,22 +143,22 @@
 		
 					<dt class="p-skill">Illustrator, Photoshop</dt> 
 					<dd class="skill__meter"><span class="skill__level-2-5">beginner</span></dd>
-					
-				</ul>
-			</article>
+				</dl>
+			</section>
 		</section>	
 
-			<!-- - - - - - - - - - - -  -->
-			<!-- work experience	-->
-			<!-- - - - - - - - - - - -  -->
-			<a id="work-experience"></a>
-			<section class=" grid grid--outer-gutter background-3">
-				<header class="text-center">
-					<h2>work Experience</h2>
-					<p> Or the story of what did I do with what I did learn ?</p>
-				</header>
+		<!-- - - - - - - - - - - -  -->
+		<!--    work experience		-->
+		<!-- - - - - - - - - - - -  -->
+		<a id="work-experience"></a>
+		<section class="grid grid--outer-gutter background-3  ">
+			<header class="icon--work text-center" >
+				<h2 class="title__separation">work Experience</h2>
+				<p class="text-center"> Or the story of what did I do with what I did learn ?</p>
+			</header>
 
-				<article class="p-experience grid__col-1-1">
+			<article class="p-experience grid__col-1-4   ">
+				<div class="block block__expandable">
 					<header>
 						<h3>Atonis Technologies</h3>
 						<ul role="presentation">
@@ -154,22 +177,26 @@
 						<aside>from <time datetime="2010-04">april 2010</time> to <time datetime="2013-12">December 2013</time></aside>
 					</header>
 
-					<p>
-						I was responsible for the development of specialized flash applications, android mobile development, back end design and front end integration. We made dozens of websites using our own cms suite. 
-					</p>
+					<div class="block__expandable--accessory">
+						<p>
+							I was responsible for the development of specialized flash applications, android mobile development, back end design and front end integration. We made dozens of websites using our own cms suite. 
+						</p>
 
-					<aside>
-						<h4>some realisations</h4>
-						<ul role="presentation">
-							<li><a href="http://www.eyesinterface.com/" role="link">Eyes</a> : an importance-based search engine.</li>
-							<li><a href="http://www.photoschool-solution.com/" role="link">photoschool</a> : a software suite designed for school photography companies </li>
-							<li>Some of the websites we made <a href="http://www.redcastle.fr/">red castle</a>, <a href="http://www.benoist.pro/">benoist architectes</a> or <a href="http://www.masprovence.com/">mas provence</a>
-							</li>					
-						</ul>
-					</aside>
-				</article>
+						<aside>
+							<h4>some realisations</h4>
+							<ul role="presentation">
+								<li><a href="http://www.eyesinterface.com/" role="link">Eyes</a> : an importance-based search engine.</li>
+								<li><a href="http://www.photoschool-solution.com/" role="link">photoschool</a> : a software suite designed for school photography companies </li>
+								<li>Some of the websites we made <a href="http://www.redcastle.fr/">red castle</a>, <a href="http://www.benoist.pro/">benoist architectes</a> or <a href="http://www.masprovence.com/">mas provence</a>
+								</li>					
+							</ul>
+						</aside>
+					</div>
+				</div>
+			</article>
 
-				<article class="p-experience grid__col-1-3">
+			<article class="p-experience grid__col-1-4   ">
+				<div class="block block__expandable">
 					<header>
 						<h3>Keepcore</h3>
 						<ul role="presentation">
@@ -184,46 +211,51 @@
 						</ul>
 						<aside>Internship from <time datetime="2009-02">february 2009</time> to <time datetime="2009-08">August 2009</time></aside>
 					</header>
-					<p>
+					<p class="block__expandable--accessory">
 						During the 6 month of this internship I learned Flex and actionscript it was awesome.
 						I mainly worked on the keeplace project, an alternative to the large Business Software available. 
 					</p>
-				</article>	
-			
-				<article class="p-experience grid__col-1-3 ">
+				</div>
+			</article>	
+		
+			<article class="p-experience grid__col-1-4   ">
+				<div class="block block__expandable">
 					<header>
 						<h3>Cibleweb</h3>
 						<h4>Back-end Developer</h4>
 						<h5 class="p-skill">php</h5>
 						<aside>Internship from <time datetime="2006-04">April 2006</time> to <time datetime="2009-06">June 2006</time></aside>
 					</header>
-					<p>I developped internal tools to ease various aspects of the company's activity wich were SEO and emailing at the time</p>
-				</article>	
-			
-				<article class="p-experience grid__col-1-3 ">
-					<header>
-						<h3>University Of Central Lancashire</h3>
-						<h4>Research and Development</h4>
-						<h5 class="p-skill">java</h5>
-						<aside>from <time datetime="2005-02">february 2005</time> to <time datetime="2005-04">April 2005</time></aside>
-					</header>
-					<p>I was commissioned to develop an algorithm simulating human pedestrian movements and interactions.</p>
-				</article>
-			</section>
+					<p class="block__expandable--accessory">I developped internal tools to ease various aspects of the company's activity wich were SEO and emailing at the time</p>
+					</div>
+			</article>	
+		
+			<article class="p-experience grid__col-1-4   ">
+				<div class="block block__expandable">
+				<header>
+					<h3>University Of Central Lancashire</h3>
+					<h4>Research and Development</h4>
+					<h5 class="p-skill">java</h5>
+					<aside>from <time datetime="2005-02">february 2005</time> to <time datetime="2005-04">April 2005</time></aside>
+				</header>
+				<p class="block__expandable--accessory">I was commissioned to develop an algorithm simulating human pedestrian movements and interactions.</p>
+				</div>
+			</article>
+		</section>
 
 
 			<!-- - - - - - - - - - - -  -->
 			<!--       education        -->
 			<!-- - - - - - - - - - - -  -->
 			<a id="education"></a>
-			<section class="background-4">
-				<header class="text-center">
-					<h2>Education</h2>
-					<p>I'm still not sure how I made it, but I did work for it</p>
+			<section class="background-4 grid grid--outer-gutter  ">
+				<header class="icon--education text-center" >
+					<h2 class="title__separation">Education</h2>
+					<p class="text-center">I'm still not sure how I made it, but I did work for it</p>
 				</header>
 
-				<article class="p-education">
-					<header>
+				<article class="p-education  grid__col-1-4 ">
+					<header class="block">
 						<h3>Master Degree Computing engineering</h3>
 						<aside>
 							<p>obtained <em> with honours</em> in <time datetime="2009">2009</time></p>
@@ -232,8 +264,8 @@
 					</header>
 				</article>
 				
-			<article class="p-education">
-				<header>
+			<article class="p-education  grid__col-1-4 ">
+				<header class="block">
 					<h3>Master 1 Automated Information and multimedia Processing</h3>
 					<aside>
 					<p>obtained <em> with honours</em> in <time datetime="2008">2008</time></p>
@@ -242,8 +274,8 @@
 				</header>
 			</article>	
 				
-			<article class="p-education">
-				<header>
+			<article class="p-education  grid__col-1-4 ">
+				<header class="block">
 					<h3>Bachelor of science computing and system management</h3>
 					<p>profesional drunk</p>
 					<aside>
@@ -253,8 +285,8 @@
 				</header>
 			</article>	
 				
-			<article class="p-education">
-				<header>
+			<article class="p-education  grid__col-1-4 ">
+				<header class="block">
 					<h3>Information technologies technical diploma</h3>
 					<aside>
 					<p>obtained  in <time datetime="2006">2006</time></p>
@@ -268,26 +300,27 @@
 		<!--       about me         -->
 		<!-- - - - - - - - - - - -  -->
 		<a id="about-me"></a>
-		<section  class="background-5">
-			<header class="text-center">
-				<h2>a bit more about me</h2>
+		<section  class="background-5 about-me">
+			<header class="icon--about-me text-center" >
+				<h2 class="title__separation">a bit more about me</h2>
 			</header>
-			<ul role="presentation">
-				<li>spent most of my childhood abroad</li>
-				<li>self learner</li>
-				<li>I can drive !</li>
-				<li>did a lot of scouting</li>
-				<li>avid reader</li>
-				<li>love photography</li>
-				<li>love traveling</li>
-				<li>love cycling (actually, repairing cycles)</li>
-				<li>hipster in diguise</li>
-				<li>Lover of good conversations (arts, politics)</li>
-				<li>would love to be able to draw something decent (flat trend saved my life)</li>
+			<ul role="presentation" class="about-me__list  tetris-grid--container">
+				<li class="about-me__list-item tetris-grid--item icon--learner">self learner</li>
+				<li class="about-me__list-item tetris-grid--item icon--drive">I can drive !</li>
+				<li class="about-me__list-item tetris-grid--item icon--scout">did a lot of scouting</li>
+				<li class="about-me__list-item tetris-grid--item icon--read">avid reader</li>
+				<li class="about-me__list-item tetris-grid--item icon--photo">love photography</li>
+				<li class="about-me__list-item tetris-grid--item icon--travel">love traveling</li>
+				<li class="about-me__list-item tetris-grid--item icon--cycling">love cycling (actually, repairing cycles)</li>
+				<li class="about-me__list-item tetris-grid--item icon--hipster">hipster in diguise</li>
+				<li class="about-me__list-item tetris-grid--item icon--conversation">Lover of good conversations (arts, politics)</li>
 			</ul>
 		</section>
 		<footer class="col-2-2"></footer>
 
+
+	<link rel="stylesheet" type="text/css" media="screen" href="css/style.min.css" />
+	
 	<script type="text/javascript">
 
 		//font list

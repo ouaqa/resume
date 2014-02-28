@@ -1,0 +1,113 @@
+/*------------------------------------*\
+    $Font-based icons.
+\*------------------------------------*/
+
+//[class^="icon-"], [class*=" icon-"] 
+[class*='icon--']:before 
+{
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    margin-right:0.25em;
+}
+
+
+.icon--travel:before {
+    content: "\e600";
+}
+.icon--google-plus:before {
+    content: "\e601";
+}
+.icon--scout:before  {
+    content: "\e602";
+}
+.icon--photo:before  {
+    content: "\e604";
+}
+.icon--src:before {
+    content: "\e605";
+}
+.icon--cycling:before  {
+    content: "\e606";
+}
+.icon--skills:before {
+    content: "\e607"; 
+}
+.icon--email:before {
+    content: "\e608";
+}
+.icon--foreign-languages:before {
+    content: "\e609";
+}
+.icon--conversation:before{
+    content: "\e609";
+}
+.icon--drive:before  {
+    content: "\e615";
+}
+.icon--programming:before  {
+    content: "\e610";
+}
+.icon--other-skills:before {
+   content: "\e60f";
+}
+
+.icon--education:before {
+    content: "\e612";
+}
+.icon--learner:before {
+    content: "\e614";
+}
+.icon--read:before {
+    content: "\e616";
+}
+.icon--work:before {
+    content: "\e60b";
+}
+
+.icon--hipster:before {
+    content: "\e60d";
+}
+.icon--about-me:before  {
+    content: "\e618";
+}
+
+/* .icon--hipster:before {
+    content: "\e617";
+}
+ */
+
+
+
+.icon-earth:before {
+    content: "\e613";
+}
+
+.icon-screen:before {
+    content: "\e603";
+}
+
+
+.icon-bookmark:before {
+    content: "\e60c";
+}
+
+.icon-file-css:before {
+    content: "\e60e";
+}
+.icon-console:before {
+    content: "\e60f";
+}
+
+.icon-menu:before {
+    content: "\e611";
+}
+

@@ -1,4 +1,4 @@
-		/*------------------------------------*\
+/*------------------------------------*\
     TABLE OF CONTENTS 
     based on Harry Robert's articles and
     https:/github.com/csswizardry/CSS-Guidelines
@@ -7,44 +7,25 @@
  * VARIABLES.................Define Sass Variables
  * MIXINS....................Define Sass Mixins
  * GENERIC...................Reset,typo... 
- * BASE......................Global Element Styles
- * STRUCTURE.................Site structure (header, nav, etc)
+ * BASE......................Global Element Styles (grid, default styles, backgrounds...)
+ * GUI.......................Site structure (header, navigation, general zones, etc...)
+ * OBJECT....................Site structure (header, nav, etc)
  */
 /*------------------------------------*\
     $VARIABLES
 \*------------------------------------*/
-/* basic variables */
-/* font colors */
-/* background colors */
-/* transparent colors */
-/* font size and line heights (todo use px rem fallback) */
-/* screen sizes */
-/* full page vars */
-/* grid vars */
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-/* the rem sizing mixin */
-/* based on http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback */
-/*
-available keywords :
-    xx-small
-    x-small
-    small
-    medium
-    large
-    x-large
-    xx-large
-*/
-/* gradient mixins */
-/* basic grid column mixin */
-/* text hover mixin */
 /*------------------------------------*\
     $GENERIC
 \*------------------------------------*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain) */
+/*------------------------------------*\ 
+    css reset
+    based on http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+   License: none (public domain)
+\*------------------------------------*/
 * {
   margin: 0;
   padding: 0; }
@@ -65,7 +46,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  /*   font-size: 100%; */
   font: inherit;
   vertical-align: baseline; }
 
@@ -96,19 +76,20 @@ a {
   text-decoration: none;
   outline: none; }
 
-/* 
-	box sizing reset 
-	http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-*/
+/*------------------------------------*\ 
+    box sizing reset 
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+\*------------------------------------*/
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* 
-  from http://typecast.com/blog/a-more-modern-scale-for-web-typography *
-  made sassy...
-*/
+/*------------------------------------*\ 
+    typo basic responsive sizing reset 
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+     from http://typecast.com/blog/a-more-modern-scale-for-web-typography 
+\*------------------------------------*/
 html {
   font-size: 100%;
   line-height: 1.5em;
@@ -156,7 +137,6 @@ h1 {
 h2 {
   font-size: 26px;
   font-size: 1.625rem;
-  /* font-size: 1.625em; */
   /* 1.625x body copy size = 26px */
   line-height: 1.15384615;
   /* 30px / 26px */ }
@@ -170,7 +150,6 @@ h2 {
     h2 {
       font-size: 36px;
       font-size: 2.25rem;
-      /* font-size: 2.25em; */
       /* 2.25x body copy size = 36px */
       line-height: 1.25; } }
 
@@ -217,7 +196,7 @@ blockquote {
       line-height: 1.45833333;
       /* 35px / 24px */ } }
 
-/*------------------------------------*\
+/*------------------------------------*\ 
     $BASE
 \*------------------------------------*/
 /*------------------------------------*\
@@ -229,17 +208,13 @@ html {
   font-family: Sans-Serif; }
 
 body {
-  height: 100%;
-  /* font-size: $body-font-size;  */ }
+  height: 100%; }
 
 header {
-  /* height:100%; */
   padding-top: 1em;
   padding-bottom: 1em; }
 
 section {
-  /* height:100%;
-  min-height:100%; */
   padding-top: 1em;
   padding-bottom: 1em; }
 
@@ -284,9 +259,6 @@ dt {
 dd {
   margin-left: 1em; }
 
-li {
-  margin-left: 1em; }
-
 /* standard styles */
 .right {
   float: right; }
@@ -297,40 +269,66 @@ li {
 .text-center {
   text-align: center; }
 
+.title__separation {
+  text-align: center;
+  display: table;
+  white-space: nowrap; }
+  .title__separation:before, .title__separation:after {
+    border-top: 1px solid #e0e0e0;
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.5em;
+    width: 50%; }
+  .title__separation:before {
+    right: 1.5%; }
+  .title__separation:after {
+    left: 1.5%; }
+
 /*------------------------------------*\
     $GRID
     simple grid system based on http://css-tricks.com/dont-overthink-it-grids/
 \*------------------------------------*/
 .grid {
-  width: 100%;
-  content: "";
-  display: table;
-  clear: both; }
+  margin: 0; }
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 [class*='grid__col-'] {
-  width: 100%; }
+  width: 100%;
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important; }
 
 @media (min-width: 40.4em) {
-  [class*='grid__col-'] {
-    border: 0px solid rgba(0, 0, 0, 0);
-    float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -moz-background-clip: padding-box !important;
-    -webkit-background-clip: padding-box !important;
-    background-clip: padding-box !important;
-    padding-right: 1em; }
+  .grid__col-1-4 {
+    width: 50%; }
 
-  [class*='grid__col-']:last-of-type {
+  .grid__col-1-8 {
+    width: 25%; } }
+[class*='grid__col-'] {
+  padding-right: 0.5em;
+  padding-bottom: 0.5em; }
+  .grid [class*='grid__col-']:last-of-type {
     padding-right: 0; }
+
+@media (min-width: 65.11em) {
+  [class*='grid__col-'] {
+    padding-right: 1em;
+    padding-bottom: 1em; }
+    .grid [class*='grid__col-']:last-of-type {
+      padding-right: 0; }
 
   .grid--outer-gutter {
     padding-left: 1em;
     padding-right: 1em; }
-
-  .grid--outer-gutter > [class*='grid__col-']:last-of-type {
-    padding-right: 20px; }
 
   .grid__col--centered {
     margin-left: auto;
@@ -354,36 +352,76 @@ li {
   .grid__col-1-4 {
     width: 25%; }
 
-  .grid__col-1-8 {
-    width: 12.5%; }
-
   .grid__col-1-5 {
-    width: 20%; } }
+    width: 20%; }
+
+  .grid__col-1-6 {
+    width: 16.66%; }
+
+  .grid__col-1-8 {
+    width: 12.5%; } }
+/*------------------------------------*\
+    alternate grid system.
+    inspired by http://www.heydonworks.com/article/tetris-the-power-of-css
+\*------------------------------------*/
+.tetris-grid--container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  display: block;
+  display: inline-block; }
+
+.tetris-grid--container:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.tetris-grid--item {
+  float: left;
+  width: 33%;
+  width: calc(100% / 3);
+  min-height: 150px;
+  margin-top: 10px;
+  padding-right: 10px;
+  text-align: center; }
+
+.tetris-grid--item:nth-child(3n + 1):nth-last-child(2),
+.tetris-grid--item:nth-child(3n + 1):nth-last-child(2) + .tetris-grid--item {
+  width: 50%; }
+
+/*------------------------------------*\
+    $blocks for contents
+\*------------------------------------*/
+.block {
+  display: block;
+  padding: 1em; }
+
+@media (min-width: 65.11em) {
+  .block__expandable:hover .block__expandable--accessory {
+    max-height: 999px; }
+
+  .block__expandable--accessory {
+    max-height: 0;
+    overflow: hidden;
+    -o-transition: max-height 0.5s;
+    -ms-transition: max-height 0.5s;
+    -moz-transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+    -o-transition: 8;
+    -ms-transition: 8;
+    -moz-transition: 8;
+    -webkit-transition: 8;
+    transition: 8; } }
+/*------------------------------------*\ 
+    background for sections and general body style
+\*------------------------------------*/
 /* paddings and heights */
-[class*='background-'] {
-  /* 	padding-top:$section-padding/40;
-  	padding-left:$section-padding/10;
-  	padding-right:$section-padding/10;
-  	padding-bottom:$section-padding/10; */ }
-  @media (min-width: 43.75em) {
-    [class*='background-'] {
-      /* height: $section-height; */
-      min-height: 70em;
-      /* padding-top:$section-padding/4;
-      padding-left:$section-padding;
-      padding-right:$section-padding/10;
-      padding-bottom:$section-padding/10; */ } }
+@media (min-width: 43.75em) {
+  [class*='background-'] {
+    min-height: 70em; } }
 
-	/* .background--title
-	{ 
-		padding-top:$section-padding/10;
-		padding-left:$section-padding/10;
-
-		@media (min-width: 43.75em) {  
-			padding-top:$section-padding;
-			padding-left:$section-padding;
-		}
-	} */
 /* painting the backgrounds */
 [class*='background-'] {
   background-repeat: no-repeat;
@@ -405,16 +443,15 @@ li {
   background-color: #40b498; }
 
 /*------------------------------------*\
-    $STRUCTURE
+    $GUI
 \*------------------------------------*/
 /* Styles for the navgation bar */
 .global-nav {
   background-color: #c7c7c7;
   background-color: rgba(199, 199, 199, 0.8);
   color: #e0e0e0;
-  /* height:$global-nav-height;   */
   width: 100%;
-  display: table; }
+  display: inline-block; }
   @media only screen and (min-width: 65.11em) {
     .global-nav {
       position: fixed;
@@ -436,28 +473,27 @@ li {
 .global-nav__link {
   color: #e0e0e0;
   display: block; }
-  @media only screen and (max-width: 40.4em) {
-    .global-nav__link {
-      border-top: 1px solid #e0e0e0; } }
   @media only screen and (min-width: 40.4em) {
     .global-nav__link {
-      border-right: 1px solid #e0e0e0;
       display: inline;
       font-size: 24px;
-      font-size: 1.5rem; }
-      .global-nav__link:not(:last-child):after {
-        content: ""; } }
+      font-size: 1.5rem; } }
 
+/*------------------------------------*\
+    $Banner styling : Main  Heading info.
+\*------------------------------------*/
 .banner {
   padding-top: 10em; }
 
 .banner__title {
-  padding-bottom: 3em; }
+  padding-bottom: 2em; }
 
 .banner__sub-title {
   margin-top: 2em; }
 
-/* contact elements */
+/*------------------------------------*\
+    $contact related styles
+\*------------------------------------*/
 .contact {
   margin-top: 3em; }
 
@@ -537,3 +573,97 @@ li {
 
 .skill__level-5-5 {
   width: 100%; }
+
+/*------------------------------------*\
+    $Font-based icons.
+\*------------------------------------*/
+[class*='icon--']:before {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-right: 0.25em; }
+
+.icon--travel:before {
+  content: "\e600"; }
+
+.icon--google-plus:before {
+  content: "\e601"; }
+
+.icon--scout:before {
+  content: "\e602"; }
+
+.icon--photo:before {
+  content: "\e604"; }
+
+.icon--src:before {
+  content: "\e605"; }
+
+.icon--cycling:before {
+  content: "\e606"; }
+
+.icon--skills:before {
+  content: "\e607"; }
+
+.icon--email:before {
+  content: "\e608"; }
+
+.icon--foreign-languages:before {
+  content: "\e609"; }
+
+.icon--conversation:before {
+  content: "\e609"; }
+
+.icon--drive:before {
+  content: "\e615"; }
+
+.icon--programming:before {
+  content: "\e610"; }
+
+.icon--other-skills:before {
+  content: "\e60f"; }
+
+.icon--education:before {
+  content: "\e612"; }
+
+.icon--learner:before {
+  content: "\e614"; }
+
+.icon--read:before {
+  content: "\e616"; }
+
+.icon--work:before {
+  content: "\e60b"; }
+
+.icon--hipster:before {
+  content: "\e60d"; }
+
+.icon--about-me:before {
+  content: "\e618"; }
+
+/* .icon--hipster:before {
+    content: "\e617";
+}
+ */
+.icon-earth:before {
+  content: "\e613"; }
+
+.icon-screen:before {
+  content: "\e603"; }
+
+.icon-bookmark:before {
+  content: "\e60c"; }
+
+.icon-file-css:before {
+  content: "\e60e"; }
+
+.icon-console:before {
+  content: "\e60f"; }
+
+.icon-menu:before {
+  content: "\e611"; }

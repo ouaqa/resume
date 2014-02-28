@@ -7,10 +7,10 @@ $global-nav-height : 3em;
 	@include opaqueBackground($rgb-gray-light,$rgb-gray-light,$rgb-gray-light,$alpha);
 
 	color:$font-color-light;
-	/* height:$global-nav-height;   */
+	// height:$global-nav-height;   
 	width:100%; 
 
-	display:table;
+	display:inline-block;
 	
 	
 	@media only screen and (min-width: $large-screen ) 
@@ -39,7 +39,6 @@ $global-nav-height : 3em;
 	font-weight: bold;
 	cursor:default;
 
-
 	//&:after {content:" | ";}
 }
  
@@ -47,20 +46,21 @@ $global-nav-height : 3em;
 .global-nav__link
 {
 	color:$font-color-light;
-display:block;
+	display:block;
 	@media only screen and (max-width: $medium-screen ) 
 	{
-		border-top:1px solid $font-color-light;
+	//	border-top:1px solid $font-color-light;
 	}
 
 
 	@media only screen and (min-width: $medium-screen ) 
 	{
-		border-right:1px solid $font-color-light;
+		//border-right:1px solid $font-color-light;
 		display:inline;
 		@include font-size(1.5);
-		&:not(:last-child):after {content:"";}
+		//&:not(:last-child):after { content:"";}
 	}
-
 }
+
+
 

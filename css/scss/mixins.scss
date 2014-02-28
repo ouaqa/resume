@@ -2,19 +2,19 @@
     $MIXINS
 \*------------------------------------*/
 
-/* the rem sizing mixin */
-/* based on http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback */
+// the rem sizing mixin 
+// based on http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback 
 
-/*
-available keywords :
-    xx-small
-    x-small
-    small
-    medium
-    large
-    x-large
-    xx-large
-*/
+
+//available keywords :
+    //xx-small
+    //x-small
+    //small
+    //medium
+    //large
+    //x-large
+    //xx-large
+
 
 @mixin font-size( $decimal-size, $keyword: null ) {
   @if $keyword{ font-size: $keyword; }
@@ -23,26 +23,26 @@ available keywords :
 }
 
 
-/* gradient mixins */
+// gradient mixins 
 @mixin quadriColorGradient($top, $middle1 , $middle2, $bottom){
     background: $top; /* Old browsers */
-    background: -moz-linear-gradient(top,  $top 0%,  $middle1 33%, $middle2 66%, $bottom 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top),color-stop(33%,$middle1),color-stop(66%,$middle2), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); /* W3C */
+    background: -moz-linear-gradient(top,  $top 0%,  $middle1 33%, $middle2 66%, $bottom 100%); // FF3.6+ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top),color-stop(33%,$middle1),color-stop(66%,$middle2), color-stop(100%,$bottom)); // Chrome,Safari4+ 
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); // Chrome10+,Safari5.1+ 
+    background: -o-linear-gradient(top,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); // Opera 11.10+ 
+    background: -ms-linear-gradient(top,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); // IE10+ 
+    background: linear-gradient(to bottom,  $top 0%,$middle1 33%, $middle2 66%, $bottom 100%); // W3C 
 }  
 
 @mixin bicolorGradient($top, $bottom){
-    background: $top; /* Old browsers */
-    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    background: $top; // Old browsers 
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); // FF3.6+ 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); // Chrome,Safari4+ 
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); // Chrome10+,Safari5.1+ 
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); // Opera 11.10+ 
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); // IE10+ 
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); // W3C 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); // IE6-9 
 }
 
 @mixin opaqueBackground ($r,$g,$b,$a)
@@ -53,7 +53,7 @@ available keywords :
 
 
 
-/* basic grid column mixin */
+// basic grid column mixin 
 @mixin col {
   border: 0px solid rgba(0, 0, 0, 0);
   float: left;
@@ -68,7 +68,7 @@ available keywords :
 
 
 
-/* text hover mixin */
+// text hover mixin 
 @mixin default-tansition($duration:.5s)
 {
     -o-transition:$duration;
@@ -107,5 +107,15 @@ available keywords :
         -webkit-transition:$duration;
         transition:$duration;
     }
+}
+
+// cool height adapt mixin
+@mixin smooth-height-change($duration:.5s)
+{
+        -o-transition: max-height $duration ;
+        -ms-transition:max-height $duration ;
+        -moz-transition:max-height $duration ;
+        -webkit-transition:max-height $duration ;
+        transition:max-height $duration ;
 }
 

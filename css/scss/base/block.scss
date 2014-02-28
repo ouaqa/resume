@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    $blocks for contents
+\*------------------------------------*/
+ 
+.block
+{ 
+    display: block;
+    padding: 1em;
+    //background-color: $main-color-3;
+}
+
+
+@media (min-width:$large-screen)  
+{
+    .block__expandable
+    {        
+        &:hover .block__expandable--accessory
+        { 
+            max-height:999px; 
+        }
+    }
+
+    .block__expandable--accessory
+    {
+        max-height:0; 
+        overflow:hidden;
+        @include smooth-height-change; 
+        @include default-tansition(8); 
+    }
+}

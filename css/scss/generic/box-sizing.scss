@@ -1,7 +1,10 @@
-/* 
-	box sizing reset 
-	http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-*/
+
+/*------------------------------------*\ 
+    box sizing reset 
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+\*------------------------------------*/
+	
+
 *, *:before, *:after {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 

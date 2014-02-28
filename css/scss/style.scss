@@ -1,4 +1,4 @@
-		/*------------------------------------*\
+/*------------------------------------*\
     TABLE OF CONTENTS 
     based on Harry Robert's articles and
     https:/github.com/csswizardry/CSS-Guidelines
@@ -7,8 +7,9 @@
  * VARIABLES.................Define Sass Variables
  * MIXINS....................Define Sass Mixins
  * GENERIC...................Reset,typo... 
- * BASE......................Global Element Styles
- * STRUCTURE.................Site structure (header, nav, etc)
+ * BASE......................Global Element Styles (grid, default styles, backgrounds...)
+ * GUI.......................Site structure (header, navigation, general zones, etc...)
+ * OBJECT....................Site structure (header, nav, etc)
  */
 @import 'vars.scss';
 @import 'mixins.scss' ;
@@ -30,19 +31,26 @@
     $BASE
 \*------------------------------------*/
 @import 'base/base.scss' ;
-@import 'base/my-grid.scss' ;
-@import 'base/background.scss' ; 
+@import 'base/grid.scss' ;
+@import 'base/tetris-grid.scss' ;
+@import 'base/block.scss'; 
+@import 'base/background.scss' ;  
+
 
 
 
 /*------------------------------------*\
-    $STRUCTURE
+    $GUI
 \*------------------------------------*/
 @import 'gui/global-navigation.scss' ;  
 @import 'gui/banner.scss' ;  
 @import 'gui/contact.scss' ;  
+//@import 'gui/experience.scss' ;  
+//@import 'gui/about-me.scss' ;   
 
 /*------------------------------------*\
     $OBJECTS
 \*------------------------------------*/
 @import 'object/skill.scss';
+//@import 'object/icon.scss';
+@import 'object/icon-font.scss';
