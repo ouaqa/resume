@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    $FOLDABLE BOX OBJECT
+\*------------------------------------*/
+.folding_box { 
+}
+
+.folding_box__opener
+{
+    cursor : pointer;
+    @include no-select();  
+    background-color: $main-color-3;   
+}
+
+.folding_box--folded 
+{
+  overflow : hidden; 
+  @include transform-style( preserve-3d);
+}
+
+
+//.folding_box__piece {}
+//.folding_box__piece--unfoldable {}
+.folding_box--foldable 
+{
+  position: relative;
+  width: 100%; 
+  height:100%;
+  overflow: hidden;
+
+  @include perspective (300px);
+  @include transition(height,0.55s,ease-in-out);
+
+  .folding_box--folded   &
+  {  
+    /* unfortunately, the !important is required as we calculate the actual heigh of the box within js */
+    height: 0!important;  
+  }
+}
+
+.folding_box--content 
+{
+   position : absolute ;
+   width: 100%;
+   height: 200px ;
+   opacity: 1;
+
+   @include transform(rotateX(0deg));
+   @include transition(all,0.55s,ease-in-out);
+    
+  .folding_box--folded   &
+  { 
+      opacity: 0;
+      @include transform(rotateX(60deg));
+ }
+}
+
+
+
+.folding_box__flap--top, .folding_box__flap--bottom 
+//[class*='folding_box__flap-']
+{
+  height: 100px; 
+  width: 100%; 
+  position: absolute;
+  left: 0;
+
+  background-color: $main-color-3;   
+  
+  @include transform(rotateX(0deg));
+  @include transition(all,0.55s,ease-in-out);
+
+  .folding_box--folded   &
+  { 
+    background-color: $main-color-1;
+  }
+}
+
+.folding_box__flap--top  {
+  top: 0;
+
+  @include transform-origin(top center);
+
+  .folding_box--folded   &
+  { 
+    @include transform(rotateX(-90deg));
+  }
+}
+
+.folding_box__flap--bottom {
+  bottom: 0;
+
+  @include transform-origin(bottom center);
+
+  .folding_box--folded   &
+  { 
+    @include transform(rotateX(90deg));
+  }
+}
+

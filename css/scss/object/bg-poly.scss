@@ -1,0 +1,86 @@
+.bg-poly 
+{
+overflow:hidden;
+  position:fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.fg-poly
+{
+  position:relative;
+}
+
+@mixin fill-fade-in-out ($duration)
+{
+  -webkit-animation: fill-fade-in-out $duration linear alternate infinite;  
+     -moz-animation: fill-fade-in-out $duration linear alternate infinite;  
+       -o-animation: fill-fade-in-out $duration linear alternate infinite;  
+          animation: fill-fade-in-out $duration linear alternate infinite;  
+}
+
+@-webkit-keyframes fill-fade-in-out {0% { fill: #333; } 100% { fill: #fff; } }
+   @-moz-keyframes fill-fade-in-out {0% { fill: #333; } 100% { fill: #fff; } } 
+     @-o-keyframes fill-fade-in-out {0% { fill: #333; } 100% { fill: #fff; } } 
+        @keyframes fill-fade-in-out {0% { fill: #333; } 100% { fill: #fff; } } 
+ 
+
+
+
+
+.bg-poly-1{
+  fill:#E6E6E6;  
+  @include fill-fade-in-out(2.4s);
+}
+.bg-poly-2{
+  fill:#4D4D4D;  
+@include fill-fade-in-out(2.6s);
+}
+.bg-poly-3{
+  fill:#808080;  
+@include fill-fade-in-out(2.8s); 
+}
+.bg-poly-4{
+  fill:#B3B3B3;  
+@include fill-fade-in-out(3.0s);
+}
+.bg-poly-5{
+  fill:#1A1A1A;  
+@include fill-fade-in-out(3.2s);
+}
+.bg-poly-6{
+  fill:#999999;  
+  @include fill-fade-in-out(3.4s);
+}
+.bg-poly-7{
+  fill:#666666;  
+  @include fill-fade-in-out(3.6s); 
+}
+.bg-poly-8{
+  fill:#CCCCCC;  
+  @include fill-fade-in-out(3.8s);
+}
+.bg-poly-9{
+  fill:#333333;  
+  @include fill-fade-in-out(4.0s);
+}
+
+.bg-poly-opacity{opacity:0.1;}
+
+.bg-poly-line { 
+  /*   stroke:#000;
+    stroke-dasharray: 100;
+    stroke-width: 1; */
+}
+
+//.bg-poly-animate { animation: dash 5s linear; }
+
+@keyframes dash 
+{
+    to 
+    { stroke-dashoffset: 1000; }
+}
+
+
+

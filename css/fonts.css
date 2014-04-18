@@ -1,9 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Raleway:300);
-.wf-active h1, h2, h3, h4, h5 {
-  font-family: raleway; }
-
 .wf-active {
   font-family: "Open Sans Condensed", sans-serif; }
+
+.wf-active h1, h2, h3, h4, h5 {
+  font-family: raleway; }
 
 /*------------------------------------*\
     $Font icon loading. 

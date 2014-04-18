@@ -1,0 +1,150 @@
+/*------------------------------------*\
+    $generic icon handler
+\*------------------------------------*/
+.icon{}
+
+[class*='icon--']:before 
+{  
+   height: 1.5em; 
+   width: 1.5em; 
+   content:" ";
+   //position:absolute; 
+   float: left;
+   margin-right: 0.5em;
+   background-repeat:no-repeat ; 
+   background-size : 1.5em;
+   line-height: 1.5em;
+    //left:0
+}
+
+/* [class*='icon--']
+{
+    margin-left: 2.5em;
+} */
+
+.icon--stack-left:before  
+{ 
+    position:absolute; 
+    left:0.25em;     
+} 
+
+.icon--stack-left
+{
+    margin-left: 2.5em; 
+
+    @media only screen and (min-width: $medium-screen ) 
+    {
+        &:not(:first-child)
+        {
+            margin-left: 0; 
+        }
+    }
+}
+
+
+.icon__hidden:before 
+{ 
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-out;
+   
+}
+
+.icon__hidden:hover 
+{
+    &:before {opacity:1;}
+}
+
+.icon--home:before 
+{ 
+    background-image:url(icons/svg/icon1.svg) ; 
+}
+.icon--work:before 
+{ 
+    background-image:url(icons/svg/icon2.svg) ; 
+}
+.icon--skills:before 
+{ 
+    background-image:url(icons/svg/icon3.svg) ; 
+}
+.icon--education:before 
+{ 
+    background-image:url(icons/svg/icon4.svg) ; 
+}
+.icon--about-me:before 
+{ 
+    background-image:url(icons/svg/icon5.svg) ; 
+}
+.icon--src:before 
+{ 
+    background-image:url(icons/svg/icon6.svg) ; 
+}
+.icon--email:before 
+{ 
+    background-image:url(icons/svg/icon7.svg) ; 
+}
+.icon--programming:before 
+{ 
+    background-image:url(icons/svg/icon8.svg) ; 
+}
+.icon--foreign-languages:before 
+{ 
+    background-image:url(icons/svg/icon9.svg) ; 
+}
+.icon--conversation:before
+{ 
+    background-image:url(icons/svg/icon9.svg) ; 
+}
+.icon--travel:before 
+{ 
+    background-image:url(icons/svg/icon10.svg) ; 
+}
+.icon--learner:before 
+{ 
+    background-image:url(icons/svg/icon11.svg) ; 
+}
+.icon--drive:before 
+{ 
+    background-image:url(icons/svg/icon12.svg) ; 
+}
+.icon--scout:before 
+{ 
+    background-image:url(icons/svg/icon13.svg) ; 
+}
+.icon--read:before 
+{ 
+    background-image:url(icons/svg/icon14.svg) ; 
+}
+.icon--photo:before 
+{ 
+    background-image:url(icons/svg/icon15.svg) ; 
+}
+.icon--travel:before 
+{ 
+    background-image:url(icons/svg/icon16.svg) ; 
+}
+.icon--hipster:before 
+{ 
+    background-image:url(icons/svg/icon17.svg) ; 
+}
+.icon--conversation:before 
+{ 
+    background-image:url(icons/svg/icon18.svg) ; 
+}
+.icon--draw:before 
+{ 
+    background-image:url(icons/svg/icon19.svg) ; 
+}
+.icon--logo:before 
+{ 
+    background-image:url(icons/svg/icon20.svg) ; 
+}
+.icon--other:before 
+{ 
+    background-image:url(icons/svg/icon21.svg) ; 
+}
+
+
+
+
+
+

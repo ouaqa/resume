@@ -1,0 +1,19 @@
+.parallax{}
+.parallax__wrap
+{
+    position:relative;
+    top:0;
+  
+  transform-style: preserve-3d;
+ /*  overflow-y: scroll;
+  overflow-x: hidden; */
+
+    -webkit-transition:top 1.4s cubic-bezier(.49,.22,.52,1);
+            transition:top 1.4s cubic-bezier(.49,.22,.52,1.35);  
+}
+
+.parallax__block {  
+        transform-style: preserve-3d;
+    -webkit-transition: background-position 1.4s cubic-bezier(.49,.22,.52,1);
+            transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);  
+}  

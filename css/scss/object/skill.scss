@@ -1,6 +1,12 @@
 /*------------------------------------*\
-    $Skill level indicators
+    $Skill and skill level indicators
 \*------------------------------------*/
+
+ .skill
+{
+	padding:$gutter-width/2;
+	border : 1px solid $font-color-light;
+} 
 
 
 [class*='skill__meter']
@@ -20,6 +26,11 @@
 	text-align:right;
 	padding-right:1em;
 }
+
+.skill--tech {}
+.skill--lang {}
+.skill--other {}
+
 .skill__level-1-5 {width:20%;}
 .skill__level-2-5 {width:40%;}
 .skill__level-3-5 {width:60%;}

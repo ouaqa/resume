@@ -6,15 +6,15 @@
 $heading-font:  raleway  ; 
 $base-font : 'Open Sans Condensed', sans-serif;
 
+.wf-active   
+{
+     font-family: $base-font; 
+}   
 .wf-active h1,h2,h3,h4,h5 
 {
 	  font-family:$heading-font; 
 }
-
-.wf-active	 
-{
-	 font-family: $base-font; 
-}	 
+ 
 
 /*------------------------------------*\
     $Font icon loading. 

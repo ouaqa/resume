@@ -2,10 +2,10 @@
     $Font-based icons.
 \*------------------------------------*/
 
-//[class^="icon-"], [class*=" icon-"] 
+
 [class*='icon--']:before 
 {
-    font-family: 'icomoon';
+    font-family: 'icomoon',serif;
     speak: none;
     font-style: normal;
     font-weight: normal;

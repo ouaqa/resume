@@ -23,6 +23,7 @@
 @import 'generic/meyer-reset.scss';
 @import 'generic/box-sizing.scss';
 @import 'generic/typo.scss' ;
+@import 'generic/parallax.scss' ;  
 
 
 
@@ -32,8 +33,8 @@
 \*------------------------------------*/
 @import 'base/base.scss' ;
 @import 'base/grid.scss' ;
-@import 'base/tetris-grid.scss' ;
-@import 'base/block.scss'; 
+//@import 'base/tetris-grid.scss' ;
+//@import 'base/block.scss'; 
 @import 'base/background.scss' ;  
 
 
@@ -54,3 +55,5 @@
 @import 'object/skill.scss';
 //@import 'object/icon.scss';
 @import 'object/icon-font.scss';
+@import 'object/folding_box.scss';
+@import 'object/bg-poly' ;
