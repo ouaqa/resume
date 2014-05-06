@@ -28,13 +28,13 @@
 
 
 
+
 /*------------------------------------*\ 
     $BASE
 \*------------------------------------*/
 @import 'base/base.scss' ;
+@import 'base/grid-box.scss' ;
 @import 'base/grid.scss' ;
-//@import 'base/tetris-grid.scss' ;
-//@import 'base/block.scss'; 
 @import 'base/background.scss' ;  
 
 
@@ -44,16 +44,21 @@
     $GUI
 \*------------------------------------*/
 @import 'gui/global-navigation.scss' ;  
+@import 'gui/nav-jumper.scss' ;  
 @import 'gui/banner.scss' ;  
-@import 'gui/contact.scss' ;  
+@import 'gui/contact.scss' ; 
+@import 'gui/skill.scss'; 
 //@import 'gui/experience.scss' ;  
 //@import 'gui/about-me.scss' ;   
 
 /*------------------------------------*\
     $OBJECTS
 \*------------------------------------*/
-@import 'object/skill.scss';
+
+@import 'object/outlined.scss';
+@import 'object/arrow.scss';
+@import 'object/media.scss' ;  
 //@import 'object/icon.scss';
-@import 'object/icon-font.scss';
-@import 'object/folding_box.scss';
+//@import 'object/icon-font.scss';
+//@import 'object/folding_box.scss';
 @import 'object/bg-poly' ;

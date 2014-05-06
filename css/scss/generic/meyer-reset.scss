@@ -55,6 +55,20 @@ table
     border-spacing: 0;}
 
 a
-  { text-decoration: none;
+  { 
+    text-decoration: none;
     outline:none;
+    cursor: pointer;
   }
+
+button
+{
+  text-decoration: none;
+  cursor: pointer;
+  border:none;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+//svg { max-height: 100%; }

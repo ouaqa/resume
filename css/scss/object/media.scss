@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    $MEDIA object
+    implementation of stubbornella's media object,
+    extended by http://wfendler.com/blog/perfecting-the-media-object
+\*------------------------------------*/
+$base-spacing-unit : 1em ;
+
+.media 
+{
+  overflow: hidden;
+  zoom:1;
+}
+
+/* .media, .media__body
+{ 
+    _overflow:hidden; 
+    overflow:visible; 
+    zoom:1;
+} */
+.media__item 
+{
+    float:left; 
+    margin-right: $base-spacing-unit ;
+}
+
+/* .media .media__item img
+{
+    display:inline-block;
+} */
+
+// additional styles.
+// FLIPPED
+.media--flip > .media__item {
+  margin-right: 0; // resetting the default right margin
+  margin-left: $base-spacing-unit;
+  float: right;
+}
+
+// STACKED
+.media--stack > .media__item {
+  float: none;
+  margin-left: 0;
+  margin-bottom: $base-spacing-unit;
+}
+
+
+// NOWRAP
+.media--nowrap > .media__body {
+  overflow: hidden;
+  // this property doesn't allow text to wrap around the floated image.
+}
+
+// VALIGN (aka "FLAG")
+.media--valign {
+  display: table;
+  height: 100%;
+}
+.media--valign > .media__item,
+.media--valign > .media__body {
+  display: table-cell;
+
+  vertical-align: middle;
+}
+//.media--valign > .media__item {  float: none;  }
+.media--valign > .media__body { width: 100%; }

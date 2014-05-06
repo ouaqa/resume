@@ -1,0 +1,171 @@
+/*------------------------------------*\
+    $ARROW animated object
+    based on Hakim El Hattab demo
+    see http://codepen.io/hakimel/pen/gfIsk
+\*------------------------------------*/
+
+$arrow_size: 50px;
+$arrow_thickness: 5px;
+
+$arrow_angleVertical: 45deg;
+$arrow_angleVerticalHover: 60deg;
+$arrow_angleVerticalActive: 75deg;
+
+$arrow_angleHorizontal: 40deg;
+$arrow_angleHorizontalHover: 30deg;
+$arrow_angleHorizontalActive: 25deg;
+
+@mixin arrowTransform( $angle, $x: 0, $y: 0 ) {
+  i:first-child {
+    @include transform (translate( -$x/2, $y ) rotate( $angle ));
+//     -webkit-transform: translate( -$x/2, $y ) rotate( $angle );
+//       -moz-transform: translate( -$x/2, $y ) rotate( $angle );
+//            transform: translate( -$x/2, $y ) rotate( $angle ); 
+  }
+
+   i:last-child {
+     @include transform (translate( $x/2, $y ) rotate( -$angle ));
+//    -webkit-transform: translate( $x/2, $y ) rotate( -$angle );
+//       -moz-transform: translate( $x/2, $y ) rotate( -$angle );
+//            transform: translate( $x/2, $y ) rotate( -$angle );
+  } 
+}
+
+
+
+
+.arrow
+{
+
+  position: relative;
+  width: $arrow_size;
+  height: $arrow_size;
+  cursor: pointer;
+
+    @include transform(translate3d(0,0,0)) ;// fixes flicker in webkit
+
+//  -webkit-transform: translate3d(0,0,0); // fixes flicker in webkit
+//     -moz-transform: translate3d(0,0,0); // fixes flicker in webkit
+//          transform: translate3d(0,0,0); // fixes flicker in webkit
+
+  -webkit-filter: drop-shadow( 0 2px 0px rgba(0,0,0,0.2) );
+  -filter: drop-shadow( 0 2px 0px rgba(0,0,0,0.2) );
+
+
+  i 
+  {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: $arrow_size;
+    height: $arrow_thickness;
+    border-radius: $arrow_thickness / 2;
+    background: #fff;
+    @include transition(all, 0.15s, ease);
+  }
+
+  &.arrow--left,
+  &.arrow--right
+  { @include transform-origin(0% 50%); } 
+
+  &.arrow--up,
+  &.arrow--down
+  { @include transform-origin(50% 0%); }
+
+    &[data-direction=down],
+    &.arrow--down
+    {
+        @include arrowTransform( $arrow_angleVertical, $arrow_size/2 + 7, 0 );
+
+        &:hover 
+        { @include arrowTransform( $arrow_angleVerticalHover, $arrow_size/2 - 2, 0px ); }
+
+        &:active 
+        { @include arrowTransform( $arrow_angleVerticalActive,  $arrow_size/3 - 5, 0px ); }
+    }
+
+
+    &[data-direction=up],
+    &.arrow--up
+    {
+        @include arrowTransform( -$arrow_angleVertical, $arrow_size/2 + 7, 0 );
+
+        &:hover 
+        { @include arrowTransform( -$arrow_angleVerticalHover, $arrow_size/2, 0px ); }
+
+        &:active 
+        { @include arrowTransform( -$arrow_angleVerticalActive,  $arrow_size/3 - 5, 0px ); }
+    }
+
+&[data-direction=left],
+&.arrow--left 
+{
+    i 
+    { @include transform-origin(0% 50%); }
+
+    @include arrowTransform( $arrow_angleHorizontal, 0, -1px );
+
+    &:hover 
+    { @include arrowTransform( $arrow_angleHorizontalHover, 0, -1px ); }
+
+    &:active 
+    { @include arrowTransform( $arrow_angleHorizontalActive, 1px, -1px ); }
+
+    /* &[data-state=disabled] 
+    {
+      @include arrowTransform( 0deg, -5px, 0 );
+      &:hover 
+      { @include arrowTransform( 0deg, -5px, 0 ); }
+    } */
+} 
+
+  &[data-direction=right],
+  &.arrow--right {
+
+    i 
+    { @include transform-origin(100% 50%); }
+
+    @include arrowTransform( $arrow_angleHorizontal, 0, 1px );
+
+    &:hover 
+    { @include arrowTransform( $arrow_angleHorizontalHover, 0, 1px ); }
+
+    &:active 
+    { @include arrowTransform( $arrow_angleHorizontalActive, 1px, 1px ); }
+
+    /* &[data-state=disabled] 
+    {
+      @include arrowTransform( 0deg, 5px, 0 );
+      &:hover 
+      { @include arrowTransform( 0deg, 5px, 0 ); }
+    } */
+  }
+
+
+
+
+
+    &[data-state=disabled],
+    &.arrow--disabled
+    {
+
+        opacity: 0.3;
+        cursor: default;
+
+        &.arrow--down,
+        &.arrow--up
+        {
+            @include arrowTransform( 90deg, -5px, 0 );
+            &:hover { @include arrowTransform( 90deg, -5px, 0 ); } 
+        }
+
+        &.arrow--left,
+        &.arrow--right
+        {
+            @include arrowTransform( 0deg, -5px, 0 );
+            &:hover { @include arrowTransform( 0deg, -5px, 0 ); } 
+        }      
+    }
+
+
+}
