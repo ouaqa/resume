@@ -1,14 +1,13 @@
 
-var svgVisibilityHandlers= Array();
 var svgElList = Array();
 
-readyAndWilling(initSvgSkills) ;
+toolBox.readyAndWilling(initSvgSkills) ;
 
 // load svg file to inject in skills container.
 function initSvgSkills()
 {
     'use strict';
-    loadMedia('media/svg/skill__svg.svg',svgLoadSucess,svgLoadFail);
+    toolBox.loadMedia('media/svg/skill__svg.svg',svgLoadSucess,svgLoadFail);
 }
 
 function svgLoadSucess (payload)
@@ -31,12 +30,10 @@ function svgLoadSucess (payload)
             var svgEl = new SVGEl(el.querySelector('svg.skill__svg'));
             svgElList.push([el,svgEl]);
 
-            if (!isElementInViewport(el))
+            if (!visibilityManager.isVisible(el))
             {
-                var handler = fireIfElementVisible(el,isVisible);
-                attachVisibilityHandler(handler);
+                visibilityManager.addOnce(el,isVisible);
 
-                svgVisibilityHandlers.push([el,handler]);
             }
             else
             {
@@ -54,8 +51,6 @@ function isVisible (el)
     var ratio = percent[0]/percent[1];
 
     svgEl.draw(ratio);
-    //remove handler
-    findAndDetachHandler(el);
 }
 
 function getSvgEl (el)
@@ -78,38 +73,9 @@ function getSvgEl (el)
 
         if (!found)
         {
-            console.log('SVGEl instance was not found for : ');
-            console.log(el);
             var svgEl = new SVGEl(el.querySelector('svg.skill__svg'));
             svgElList.push([el,svgEl]);
             return svgEl ;
-        }
-    }
-}
-
-function findAndDetachHandler(el)
-{
-    'use strict';
-    var len = svgVisibilityHandlers.length ;
-    if (len>0)
-    {
-        var cpt = 0;
-        var found = false ;
-        while (cpt<len&&found==false)
-        {
-            if (svgVisibilityHandlers[cpt][0]===el)
-            {
-                found=true;
-                break;
-            }
-            cpt++;
-        }
-
-        if (found)
-        {
-            var handler = svgVisibilityHandlers[cpt][1];
-            detachVisibilityHandler(handler);
-            svgVisibilityHandlers.remove(cpt);
         }
     }
 }
@@ -120,7 +86,8 @@ function svgLoadFail ()
 }
 
 
-    function SVGEl( el ) {
+    function SVGEl( el ) 
+    {
         'use strict';
         this.el = el;
         // the path elements

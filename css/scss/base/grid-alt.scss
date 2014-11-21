@@ -1,0 +1,117 @@
+/*------------------------------------*\
+    $GRID
+    simple grid system based on http://css-tricks.com/dont-overthink-it-grids/
+\*------------------------------------*/
+.grid {
+
+  margin: 0;
+  
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+[class*='grid__col-'] {
+  width: 100%;
+   @include col;
+}
+
+
+
+ @media #{$medium-up}  {
+ //  .grid__col-4-12 {
+ //   width: 50%;
+ // }
+ // .grid__col-2-12 {
+ //   width: 25%;
+ // }
+
+   .grid--outer-gutter {
+    padding-left:$gutter-width;
+    padding-right:$gutter-width;
+  } 
+} 
+
+[class*='grid__col-'] {
+   
+    padding-right: $gutter-width/4;
+    padding-bottom: $gutter-width/4;
+      padding-left: $gutter-width/4;
+    
+    /* .grid &:last-of-type {
+      padding-right: 0;
+    } */
+  }
+
+
+@media #{$large-up}  {
+
+  [class*='grid__col-'] {
+   
+    padding-right: $gutter-width;
+    padding-bottom: $gutter-width;
+    .grid &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  .grid--outer-gutter {
+    padding-left:$gutter-width*2;
+    padding-right:$gutter-width*2;
+  } 
+  
+
+  .grid__col--centered
+  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid__col-1-12 {
+    width: 1/12 * 100% ;
+  }
+  
+  .grid__col-2-12 {
+    width: 2/12 * 100% ;
+  }
+
+  .grid__col-3-12 {
+    width: 3/12 * 100% ;
+  }
+  .grid__col-4-12 {
+    width: 4/12 * 100% ;
+  }
+  .grid__col-5-12 {
+    width: 5/12 * 100% ;
+  }
+  .grid__col-6-12 {
+    width: 6/12 * 100% ;
+  }
+
+  .grid__col-7-12 {
+    width: 7/12 * 100% ;
+  } 
+
+  .grid__col-8-12{
+    width: 8/12 * 100% ;
+  }
+
+  .grid__col-9-12 {
+    width: 9/12 * 100% ;
+  }
+
+  .grid__col-10-12 {
+    width: 10/12 * 100% ;
+  }
+
+  .grid__col-11-12 {
+    width: 11/12 * 100% ;
+  }
+
+  .grid__col-12-12 {
+    width: 12/12 * 100% ;
+  }
+}

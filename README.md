@@ -1,13 +1,22 @@
-This is where the magic happens.
+Curriculum Vitae 
 =======================================
 
-Work in Progress
------------------
-
-Source of my resume page. [ouaqa.github.io] [1].
+English & French Version
+------------------------
 
 
+Ongoing curriculum vitae page. I also use it to play with presentation, grids and anything else. 
+Variations between english and french version are possible.
+
+All sources are available here. 
+Credits are directly inserted in code when due.
+
+
+
+Direct link : [ouaqa.github.io] [1].
+Direct link (english version) : [ouaqa.github.io-en] [1].
 
 
   [1]: http://ouaqa.github.io/resume  "ouaqa.github.io"
+  [2]: http://ouaqa.github.io/resume/index-en.html  "ouaqa.github.io-en"
 

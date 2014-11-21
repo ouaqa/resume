@@ -1,0 +1,27 @@
+<svg class="bg-poly" viewBox="0 0 1280 800" preserveAspectRatio ="xMidYMid slice" >
+<g class="" ><!--bg-poly-opacity-->
+<polygon class="bg-poly-animate bg-poly-5" points="418,470 124,337 263,242 177,0 177,0 263,242 122,338 0,471 0,508 347,477"/>
+<polygon class="bg-poly-animate bg-poly-7" points="1231,176 1280,352 1280,0 1195,0 1229,169"/>
+<polygon class="bg-poly-animate bg-poly-2" points="1002,741 806,800 1195,800"/>
+<polygon class="bg-poly-animate bg-poly-5" points="562,42 808,0 329,0 377,8"/>
+<polygon class="bg-poly-animate bg-poly-2" points="0,800 109,800 0,610"/>
+<polygon class="bg-poly-animate bg-poly-2" points="0,0 0,55 108,0"/>
+<polygon class="bg-poly-animate bg-poly-5" points="176,800 567,800 463,754"/>
+<polygon class="bg-poly-animate bg-poly-1" points="1280,792 1280,404 1166,539"/>
+<polygon class="bg-poly-animate bg-poly-2" points="708,443 708,443 708,443 707,443 659,614 856,603 1006,377"/>
+<polygon class="bg-poly-animate bg-poly-5" points="1005,377 856,603 1166,538 1280,403 1280,390"/>
+<polygon class="bg-poly-animate bg-poly-3" points="814,143 1005,377 1280,390 1280,352 1231,175"/>
+<polygon class="bg-poly-animate bg-poly-8" points="707,443 470,159 263,240 707,443"/>
+<polygon class="bg-poly-animate bg-poly-2" points="814,143 1232,176 1230,169 1195,0 808,0 562,42"/>
+<polygon class="bg-poly-animate bg-poly-3" points="347,475 0,507 0,610 109,800 176,800 462,753"/>
+<polygon class="bg-poly-animate bg-poly-4" points="121,336 121,337 262,242 177,0 108,0 0,55 0,193"/>
+<polygon class="bg-poly-animate bg-poly-2" points="707,443 418,470 418,470 418,470 347,476 463,753 659,614 707,443"/>
+<polygon class="bg-poly-animate bg-poly-3" points="1012,570 1002,741 1195,800 1280,800 1280,789 1167,537 856,604 728,800 806,800 1002,741"/>
+<polygon class="bg-poly-animate bg-poly-5" points="856,604 659,614 463,753 377,800 806,800"/>
+<polygon class="bg-poly-animate bg-poly-3" points="121,335 0,193 0,471 121,337"/>
+<polygon class="bg-poly-animate bg-poly-6" points="707,445 663,323 663,323 663,323 562,43 377,8 470,161 707,445"/>
+<polygon class="bg-poly-animate bg-poly-2" points="263,242 470,160 377,8 329,0 177,0"/>
+<polygon class="bg-poly-animate bg-poly-9" points="886,232 663,322 707,444 708,444 1006,378 814,144 562,42 663,322"/>
+<polygon class="bg-poly-animate bg-poly-9" points="263,240 124,337 418,470 707,443"/>
+</g> 
+</svg>

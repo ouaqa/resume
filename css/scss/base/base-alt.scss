@@ -1,0 +1,29 @@
+html
+{
+    font-family: sans-serif;
+   // color: $font-color ;
+    // background-color: $background-default;
+}  
+
+body { 
+    height:100%;
+
+    &:after
+    {
+        display: none;
+        @media #{$small-only}
+        {
+            content:'1';
+        }
+        @media #{$medium-only} 
+        {
+            content:'2';
+        }
+        @media #{$large-up}
+        {
+            content:'3';
+        }
+    }
+}
+
+// a { color:$font-color ; }

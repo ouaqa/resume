@@ -1,0 +1,419 @@
+/*------------------------------------*\
+    TABLE OF CONTENTS 
+    based on Harry Robert's articles and
+    https:/github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES.................Define Sass Variables
+ * MIXINS....................Define Sass Mixins
+ * GENERIC...................Reset,typo... 
+ * BASE......................Global Element Styles (grid, default styles, backgrounds...)
+ * GUI.......................Site structure (header, navigation, general zones, etc...)
+ * OBJECT....................Site structure (header, nav, etc)
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $GENERIC  
+\*------------------------------------*/
+/*------------------------------------*\ 
+    css reset
+    based on http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+   License: none (public domain)
+\*------------------------------------*/
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  cursor: pointer; }
+
+button {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/*------------------------------------*\ 
+    box sizing reset 
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+\*------------------------------------*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*------------------------------------*\ 
+    typo basic responsive sizing reset 
+    http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+     from http://typecast.com/blog/a-more-modern-scale-for-web-typography 
+\*------------------------------------*/
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  font-size: medium;
+  font-size: 1.1rem;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */ }
+  @media only screen and (min-width: 40.063em) {
+    body {
+      font-size: medium;
+      font-size: 1.1rem;
+      /* equivalent to 16px */
+      line-height: 1.375;
+      /* equivalent to 22px */ } }
+
+h1 {
+  font-size: 40px;
+  font-size: 2.5rem;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */ }
+  @media only screen and (min-width: 40.063em) {
+    h1 {
+      font-size: 48px;
+      font-size: 3rem;
+      /* 2.5x body copy size = 40px */
+      line-height: 1.125; } }
+  @media only screen and (min-width: 64.063em) {
+    h1 {
+      font-size: 64px;
+      font-size: 4rem;
+      /* 3x body copy size = 48px */
+      line-height: 1.05;
+      /* keep to a multiple of the 20px line height and something more appropriate for display headings */ } }
+
+h2 {
+  font-size: 32px;
+  font-size: 2rem;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */ }
+  @media only screen and (min-width: 40.063em) {
+    h2 {
+      font-size: 40px;
+      font-size: 2.5rem;
+      /* 2x body copy size = 32px */
+      line-height: 1.25; } }
+  @media only screen and (min-width: 64.063em) {
+    h2 {
+      font-size: 48px;
+      font-size: 3rem;
+      /* 2.25x body copy size = 36px */
+      line-height: 1.25; } }
+
+h3 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */ }
+  @media only screen and (min-width: 40.063em) {
+    h3 {
+      font-size: 30.4px;
+      font-size: 1.9rem;
+      /* 1.5x body copy size = 24px */
+      line-height: 1.25; } }
+  @media only screen and (min-width: 64.063em) {
+    h3 {
+      font-size: 35.2px;
+      font-size: 2.2rem;
+      /* 1.75x body copy size = 28px */
+      line-height: 1.25; } }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111; }
+  @media only screen and (min-width: 40.063em) {
+    h4 {
+      line-height: 1.22222222;
+      /* (22px / 18px */ } }
+
+blockquote {
+  font-size: small;
+  font-size: 1.25rem;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */ }
+  @media only screen and (min-width: 40.063em) {
+    blockquote {
+      font-size: small;
+      font-size: 1.5rem;
+      /* 24px / 16px = */
+      line-height: 1.45833333;
+      /* 35px / 24px */ } }
+
+/*------------------------------------*\ 
+    $BASE
+\*------------------------------------*/
+html {
+  font-family: sans-serif; }
+
+body {
+  height: 100%; }
+  body:after {
+    display: none; }
+    @media only screen and (max-width: 40em) {
+      body:after {
+        content: '1'; } }
+    @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+      body:after {
+        content: '2'; } }
+    @media only screen and (min-width: 64.063em) {
+      body:after {
+        content: '3'; } }
+
+/*------------------------------------*\
+    $GRID
+    base grid system transitionned to flex box.
+\*------------------------------------*/
+.grid {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center; }
+
+[class*='grid__col-'] {
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  flex: 1 1 auto; }
+
+@media only screen and (min-width: 40.063em) {
+  .grid__col-4-12 {
+    -webkit-flex: 1 1 50%;
+    -moz-flex: 1 1 50%;
+    flex: 1 1 50%; }
+
+  .grid__col-2-12 {
+    -webkit-flex: 1 1 25%;
+    -moz-flex: 1 1 25%;
+    flex: 1 1 25%; } }
+@media only screen and (min-width: 64.063em) {
+  .grid__col-1-12 {
+    -webkit-flex: 1 1 8.33333%;
+    -moz-flex: 1 1 8.33333%;
+    flex: 1 1 8.33333%; }
+
+  .grid__col-2-12 {
+    -webkit-flex: 1 1 16.66667%;
+    -moz-flex: 1 1 16.66667%;
+    flex: 1 1 16.66667%; }
+
+  .grid__col-3-12 {
+    -webkit-flex: 1 1 25%;
+    -moz-flex: 1 1 25%;
+    flex: 1 1 25%; }
+
+  .grid__col-4-12 {
+    -webkit-flex: 1 1 33.33333%;
+    -moz-flex: 1 1 33.33333%;
+    flex: 1 1 33.33333%; }
+
+  .grid__col-5-12 {
+    -webkit-flex: 1 1 41.66667%;
+    -moz-flex: 1 1 41.66667%;
+    flex: 1 1 41.66667%; }
+
+  .grid__col-6-12 {
+    -webkit-flex: 1 1 50%;
+    -moz-flex: 1 1 50%;
+    flex: 1 1 50%; }
+
+  .grid__col-7-12 {
+    -webkit-flex: 1 1 58.33333%;
+    -moz-flex: 1 1 58.33333%;
+    flex: 1 1 58.33333%; }
+
+  .grid__col-8-12 {
+    -webkit-flex: 1 1 66.66667%;
+    -moz-flex: 1 1 66.66667%;
+    flex: 1 1 66.66667%; }
+
+  .grid__col-9-12 {
+    -webkit-flex: 1 1 75%;
+    -moz-flex: 1 1 75%;
+    flex: 1 1 75%; }
+
+  .grid__col-10-12 {
+    -webkit-flex: 1 1 83.33333%;
+    -moz-flex: 1 1 83.33333%;
+    flex: 1 1 83.33333%; }
+
+  .grid__col-11-12 {
+    -webkit-flex: 1 1 91.66667%;
+    -moz-flex: 1 1 91.66667%;
+    flex: 1 1 91.66667%; }
+
+  .grid__col-12-12 {
+    -webkit-flex: 1 1 100%;
+    -moz-flex: 1 1 100%;
+    flex: 1 1 100%; } }
+/*------------------------------------*\
+    $GRID
+    simple grid system based on http://css-tricks.com/dont-overthink-it-grids/
+\*------------------------------------*/
+.grid {
+  margin: 0; }
+  .grid:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+[class*='grid__col-'] {
+  width: 100%;
+  border: 0px solid transparent;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box !important;
+  -moz-background-clip: padding-box !important;
+  background-clip: padding-box !important; }
+
+@media only screen and (min-width: 40.063em) {
+  .grid--outer-gutter {
+    padding-left: 1em;
+    padding-right: 1em; } }
+[class*='grid__col-'] {
+  padding-right: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.25em;
+  /* .grid &:last-of-type {
+    padding-right: 0;
+  } */ }
+
+@media only screen and (min-width: 64.063em) {
+  [class*='grid__col-'] {
+    padding-right: 1em;
+    padding-bottom: 1em; }
+    .grid [class*='grid__col-']:last-of-type {
+      padding-right: 0; }
+
+  .grid--outer-gutter {
+    padding-left: 2em;
+    padding-right: 2em; }
+
+  .grid__col--centered {
+    margin-left: auto;
+    margin-right: auto; }
+
+  .grid__col-1-12 {
+    width: 8.33333%; }
+
+  .grid__col-2-12 {
+    width: 16.66667%; }
+
+  .grid__col-3-12 {
+    width: 25%; }
+
+  .grid__col-4-12 {
+    width: 33.33333%; }
+
+  .grid__col-5-12 {
+    width: 41.66667%; }
+
+  .grid__col-6-12 {
+    width: 50%; }
+
+  .grid__col-7-12 {
+    width: 58.33333%; }
+
+  .grid__col-8-12 {
+    width: 66.66667%; }
+
+  .grid__col-9-12 {
+    width: 75%; }
+
+  .grid__col-10-12 {
+    width: 83.33333%; }
+
+  .grid__col-11-12 {
+    width: 91.66667%; }
+
+  .grid__col-12-12 {
+    width: 100%; } }
+/*------------------------------------*\
+    $MATERIAL design inspired css rules.
+
+    articles are considered to be cards 
+    in this particular case.
+\*------------------------------------*/
+.mat__sheet {
+  margin-left: 5em;
+  margin-right: 5em;
+  background-color: #bada55;
+  border-bottom: solid 1px #000000; }
+
+article,
+.mat__card {
+  background-color: white;
+  color: black;
+  margin: 1em; }

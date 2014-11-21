@@ -8,7 +8,7 @@ var folding_box__dispatcherClass = 'js-folding_box__opener',
 
 
 // document ready handler
-readyAndWilling( initFoldingBox ); 
+toolBox.readyAndWilling( initFoldingBox ); 
 
 function initFoldingBox(){
 
@@ -19,6 +19,25 @@ function initFoldingBox(){
     // injecting fold bells and whistles to the boxes
     initAdditionalContentToFolds();
     
+}
+
+function appendClickListenerToAll (list,func)
+{
+    'use strict';
+    var cpt = 0, len = list.length ,elem ;
+
+
+    while (cpt<len)
+    {
+        elem = list[cpt] ;
+        if (elem.addEventListener)
+        { elem.addEventListener('click', func, false); }
+        else if (elem.attachEvent) 
+        { elem.attachEvent('onclick', func); }
+
+        cpt++;
+    }
+    elem = null;
 }
 
 function initAdditionalContentToFolds(injectInFolds,injectColors)
@@ -53,13 +72,13 @@ function initAdditionalContentToFolds(injectInFolds,injectColors)
         parent_bg_color='';
 
         elem = folds[cpt] ;
-        height = outerHeight(elem);
+        height = toolBox.outerHeight(elem);
         halfContentHeight = height / 2 ;
         content =  elem.innerHTML ;
         
         if (injectColors)
         {
-          bg_color = getBackground(elem.parentNode) ;
+          bg_color = toolBox.getBackground(elem.parentNode) ;
           if (elem.parentNode.parentNode)
           { parent_bg_color =  getBackground(elem.parentNode.parentNode) ; }
         }
@@ -112,6 +131,35 @@ function initAdditionalContentToFolds(injectInFolds,injectColors)
 
     folds = null ;
     elem = null ;
+}
+
+
+// get element style
+function getBackground (el)
+{
+    'use strict';
+    var style ='' ;
+    if (el.currentStyle)
+    {
+        style = el.currentStyle['backgroundColor'];
+    }
+    else if (window.getComputedStyle)
+    {style = document.defaultView.getComputedStyle(el,null).getPropertyValue('background');}
+    return style;
+}
+
+function injectAll (str,reps)
+{
+    'use strict';
+    for (var key in reps)
+    {
+        str =  str.replace(/(___[a-zA-Z]+___)/g, function(s, key) 
+        {
+            var rep = reps[key];
+            return typeof rep === 'undefined' ? s : rep;
+        });
+    }
+    return str ; 
 }
 
 

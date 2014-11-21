@@ -128,7 +128,7 @@
 
 
 // text hover mixin 
-@mixin default-tansition($duration:.5s)
+@mixin default-transition($duration:.5s)
 {
     -o-transition:$duration;
     -ms-transition:$duration;

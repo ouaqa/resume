@@ -6,21 +6,21 @@
 $body-font-size : 100%;
  
 // font colors 
-$font-color-dark: #c7c7c7;//#808080;
-$font-color-light:#e0e0e0;// #999999;
-$font-color-hover:#ffffff;
+$font-color-dark:  #c7c7c7;  // #000000;//#808080;
+$font-color-light: #e0e0e0; // #000000;// #999999;
+$font-color-hover: #ffffff; // #000000;
 
 // background colors 
-$main-color-1: rgba(64,180,152,0.8); // #40b498; // #8dced8;
+ $main-color-1: rgba(64,180,152,0.8); // #40b498; // #8dced8;
 $main-color-2: rgba(96,200,175,0.8); // #60c8af; // #b2dee6;
-$main-color-3: rgba(133,214,194,0.8); // #85d6c2; // #d8eff3;
+$main-color-3: rgba(133,214,194,0.8); // #85d6c2; // #d8eff3; 
 
 $complimentary-color:#E73B57;
 
 // transparent colors 
 $rgb-gray-light:199;
 $alpha:.8;
-
+ 
 
 
 // font size and line heights (todo use px rem fallback) 
@@ -40,7 +40,3 @@ $section-padding:10em;
 // grid vars 
 $gutter-width: 1em;
 $default-section-padding:1em;
-
-
-
-

@@ -1,44 +1,61 @@
-var anim_Elements ;
+var animateClasses = Array('animate__moveUp', 'animate__scaleUp' ,'animate__fall' ,'animate__fly', 'animate__flip', 'animate__helix', 'animate__left', 'animate__right');
 
-readyAndWilling(initAnimateOnDisplay) ;
+toolBox.readyAndWilling(initAnimateOnDisplay) ;
+
 
 // if initial screen resolution is okay we listen for animations.
 function initAnimateOnDisplay()
 {
     // first we check if animations are to be included.
-    if (getScreenSize()>1)
+    if (toolBox.getScreenSize()>1)
     {
-        console.log('yepy');
+        anim_Elements = document.querySelectorAll('.js-animate--once');      
 
-            anim_Elements = document.querySelectorAll('.js-animate-once');            
+        //injecting svg.
+        Array.prototype.forEach.call(anim_Elements, 
+        function(el, i)
+        {
+            // adding animate class to hide
+            if (el.classList)
+            { el.classList.add('animate'); }
+            else
+            { el.className += ' animate'; }
+
+            // adding more animate class if necessarry
+                if (typeof (el.dataset.animateinit) != 'undefined')
+                {
+                    if (el.classList)
+                    { el.classList.add(el.dataset.animateInit); }
+                    else
+                    { el.className += ' ' + el.dataset.animateInit; }
+                }
+            
+
+            if (!visibilityManager.isVisible(el))
+            {
+                visibilityManager.addOnce(el,animateWhenVisible);
+            }
+            else
+            {
+                animateWhenVisible (el);
+            }
+        });
     }
 }
 
-function AnimatedObject( el ) 
-{
-        'use strict';
-        this.el = el;
-        this.animateOnce = true ;
-        this.callBack = null ;
-        this._init();
-}
 
-AnimatedObject.prototype._init = function() 
+function animateWhenVisible(el)
 {
-    'use strict';
-    var self = this;
-    this.paths.forEach( function( path, i ) {
-        self.pathsArr[i] = path;
-        path.style.strokeDasharray = self.lengthsArr[i] = path.getTotalLength();
-    } );
-    // undraw stroke
-    this.draw(0);
-}
+    el.offsetWidth  = el.offsetWidth  ;
+    var animationClass  = el.dataset.animate || 'animate__rand' ;
 
-// val in [0,1] : 0 - no stroke is visible, 1 - stroke is visible
-AnimatedObject.prototype.draw = function( val ) {
-    'use strict';
-    for( var i = 0, len = this.pathsArr.length; i < len; ++i ){
-        this.pathsArr[ i ].style.strokeDashoffset = this.lengthsArr[ i ] * ( 1 - val );
+    if (animationClass == 'animate__rand' )
+    {
+        animationClass = animateClasses[Math.floor(Math.random()*animateClasses.length)];
     }
+    
+   if (el.classList)
+    { el.classList.add(animationClass); }
+    else
+    { el.className += ' ' + animationClass; }
 }

@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $MATERIAL design inspired css rules.
+
+    articles are considered to be cards 
+    in this particular case.
+\*------------------------------------*/
+.mat__sheet
+{
+    margin-left: 5em;
+    margin-right: 5em;
+    background-color:$sheet-color;
+    border-bottom: solid 1px #000000;
+}
+
+article,
+.mat__card
+{
+    background-color: $card-color;
+    color:$card-color-font;
+    margin:1em;
+}
+

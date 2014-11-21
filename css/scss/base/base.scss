@@ -47,7 +47,7 @@ section
 
 a { 
 	color:$font-color-light;
-	@include default-tansition;
+	@include default-transition;
 	@include text-hover($font-color-hover) ;
 }
 

@@ -26,9 +26,13 @@ Math.inOutQuintic = function(t, b, c, d) {
   return b+c*(6*tc*ts + -15*ts*ts + 10*tc);
 };
 
+var toolBox = new _toolBox() ; 
+window.toolBox = toolBox;
+
+function _toolBox () {}
 
 // return screen size of possible value :  1, 2 or 3 for small, medium & large.
-function getScreenSize()
+_toolBox.prototype.getScreenSize = function()
 {
     'use strict';
     var currentSize = window.getComputedStyle(document.querySelector('body'), ':after' ).getPropertyValue('content'); 
@@ -36,90 +40,35 @@ function getScreenSize()
     return parseInt(currentSize) ; 
 }
 
-// from http://stackoverflow.com/a/7557433
-// returns true if element is visible.
-function isElementInViewport (el) 
+_toolBox.prototype.getViewPortHeight = function()
 {
-    'use strict';
-    var rect = el.getBoundingClientRect(),
-        result = (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
-    );
-        rect = null ;
-        return result;
+  'use strict';
+   return document.documentElement.clientHeight || window.innerHeight;
 }
 
-
-
-function appendClickListenerToAll (list,func)
+// http://stackoverflow.com/a/5598797/989439
+_toolBox.prototype.getAbsoluteOffset = function(el)
 {
-    'use strict';
-    var cpt = 0, len = list.length ,elem ;
+  'use strict';
+    var offsetTop = 0, offsetLeft = 0;
+    do {
+      if ( !isNaN( el.offsetTop ) ) {
+        offsetTop += el.offsetTop;
+      }
+      if ( !isNaN( el.offsetLeft ) ) {
+        offsetLeft += el.offsetLeft;
+      }
+    } while( el = el.offsetParent )
 
-
-    while (cpt<len)
-    {
-        elem = list[cpt] ;
-        if (elem.addEventListener)
-        { elem.addEventListener('click', func, false); }
-        else if (elem.attachEvent) 
-        { elem.attachEvent('onclick', func); }
-
-        cpt++;
-    }
-    elem = null;
-}
-
-
-
-// event listener for element visibility.
-function fireIfElementVisible (el, callback) {
-    return function () {
-        if ( isElementInViewport(el) ) {
-            callback(el);
-        }
-    }
-
-}
-
-function attachVisibilityHandler (handler)
-{
-    if (window.addEventListener) 
-    {
-        addEventListener('DOMContentLoaded', handler, false); 
-        addEventListener('load', handler, false); 
-        addEventListener('scroll', handler, false); 
-        addEventListener('resize', handler, false); 
-    } else if (window.attachEvent)  {
-        attachEvent('onDOMContentLoaded', handler); // IE9+ :(
-        attachEvent('onload', handler);
-        attachEvent('onscroll', handler);
-        attachEvent('onresize', handler);
-    }
-}
-
-function detachVisibilityHandler (handler)
-{
-    if (window.addEventListener) 
-    {
-        removeEventListener('DOMContentLoaded', handler, false); 
-        removeEventListener('load', handler, false); 
-        removeEventListener('scroll', handler, false); 
-        removeEventListener('resize', handler, false); 
-    } else if (window.attachEvent)  {
-        detachEvent('onDOMContentLoaded', handler); // IE9+ :(
-        detachEvent('onload', handler);
-        detachEvent('onscroll', handler);
-        detachEvent('onresize', handler);
+    return {
+      top : offsetTop,
+      left : offsetLeft
     }
 }
 // /-/-/-/-/-/-/-/
 
 // handle for document ready
-function readyAndWilling(fn) 
+_toolBox.prototype.readyAndWilling = function(fn) 
 {
     'use strict';
     if (document.readyState== 'complete')
@@ -141,7 +90,7 @@ function readyAndWilling(fn)
 }
 
 // load a media, througt a GET request.
-function loadMedia(url,onResult,onFault)
+_toolBox.prototype.loadMedia = function (url,onResult,onFault)
 {
     'use strict';
     var request = new XMLHttpRequest();
@@ -166,22 +115,10 @@ function loadMedia(url,onResult,onFault)
     request.send();
 }
 
-function injectAll(str,reps)
-{
-    'use strict';
-    for (var key in reps)
-    {
-        str =  str.replace(/(___[a-zA-Z]+___)/g, function(s, key) 
-        {
-            var rep = reps[key];
-            return typeof rep === 'undefined' ? s : rep;
-        });
-    }
-    return str ; 
-}
+
 
 // return element's outer height including margins
-function outerHeight(el)
+_toolBox.prototype.outerHeight = function (el)
 {
     'use strict';
   var height = el.offsetHeight;
@@ -189,18 +126,4 @@ function outerHeight(el)
 
   height += parseInt(style.marginTop) + parseInt(style.marginBottom);
   return height;
-}
-
-// get element style
-function getBackground(el)
-{
-    'use strict';
-    var style ='' ;
-    if (el.currentStyle)
-    {
-        style = el.currentStyle['backgroundColor'];
-    }
-    else if (window.getComputedStyle)
-    {style = document.defaultView.getComputedStyle(el,null).getPropertyValue('background');}
-    return style;
 }

@@ -16,7 +16,7 @@ var nav_button,
     // figure out if this is moz || IE because they use documentElement
     nav_doc = (navigator.userAgent.indexOf('Firefox') != -1 || navigator.userAgent.indexOf('MSIE') != -1) ? document.documentElement : document.body;
 
-readyAndWilling(initNavJumper) ;
+toolBox.readyAndWilling(initNavJumper) ;
 
 function initNavJumper ()
 {

@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+// basic variables  
+$body-font-size : 100%;
+ 
+
+// font size and line heights (todo use px rem fallback) 
+$base-font-multiplier : 1 ; //1 = 100%.
+$base-line-height:1.5em;
+
+ 
+// full page vars 
+$section-height:50em;
+$section-padding:10em;
+
+// grid vars 
+$gutter-width: 1em;
+$default-section-padding:1em;
+
+
+// colors
+$font-color : #F2F2F2 ;
+$background-default : #058C73 ;
+
+// material
+$sheet-color : #bada55 ;
+
+$card-color : #ffffff;
+$card-color-font : #000000 ; 

@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    TABLE OF CONTENTS 
+    based on Harry Robert's articles and
+    https:/github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES.................Define Sass Variables
+ * MIXINS....................Define Sass Mixins
+ * GENERIC...................Reset,typo... 
+ * BASE......................Global Element Styles (grid, default styles, backgrounds...)
+ * GUI.......................Site structure (header, navigation, general zones, etc...)
+ * OBJECT....................Site structure (header, nav, etc)
+ */
+@import 'vars-alt.scss';
+@import 'mixins-alt.scss' ;
+
+
+/*------------------------------------*\
+    $GENERIC  
+\*------------------------------------*/
+@import 'generic/meyer-reset.scss';
+@import 'generic/box-sizing.scss';
+@import 'generic/typo-alt.scss' ;
+
+
+/*------------------------------------*\ 
+    $BASE
+\*------------------------------------*/
+@import 'base/base-alt.scss';
+@import 'base/grid-box-alt.scss';
+@import 'base/grid-alt.scss';
+@import 'base/material.scss' ;  
