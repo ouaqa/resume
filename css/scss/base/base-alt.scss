@@ -1,8 +1,6 @@
 html
 {
     font-family: sans-serif;
-   // color: $font-color ;
-    // background-color: $background-default;
 }  
 
 body { 
@@ -26,4 +24,7 @@ body {
     }
 }
 
-// a { color:$font-color ; }
+a { 
+    @include color($color-dark, $alpha--text,color);   
+    &:hover {color:$color__accent;}
+}

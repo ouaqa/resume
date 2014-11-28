@@ -226,6 +226,12 @@ body {
       body:after {
         content: '3'; } }
 
+a {
+  color: black;
+  color: rgba(0, 0, 0, 0.87); }
+  a:hover {
+    color: #ffc107; }
+
 /*------------------------------------*\
     $GRID
     base grid system transitionned to flex box.
@@ -409,11 +415,23 @@ body {
 .mat__sheet {
   margin-left: 5em;
   margin-right: 5em;
-  background-color: #bada55;
-  border-bottom: solid 1px #000000; }
+  background-color: #b2dfdb;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: black;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  color: white;
+  color: rgba(255, 255, 255, 0.87); }
+  .mat__sheet a {
+    color: white;
+    color: rgba(255, 255, 255, 0.87); }
+    .mat__sheet a:hover {
+      color: #ffc107; }
 
 article,
 .mat__card {
   background-color: white;
+  background-color: white;
   color: black;
+  color: rgba(0, 0, 0, 0.87);
   margin: 1em; }

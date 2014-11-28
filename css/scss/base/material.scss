@@ -8,15 +8,25 @@
 {
     margin-left: 5em;
     margin-right: 5em;
-    background-color:$sheet-color;
-    border-bottom: solid 1px #000000;
-}
+    
+    background-color: $color__primary--light;
+
+    @include seam-divider(bottom);
+
+    @include color($color-light, $alpha--text,color); 
+
+    a { @include color($color-light, $alpha--text,color);
+     &:hover {color:$color__accent;}}
+} 
+ 
+
 
 article,
 .mat__card
 {
-    background-color: $card-color;
-    color:$card-color-font;
+   
+    @include color($color-light, $alpha--default,background-color); 
+    @include color($color-dark, $alpha--text,color); 
     margin:1em;
 }
 

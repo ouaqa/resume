@@ -18,13 +18,55 @@ $section-padding:10em;
 $gutter-width: 1em;
 $default-section-padding:1em;
 
-
+ 
 // colors
-$font-color : #F2F2F2 ;
-$background-default : #058C73 ;
+ 
+$background-default : #058C73 ; 
 
 // material
-$sheet-color : #bada55 ;
+$sheet-color : #E0F2F1 ;
 
 $card-color : #ffffff;
-$card-color-font : #000000 ; 
+
+
+$color-light: 255 ; // #FFFFFF ;
+$color-dark: 0 ; // #FFFFFF ;
+
+$alpha--default : 1;
+$alpha--dividers : 0.12 ; // 12%
+$alpha--disabled-hint : 0.26 ;  //26%
+$alpha--secondary-icon : 0.54 ; // 54%
+$alpha--text : 0.87 ; //87% 
+
+$color__primary : #009688 ;
+$color__primary--light : #B2DFDB ;
+$color__primary--dark : #00796B ;
+
+$color__accent : #FFC107 ;
+$color__accent--light : #FFECB3 ;
+$color__accent--dark : #FFA000;
+
+@mixin color ($color,$alpha,$prop)
+{
+    #{$prop} : rgb($color,$color,$color);
+    #{$prop} : rgba($color,$color,$color,$alpha);
+}
+
+@mixin seam-divider ($direction)
+{
+    border-#{$direction}-style : solid ; 
+    border-#{$direction}-width : thin;
+    border-#{$direction}-color : rgb($color-dark,$color-dark,$color-dark);
+    border-#{$direction}-color : rgba($color-dark,$color-dark,$color-dark,$alpha--dividers);
+}
+@mixin step-divider ($direction)
+{
+    border-#{$direction}-style : solid ; 
+    border-#{$direction}-width : medium;
+    border-#{$direction}-color : rgb($color-dark,$color-dark,$color-dark);
+    border-#{$direction}-color : rgba($color-dark,$color-dark,$color-dark,$alpha--dividers);
+
+
+}
+
+
