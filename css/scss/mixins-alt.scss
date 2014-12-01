@@ -4,10 +4,24 @@
 \*------------------------------------*/
 
 
+@mixin color ($color,$alpha,$property)
+{
+    #{$property} : rgb($color,$color,$color);
+    #{$property} : rgba($color,$color,$color,$alpha);
+}
+
 @mixin font-size( $decimal-size, $keyword: null ) {
   @if $keyword{ font-size: $keyword; }
   @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
   font-size: $decimal-size * 1rem;
+}
+
+
+@mixin flex ($basis, $grow:1,$shrink:1)
+{
+  -webkit-flex: $grow $shrink $basis;
+     -moz-flex: $grow $shrink $basis;
+          flex: $grow $shrink $basis;
 }
 
 // basic grid column mixin 
@@ -55,6 +69,22 @@ $xlarge-range: (90.063em, 120em); // 1441px, 1920px
 $xxlarge-range: (120.063em); // 1921px 
 
 // Media Queries
+//usage
+//@media #{$small-up} { }
+//@media #{$small-only} { }
+//
+//@media #{$medium-up} { }
+//@media #{$medium-only} { }
+//
+//@media #{$large-up} { }
+//@media #{$large-only} { }
+//
+//@media #{$xlarge-up} { }
+//@media #{$xlarge-only} { }
+//
+//@media #{$xxlarge-up} { }
+//@media #{$xxlarge-only} { }
+
 $screen: "only screen" !default;
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
@@ -75,18 +105,23 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})" !default;
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})" !default;
 
-//usage
-//@media #{$small-up} { }
-//@media #{$small-only} { }
-//
-//@media #{$medium-up} { }
-//@media #{$medium-only} { }
-//
-//@media #{$large-up} { }
-//@media #{$large-only} { }
-//
-//@media #{$xlarge-up} { }
-//@media #{$xlarge-only} { }
-//
-//@media #{$xxlarge-up} { }
-//@media #{$xxlarge-only} { }
+
+// material mixins
+
+//divider for overlapping material
+@mixin seam-divider ($direction)
+{
+    border-#{$direction}-style : solid ; 
+    border-#{$direction}-width : thin;
+    border-#{$direction}-color : rgb($color-dark,$color-dark,$color-dark);
+    border-#{$direction}-color : rgba($color-dark,$color-dark,$color-dark,$alpha--dividers);
+}
+
+//divider for jouxting material
+@mixin step-divider ($direction)
+{
+    border-#{$direction}-style : solid ; 
+    border-#{$direction}-width : medium;
+    border-#{$direction}-color : rgb($color-dark,$color-dark,$color-dark);
+    border-#{$direction}-color : rgba($color-dark,$color-dark,$color-dark,$alpha--dividers);
+}

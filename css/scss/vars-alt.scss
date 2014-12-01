@@ -46,27 +46,5 @@ $color__accent : #FFC107 ;
 $color__accent--light : #FFECB3 ;
 $color__accent--dark : #FFA000;
 
-@mixin color ($color,$alpha,$prop)
-{
-    #{$prop} : rgb($color,$color,$color);
-    #{$prop} : rgba($color,$color,$color,$alpha);
-}
-
-@mixin seam-divider ($direction)
-{
-    border-#{$direction}-style : solid ; 
-    border-#{$direction}-width : thin;
-    border-#{$direction}-color : rgb($color-dark,$color-dark,$color-dark);
-    border-#{$direction}-color : rgba($color-dark,$color-dark,$color-dark,$alpha--dividers);
-}
-@mixin step-divider ($direction)
-{
-    border-#{$direction}-style : solid ; 
-    border-#{$direction}-width : medium;
-    border-#{$direction}-color : rgb($color-dark,$color-dark,$color-dark);
-    border-#{$direction}-color : rgba($color-dark,$color-dark,$color-dark,$alpha--dividers);
-
-
-}
 
 

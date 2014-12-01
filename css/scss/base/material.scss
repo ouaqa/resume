@@ -4,29 +4,48 @@
     articles are considered to be cards 
     in this particular case.
 \*------------------------------------*/
+
+.mat__env 
+{   
+    width: 100%;
+    height:100%;
+}
+
 .mat__sheet
 {
-    margin-left: 5em;
-    margin-right: 5em;
-    
     background-color: $color__primary--light;
 
     @include seam-divider(bottom);
 
     @include color($color-light, $alpha--text,color); 
+    a {
+        @include color($color-light, $alpha--text,color);
+        &:hover {color:$color__accent;}
+    }
 
-    a { @include color($color-light, $alpha--text,color);
-     &:hover {color:$color__accent;}}
+    @media #{$medium-up} 
+    { 
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 } 
  
 
 
 article,
 .mat__card
-{
-   
+{   
+    min-height: 5em;
+    padding: 1em;
+    margin:auto;
+
+
     @include color($color-light, $alpha--default,background-color); 
     @include color($color-dark, $alpha--text,color); 
-    margin:1em;
+    a {
+        @include color($color-dark, $alpha--text,color);
+        &:hover {color:$color__accent;}
+    }
+    
 }
 

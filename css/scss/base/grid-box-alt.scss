@@ -3,85 +3,72 @@
     base grid system transitionned to flex box.
 \*------------------------------------*/
 .grid {
+  min-height:100%;
+
+   padding-left:$gutter-width ;
+/*  padding-right:$gutter-width; */
+
+  display: -webkit-box;
+  display:    -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
-  display: -moz-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content:center;
-}
+  display:         flex;
 
-@mixin flex ($basis, $grow:1,$shrink:1)
-{
-  -webkit-flex: $grow $shrink $basis;
-      -moz-flex: $grow $shrink $basis;
-           flex: $grow $shrink $basis;
-}
+-webkit-flex-direction :  row ;
+   -moz-flex-direction :  row ;
+        flex-direction :  row ;
 
-[class*='grid__col-'] {
- @include flex (auto);
-  }
-
-
-
-@media  #{$medium-up}   {
-   .grid__col-4-12 {
-     @include flex (50%);
-  }
-  .grid__col-2-12 {
-     @include flex (25%);
-  }
-}
-
-@media  #{$large-up}   {
-
-
-
-  .grid__col-1-12 {
-    @include flex ( 1/12 * 100%);
-  }
+  -webkit-flex-wrap :  wrap;
+     -moz-flex-wrap :  wrap;
+          flex-wrap :  wrap;
   
-  .grid__col-2-12 {
-     @include flex (2/12 * 100%);
-  }
 
-  .grid__col-3-12 {
-     @include flex (3/12 * 100%);
-  }
-  .grid__col-4-12 {
-     @include flex (4/12 * 100%);
-  }
-  .grid__col-5-12 {
-     @include flex (5/12 * 100%);
-  }
-  .grid__col-6-12 {
-     @include flex (6/12 * 100%);
-  }
+  -webkit-justify-content: space-between;
+     -moz-justify-content: space-between;
+          justify-content: space-between;
 
-  .grid__col-7-12 {
-     @include flex (7/12 * 100%);
-  } 
+  align-content: space-around;   
+  align-items : stretch ;
 
-  .grid__col-8-12{
-     @include flex (8/12 * 100%);
-  }
-
-  .grid__col-9-12 {
-     @include flex (9/12 * 100%);
-  }
-
-  .grid__col-10-12 {
-     @include flex (10/12 * 100%);
-  }
-
-  .grid__col-11-12 {
-     @include flex (11/12 * 100%);
-  }
-
-  .grid__col-12-12 {
-     @include flex (12/12 * 100%);
-  }
 }
+
+[class*='grid__item']  
+{
+  flex-grow: 1;
+  margin-right : $gutter-width;
+  &:first
+  { margin-left : $gutter-width; }
+
+  @include flex (1,0,0px);
+  
+
+}
+ 
+.grid__item--fullrow
+{
+  flex : 1 100%;
+}
+
+
+
+//@media  #{$medium-up}   
+//{
+//   .grid__col-4-12 { @include flex (50%); } 
+//   .grid__col-2-12 { @include flex (25%); } 
+//}
+//
+//@media  #{$large-up}   
+//{
+//  .grid__col-1-12 { @include flex ( 1/12 * 100%);} 
+//  .grid__col-2-12 { @include flex (2/12 * 100%); } 
+//  .grid__col-3-12 { @include flex (3/12 * 100%); } 
+//  .grid__col-4-12 { @include flex (4/12 * 100%); } 
+//  .grid__col-5-12 { @include flex (5/12 * 100%); } 
+//  .grid__col-6-12 { @include flex (6/12 * 100%); } 
+//  .grid__col-7-12 { @include flex (7/12 * 100%); } 
+//  .grid__col-8-12 { @include flex (8/12 * 100%); } 
+//  .grid__col-9-12 { @include flex (9/12 * 100%); } 
+//  .grid__col-10-12 { @include flex (10/12 * 100%); } 
+//  .grid__col-11-12 { @include flex (11/12 * 100%); } 
+//  .grid__col-12-12 { @include flex (12/12 * 100%); } 
+//}

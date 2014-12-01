@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    $contact related styles
+\*------------------------------------*/
+
+.contact 
+{
+  display: block; 
+}
+
+.contact--mail:before
+{
+    @media #{$small-up} 
+    { content:"\2709"; }   
+    @media #{$medium-up} 
+    { content : "email : "; }    
+    @media #{$large-up} 
+    { content : "envoyez-moi un email : "; }
+
+}
+
+.contact--plus:before
+{
+    @media #{$small-up} 
+    { content : "\2795"; }   
+    @media #{$medium-up} 
+    { content : "plus : "; }    
+    @media #{$large-up} 
+    { content : "contactez-moi via google plus : " ;}
+    
+}
+
+.contact--tel:before
+{
+    @media #{$small-up} 
+    { content:"\260E"; }   
+    @media #{$medium-up} 
+    { content : "tel : "; }    
+    @media #{$large-up} 
+    { content : "appelez-moi directement au "; }
+}

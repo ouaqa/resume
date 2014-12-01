@@ -28,3 +28,6 @@ a {
     @include color($color-dark, $alpha--text,color);   
     &:hover {color:$color__accent;}
 }
+
+.right
+{ float : right ;}

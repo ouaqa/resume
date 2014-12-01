@@ -28,5 +28,10 @@
 \*------------------------------------*/
 @import 'base/base-alt.scss';
 @import 'base/grid-box-alt.scss';
-@import 'base/grid-alt.scss';
-@import 'base/material.scss' ;  
+@import 'base/material.scss' ; 
+
+
+/*------------------------------------*\ 
+    $GUI
+\*------------------------------------*/
+@import 'gui/contact-alt.scss' ;  
