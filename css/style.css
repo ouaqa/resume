@@ -975,38 +975,39 @@ h4 {
     $MEDIA object
     implementation of stubbornella's media object,
     extended by http://wfendler.com/blog/perfecting-the-media-object
+
+    usage : 
+    <div class="media">
+      <div class="media__item"> some header </div>
+      <div class="media__body"> some body </div> 
+    </div>
 \*------------------------------------*/
 .media {
   overflow: hidden;
   zoom: 1; }
 
-/* .media, .media__body
-{ 
-    _overflow:hidden; 
-    overflow:visible; 
-    zoom:1;
-} */
 .media__item {
   float: left;
   margin-right: 1em; }
 
-/* .media .media__item img
-{
-    display:inline-block;
-} */
+/* additional styles. */
+/* FLIPPED */
 .media--flip > .media__item {
   margin-right: 0;
   margin-left: 1em;
   float: right; }
 
+/*  STACKED */
 .media--stack > .media__item {
   float: none;
   margin-left: 0;
   margin-bottom: 1em; }
 
+/*  NOWRAP */
 .media--nowrap > .media__body {
   overflow: hidden; }
 
+/*  VALIGN (aka "FLAG") */
 .media--valign {
   display: table;
   height: 100%; }

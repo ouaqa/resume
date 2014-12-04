@@ -1,7 +1,7 @@
 /*------------------------------------*\
     TABLE OF CONTENTS 
     based on Harry Robert's articles and
-    https:/github.com/csswizardry/CSS-Guidelines
+    http://cssguidelin.es/
 \*------------------------------------*/
 /**
  * VARIABLES.................Define Sass Variables
@@ -9,7 +9,7 @@
  * GENERIC...................Reset,typo... 
  * BASE......................Global Element Styles (grid, default styles, backgrounds...)
  * GUI.......................Site structure (header, navigation, general zones, etc...)
- * OBJECT....................Site structure (header, nav, etc)
+ * OBJECT....................Site structure (media, nav, etc)
  */
 @import 'vars-alt.scss';
 @import 'mixins-alt.scss' ;
@@ -35,3 +35,10 @@
     $GUI
 \*------------------------------------*/
 @import 'gui/contact-alt.scss' ;  
+
+
+/*------------------------------------*\ 
+    $OBJECT
+\*------------------------------------*/
+@import 'object/media.scss' ;  
+@import 'object/lvl.scss' ;  

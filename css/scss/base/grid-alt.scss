@@ -21,19 +21,6 @@
 
 
 
- @media #{$medium-up}  {
- //  .grid__col-4-12 {
- //   width: 50%;
- // }
- // .grid__col-2-12 {
- //   width: 25%;
- // }
-
-   .grid--outer-gutter {
-    padding-left:$gutter-width;
-    padding-right:$gutter-width;
-  } 
-} 
 
 [class*='grid__col-'] {
    
@@ -48,6 +35,11 @@
 
 
 @media #{$large-up}  {
+
+     .grid--outer-gutter {
+    padding-left:$gutter-width;
+    padding-right:$gutter-width;
+  } 
 
   [class*='grid__col-'] {
    

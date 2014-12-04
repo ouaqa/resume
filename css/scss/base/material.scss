@@ -18,12 +18,12 @@
     @include seam-divider(bottom);
 
     @include color($color-light, $alpha--text,color); 
-    a {
-        @include color($color-light, $alpha--text,color);
-        &:hover {color:$color__accent;}
-    }
+    //a {
+    //    @include color($color-light, $alpha--text,color);
+    //    &:hover {color:$color__accent;}
+    //}
 
-    @media #{$medium-up} 
+    @media #{$large-up} 
     { 
         margin-left: 5em;
         margin-right: 5em;
@@ -36,8 +36,7 @@ article,
 .mat__card
 {   
     min-height: 5em;
-    padding: 1em;
-    margin:auto;
+   padding: 1em;
 
 
     @include color($color-light, $alpha--default,background-color); 

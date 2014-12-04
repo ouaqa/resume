@@ -2,6 +2,12 @@
     $MEDIA object
     implementation of stubbornella's media object,
     extended by http://wfendler.com/blog/perfecting-the-media-object
+
+    usage : 
+    <div class="media">
+      <div class="media__item"> some header </div>
+      <div class="media__body"> some body </div> 
+    </div>
 \*------------------------------------*/
 $base-spacing-unit : 1em ;
 
@@ -11,32 +17,32 @@ $base-spacing-unit : 1em ;
   zoom:1;
 }
 
-/* .media, .media__body
-{ 
-    _overflow:hidden; 
-    overflow:visible; 
-    zoom:1;
-} */
+//.media, .media__body
+//{ 
+//    _overflow:hidden; 
+//    overflow:visible; 
+//    zoom:1;
+//} 
 .media__item 
 {
     float:left; 
     margin-right: $base-spacing-unit ;
 }
 
-/* .media .media__item img
-{
-    display:inline-block;
-} */
+//.media .media__item img
+//{
+//    display:inline-block;
+//} 
 
-// additional styles.
-// FLIPPED
+/* additional styles. */
+/* FLIPPED */
 .media--flip > .media__item {
   margin-right: 0; // resetting the default right margin
   margin-left: $base-spacing-unit;
   float: right;
 }
 
-// STACKED
+/*  STACKED */
 .media--stack > .media__item {
   float: none;
   margin-left: 0;
@@ -44,13 +50,13 @@ $base-spacing-unit : 1em ;
 }
 
 
-// NOWRAP
+/*  NOWRAP */
 .media--nowrap > .media__body {
   overflow: hidden;
   // this property doesn't allow text to wrap around the floated image.
 }
 
-// VALIGN (aka "FLAG")
+/*  VALIGN (aka "FLAG") */
 .media--valign {
   display: table;
   height: 100%;

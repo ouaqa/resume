@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    $lvl level indicator.
+    Similar to the $experience class set,
+    made to be generic.
+
+    usage
+    <container class="lvl">
+        <level class="lvl-x-5">lorem</level>
+        <.../>
+    </container>
+\*------------------------------------*/
+
+$lvl-color-bg : $color__accent--light;
+$lvl-color : $color__accent--dark;
+
+$lvl-height : 0.1em;
+
+.lvl
+{
+    width: 100%;
+    border-bottom : solid $lvl-height  $lvl-color-bg; 
+    margin-bottom: $lvl-height*5; 
+}
+
+
+.lvl__5-5,
+.lvl__4-5,
+.lvl__3-5,
+.lvl__2-5,
+.lvl__1-5
+{ 
+    border-bottom : solid $lvl-height  $lvl-color;  
+    display:block;
+    text-overflow: visible;
+    white-space: nowrap;
+}
+
+.lvl__5-5 { width : 100%; }
+.lvl__4-5 { width : 80% ; } 
+.lvl__3-5 { width : 60% ; }
+.lvl__2-5 { width : 40% ; }
+.lvl__1-5 { width : 20% ; } 
+

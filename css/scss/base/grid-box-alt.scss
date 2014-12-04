@@ -3,10 +3,7 @@
     base grid system transitionned to flex box.
 \*------------------------------------*/
 .grid {
-  min-height:100%;
-
-   padding-left:$gutter-width ;
-/*  padding-right:$gutter-width; */
+  min-height:100%;  
 
   display: -webkit-box;
   display:    -moz-box;
@@ -16,59 +13,74 @@
 
 -webkit-flex-direction :  row ;
    -moz-flex-direction :  row ;
+    -ms-flex-direction :  row ;
         flex-direction :  row ;
 
-  -webkit-flex-wrap :  wrap;
-     -moz-flex-wrap :  wrap;
-          flex-wrap :  wrap;
-  
+  -webkit-flex-wrap : wrap;
+     -moz-flex-wrap : wrap;
+      -ms-flex-wrap : wrap;
+          flex-wrap : wrap;
 
-  -webkit-justify-content: space-between;
-     -moz-justify-content: space-between;
-          justify-content: space-between;
+  -webkit-justify-content : space-between;
+     -moz-justify-content : space-between;
+          justify-content : space-between;
 
-  align-content: space-around;   
-  align-items : stretch ;
+  -webkit-align-content : space-around;   
+     -moz-align-content : space-around;   
+      -ms-align-content : space-around;   
+          align-content : space-around;  
 
+  -webkit-align-items : stretch ;
+     -moz-align-items : stretch ;
+      -ms-align-items : stretch ;
+          align-items : stretch ;
+ 
 }
+
 
 [class*='grid__item']  
 {
+  margin:0.1em;
+
   flex-grow: 1;
-  margin-right : $gutter-width;
-  &:first
-  { margin-left : $gutter-width; }
+  flex-shrink: 1;
+  flex-basis : 100%;
 
-  @include flex (1,0,0px);
-  
+  @media  #{$large-up} 
+  {
+    flex-basis : auto ;
+  }
 
+  //margin-right : $gutter-width;
+  //&:first
+  //{ margin-left : $gutter-width; }
 }
- 
-.grid__item--fullrow
+
+
+
+@media  #{$medium-up} 
 {
-  flex : 1 100%;
+  .grid__gutter
+  {
+    padding-left : $gutter-width ; 
+    padding-right : $gutter-width ;
+  }
+  .grid__gutter--left
+  { padding-left:$gutter-width ; }
+
+  .grid__gutter--right
+  { padding-right:$gutter-width;  }
+
+  .grid__item--full
+  {flex-basis : 100%; }
+
+
+  .grid__item--half
+  { flex-basis : 49%; }
+
+  .grid__item--third
+  { flex-basis : 32%; }
+
+  .grid__item--fourth
+  { flex-basis : 24%;  }
 }
-
-
-
-//@media  #{$medium-up}   
-//{
-//   .grid__col-4-12 { @include flex (50%); } 
-//   .grid__col-2-12 { @include flex (25%); } 
-//}
-//
-//@media  #{$large-up}   
-//{
-//  .grid__col-1-12 { @include flex ( 1/12 * 100%);} 
-//  .grid__col-2-12 { @include flex (2/12 * 100%); } 
-//  .grid__col-3-12 { @include flex (3/12 * 100%); } 
-//  .grid__col-4-12 { @include flex (4/12 * 100%); } 
-//  .grid__col-5-12 { @include flex (5/12 * 100%); } 
-//  .grid__col-6-12 { @include flex (6/12 * 100%); } 
-//  .grid__col-7-12 { @include flex (7/12 * 100%); } 
-//  .grid__col-8-12 { @include flex (8/12 * 100%); } 
-//  .grid__col-9-12 { @include flex (9/12 * 100%); } 
-//  .grid__col-10-12 { @include flex (10/12 * 100%); } 
-//  .grid__col-11-12 { @include flex (11/12 * 100%); } 
-//  .grid__col-12-12 { @include flex (12/12 * 100%); } 
-//}

@@ -24,10 +24,15 @@ body {
     }
 }
 
+// headers reset
+h1,h2,h3,h4,h5
+{ display:inline; }
+
+/*
 a { 
     @include color($color-dark, $alpha--text,color);   
     &:hover {color:$color__accent;}
 }
-
+*/
 .right
 { float : right ;}
