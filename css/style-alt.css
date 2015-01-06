@@ -209,6 +209,9 @@ blockquote {
 /*------------------------------------*\ 
     $BASE
 \*------------------------------------*/
+/*------------------------------------*\
+    $BASE GLOBAL STYLES
+\*------------------------------------*/
 html {
   font-family: sans-serif; }
 
@@ -259,6 +262,7 @@ a {
   flex-wrap: wrap;
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
   justify-content: space-between;
   -webkit-align-content: space-around;
   -moz-align-content: space-around;
@@ -271,12 +275,21 @@ a {
 
 [class*='grid__item'] {
   margin: 0.1em;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
   flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
   flex-shrink: 1;
+  -webkit-flex-basis: 100%;
+  -ms-flex-basis: 100%;
   flex-basis: 100%; }
   @media only screen and (min-width: 64.063em) {
     [class*='grid__item'] {
-      flex-basis: auto; } }
+      -webkit-flex-basis: auto;
+      -ms-flex-basis: auto;
+      flex-basis: auto;
+      min-width: 24%; } }
 
 @media only screen and (min-width: 40.063em) {
   .grid__gutter {
@@ -290,15 +303,24 @@ a {
     padding-right: 1em; }
 
   .grid__item--full {
-    flex-basis: 100%; }
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    margin: 0; }
 
   .grid__item--half {
+    -webkit-flex-basis: 49%;
+    -ms-flex-basis: 49%;
     flex-basis: 49%; }
 
   .grid__item--third {
+    -webkit-flex-basis: 32%;
+    -ms-flex-basis: 32%;
     flex-basis: 32%; }
 
   .grid__item--fourth {
+    -webkit-flex-basis: 24%;
+    -ms-flex-basis: 24%;
     flex-basis: 24%; } }
 /*------------------------------------*\
     $MATERIAL design inspired css rules.
@@ -311,7 +333,7 @@ a {
   height: 100%; }
 
 .mat__sheet {
-  background-color: #b2dfdb;
+  background-color: #B2DFDB;
   border-bottom-style: solid;
   border-bottom-width: thin;
   border-bottom-color: black;
@@ -323,21 +345,66 @@ a {
       margin-left: 5em;
       margin-right: 5em; } }
 
-article,
-.mat__card {
+.mat__tile {
   min-height: 5em;
-  padding: 1em;
   background-color: white;
   background-color: white;
   color: black;
-  color: rgba(0, 0, 0, 0.87); }
-  article a,
-  .mat__card a {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom-style: solid;
+  border-bottom-width: medium;
+  border-bottom-color: black;
+  border-bottom-color: rgba(0, 0, 0, 0.12); }
+  .mat__tile a {
     color: black;
     color: rgba(0, 0, 0, 0.87); }
-    article a:hover,
-    .mat__card a:hover {
-      color: #ffc107; }
+    .mat__tile a:hover {
+      color: #FFC107; }
+
+.mat__tile--header {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: black;
+  color: rgba(0, 0, 0, 0.54); }
+  .mat__tile--header + .mat__tile--body {
+    margin-top: 0.5em;
+    padding-top: 0.5em;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: black;
+    border-top-color: rgba(0, 0, 0, 0.12); }
+  .mat__tile--header h1, .mat__tile--header h2, .mat__tile--header h3, .mat__tile--header h4 {
+    color: black;
+    color: rgba(0, 0, 0, 0.87); }
+
+.mat__tile--body {
+  padding: 1em; }
+
+.mat__elevated-1 {
+  -webkit-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.48);
+  -box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.48); }
+
+.mat__elevated-2 {
+  -webkit-box-shadow: 0 9px 30px 3px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 0 9px 30px 3px rgba(0, 0, 0, 0.46);
+  -box-shadow: 0 9px 30px 3px rgba(0, 0, 0, 0.46); }
+
+.mat__elevated-3 {
+  -webkit-box-shadow: 0 18px 30px 3px rgba(0, 0, 0, 0.46);
+  -moz-box-shadow: 0 18px 30px 3px rgba(0, 0, 0, 0.46);
+  -box-shadow: 0 18px 30px 3px rgba(0, 0, 0, 0.46); }
+
+.mat__elevated-4 {
+  -webkit-box-shadow: 0 30px 50px 5px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0 30px 50px 5px rgba(0, 0, 0, 0.44);
+  -box-shadow: 0 30px 50px 5px rgba(0, 0, 0, 0.44); }
+
+.mat__elevated-5 {
+  -webkit-box-shadow: 0 45px 60px 6px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 0 45px 60px 6px rgba(0, 0, 0, 0.44);
+  -box-shadow: 0 45px 60px 6px rgba(0, 0, 0, 0.44); }
 
 /*------------------------------------*\ 
     $GUI
@@ -443,7 +510,7 @@ article,
 \*------------------------------------*/
 .lvl {
   width: 100%;
-  border-bottom: solid 0.1em #ffecb3;
+  border-bottom: solid 0.1em #FFECB3;
   margin-bottom: 0.5em; }
 
 .lvl__5-5,
@@ -451,7 +518,7 @@ article,
 .lvl__3-5,
 .lvl__2-5,
 .lvl__1-5 {
-  border-bottom: solid 0.1em #ffa000;
+  border-bottom: solid 0.1em #FFA000;
   display: block;
   text-overflow: visible;
   white-space: nowrap; }

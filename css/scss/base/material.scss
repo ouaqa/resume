@@ -5,12 +5,16 @@
     in this particular case.
 \*------------------------------------*/
 
+$mat__unit : 1em ;
+
+// bottom level of the material stack
 .mat__env 
 {   
     width: 100%;
     height:100%;
 }
 
+// first level of the material stack
 .mat__sheet
 {
     background-color: $color__primary--light;
@@ -18,33 +22,71 @@
     @include seam-divider(bottom);
 
     @include color($color-light, $alpha--text,color); 
-    //a {
-    //    @include color($color-light, $alpha--text,color);
-    //    &:hover {color:$color__accent;}
-    //}
 
     @media #{$large-up} 
     { 
-        margin-left: 5em;
-        margin-right: 5em;
+        margin-left: $mat__unit * 5 ;
+        margin-right: $mat__unit * 5 ;
     }
 } 
  
 
-
-article,
-.mat__card
+// second level of the material stack : tiles and cards.
+.mat__tile
 {   
-    min-height: 5em;
-   padding: 1em;
+    min-height: $mat__unit * 5 ;
+    
 
 
     @include color($color-light, $alpha--default,background-color); 
     @include color($color-dark, $alpha--text,color); 
+
     a {
         @include color($color-dark, $alpha--text,color);
         &:hover {color:$color__accent;}
-    }
-    
+    }    
+
+    @include step-divider(bottom);
 }
 
+
+.mat__tile--header
+{
+    padding-top: $mat__unit; 
+    padding-left: $mat__unit; 
+    padding-right: $mat__unit; 
+    
+
+    &+.mat__tile--body 
+    { 
+        margin-top : $mat__unit * 0.5 ;
+        padding-top :$mat__unit * 0.5;
+        @include seam-divider(top); 
+    }
+
+
+    @include color($color-dark, $alpha--secondary-icon ,color);
+    h1,h2,h3,h4
+    { @include color($color-dark, $alpha--text,color);  }
+}
+
+.mat__tile--body
+{
+    padding: $mat__unit; 
+}
+
+
+
+
+@mixin box-shadow ($value)
+{
+    -webkit-box-shadow : $value ;
+       -moz-box-shadow : $value ;
+           -box-shadow : $value ;
+}
+
+.mat__elevated-1 { @include box-shadow(0 3px 10px 1px rgba(0,0,0,.48)); }
+.mat__elevated-2 { @include box-shadow(0 9px 30px 3px rgba(0,0,0,.46)); }
+.mat__elevated-3 { @include box-shadow(0 18px 30px 3px rgba(0,0,0,.46)); }
+.mat__elevated-4 { @include box-shadow(0 30px 50px 5px rgba(0,0,0,.44)); }
+.mat__elevated-5 { @include box-shadow(0 45px 60px 6px rgba(0,0,0,.44)); }
