@@ -5,7 +5,7 @@ English & French Version
 ------------------------
 
 Direct link : [ouaqa.github.io] [1].
-Direct link (english version) : [ouaqa.github.io-en] [1].
+Direct link (english version) : [ouaqa.github.io-en] [2].
 
 Ongoing curriculum vitae page. I also use it to play with presentation, grids and anything else. 
 Variations between english and french version are possible.
